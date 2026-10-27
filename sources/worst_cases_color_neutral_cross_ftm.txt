@@ -1,0 +1,280 @@
+Scramble: L D' R' F B U' L' D B' D2 F' L2 B2
+  Cross on U: L R' U R F U' B L
+  Cross on D: F2 B' R F R' D' B R
+  Cross on R: F B L2 D' B U' F R'
+  Cross on L: F' B' R2 D B' U F' L
+  Cross on F: L' R F' R' U' F D' L'
+  Cross on B: U2 L B U L' B R B2
+Scramble: L' U R F' B' D L U' B U2 F L2 B2
+  Cross on U: L R' F' U L' F2 U' L
+  Cross on D: F2 B' D2 L' F' D' F' R'
+  Cross on R: F B L2 D' B U' F R'
+  Cross on L: F' B' R2 D B' U F' L
+  Cross on F: L' R U F' L U2 F L'
+  Cross on B: U2 B' U' L' B2 U' D' L'
+Scramble: U' R' B D F U2 R' U' L F R2 D2 F B2
+  Cross on U: L R B F U2 R L U
+  Cross on D: F2 B' L' D2 F' L B D
+  Cross on R: F B L2 D' B U' F R'
+  Cross on L: F' B' R2 D B' U F' L
+  Cross on F: L' R2 U' F2 R' U L F'
+  Cross on B: U2 L B2 U R L' D' B'
+Scramble: U2 B2 R L U' F2 U' F B' R U D' B
+  Cross on U: B2 D' F2 U2 B L R' B'
+  Cross on D: L R U2 B' R F' L D
+  Cross on R: B' U2 F2 D F' U' B' R
+  Cross on L: B D U' B' R2 F2 L B2
+  Cross on F: B' U' L2 F D2 R D' L'
+  Cross on B: F L' U' R U2 F L2 D'
+Scramble: U' D L' D2 R F' B U' F2 D2 R' L' B
+  Cross on U: B2 D' F2 U2 B L R' B'
+  Cross on D: L R U2 B' R F' L D
+  Cross on R: B' D' U' F B U2 R' B'
+  Cross on L: B U2 F2 D' F U B L'
+  Cross on F: B' U' L2 F D2 R D' L'
+  Cross on B: F R U2 B' L2 D' L U
+Scramble: R2 B' R' L U F2 D' F B' R' U D B2
+  Cross on U: B2 D' F2 U2 B L R' B'
+  Cross on D: L U2 F' L D2 F' D' B2
+  Cross on R: B' U2 F2 D F' U' B' R
+  Cross on L: B U2 F2 D' F U B L'
+  Cross on F: B' U' L2 F D2 R D' L'
+  Cross on B: F D' L' U L2 F D2 R'
+Scramble: U' F B' L' U D' B D2 B R' L' U2 B2
+  Cross on U: B2 D' F2 U2 B L R' B'
+  Cross on D: L U2 B' R F' L D L
+  Cross on R: B' U2 F2 D F' U' B' R
+  Cross on L: B U2 L' F2 D' F U L'
+  Cross on F: B' U' L2 F D2 R D' L'
+  Cross on B: F L' U' R U2 L2 D' L
+Scramble: U F' B R U' D B' D2 B' R L U2 B2
+  Cross on U: B2 D' F2 U2 B L R' B'
+  Cross on D: L U' B' R L D2 B' F'
+  Cross on R: B' U2 R F2 D F' U' R
+  Cross on L: B U2 F2 D' F U B L'
+  Cross on F: B' U' L2 F D2 R D' L'
+  Cross on B: F L' U' R U2 L2 D' L
+Scramble: R L' D' R2 U F' B L' F2 R2 U' D' B
+  Cross on U: B2 R' B L' F L2 U' B'
+  Cross on D: L R U2 B' R F' L D
+  Cross on R: B' U2 F2 D F' U' B' R
+  Cross on L: B R U2 B2 F' U B D
+  Cross on F: B' L U R' U2 B' L2 D
+  Cross on B: F U L2 B' D2 R' D L
+Scramble: R2 B2 U D R' F2 R' F B' D R L' B
+  Cross on U: B2 R' B L' F L2 U' B'
+  Cross on D: L R U2 B' R F' L D
+  Cross on R: B' L' U2 B2 F U' B' D'
+  Cross on L: B U2 F2 D' F U B L'
+  Cross on F: B' R' U2 F L2 D L' U'
+  Cross on B: F U L2 B' D2 R' D L
+Scramble: L2 B' R L' D F2 U' F B' L' U D B2
+  Cross on U: B2 R' B L' F L2 U' B'
+  Cross on D: L U2 L2 B L' F' D' F'
+  Cross on R: B' U2 F2 D F' U' B' R
+  Cross on L: B U2 F2 D' F U B L'
+  Cross on F: B' D L U' L2 B' D2 R
+  Cross on B: F U L2 B' D2 R' D L
+Scramble: B L D2 R' U' D F' R L U2 B2 D B
+  Cross on U: B2 R' B L' F L2 U' B'
+  Cross on D: L U2 B' R F' L D L
+  Cross on R: B' U2 F2 D F' U' B' R
+  Cross on L: B U2 L' F2 D' F U L'
+  Cross on F: B' L U' L2 D2 R D' L'
+  Cross on B: F U L2 B' D2 R' D L
+Scramble: U' F2 D2 R' L' B U' D R U2 L' F' B
+  Cross on U: B2 R' B L' F L2 U' B'
+  Cross on D: L U' B' R L D2 B' F'
+  Cross on R: B' U2 R F2 D F' U' R
+  Cross on L: B U2 F2 D' F U B L'
+  Cross on F: B' L U' L2 D2 R D' L'
+  Cross on B: F U L2 B' D2 R' D L
+Scramble: R' F B' U' R L' B L2 B U' D' R2 B2
+  Cross on U: B2 L D2 B' R' L U L
+  Cross on D: L R U2 B' R F' L D
+  Cross on R: B' L' U2 B2 F U' B' D'
+  Cross on L: B R2 B2 D B' U' L' U'
+  Cross on F: B' R' U2 F L2 D L' U'
+  Cross on B: F L' U' R U2 L2 D' L
+Scramble: B U L2 D' R' L F' U D R2 B2 L B
+  Cross on U: B2 L D2 B' R' L U L
+  Cross on D: L R U2 B' R F' L D
+  Cross on R: B' D' U' F B U2 R' B'
+  Cross on L: B R2 B2 D B' U' L' U'
+  Cross on F: B' L U' L2 D2 R D' L'
+  Cross on B: F R U2 B' L2 D' L U
+Scramble: D F' B L U D' B' U2 B' R L D2 B2
+  Cross on U: B2 L D2 B' R' L U L
+  Cross on D: L U2 L2 B L' F' D' F'
+  Cross on R: B' U2 F2 D F' U' B' R
+  Cross on L: B R2 B2 D B' U' L' U'
+  Cross on F: B' D L U' L2 B' D2 R
+  Cross on B: F L' U' R U2 L2 D' L
+Scramble: U' R' L B' L2 F2 U D L' B2 L' F' B
+  Cross on U: B2 L D2 B' R' L U L
+  Cross on D: L U2 F' L D2 F' D' B2
+  Cross on R: B' U2 F2 D F' U' B' R
+  Cross on L: B R2 B2 D B' U' L' U'
+  Cross on F: B' L U' L2 D2 R D' L'
+  Cross on B: F D' L' U L2 F D2 R'
+Scramble: L' F' B D R2 U' R L' F' U D L2 B2
+  Cross on U: B2 L D2 B' R' L U L
+  Cross on D: L U' B' R L D2 B' F'
+  Cross on R: B' U2 R F2 D F' U' R
+  Cross on L: B R2 B2 D B' U' L' U'
+  Cross on F: B' L U' L2 D2 R D' L'
+  Cross on B: F L' U' R U2 L2 D' L
+Scramble: L F' B U R L' B' R2 B' U D L2 B2
+  Cross on U: B2 R' D2 B L R' U' R'
+  Cross on D: L R U2 B' R F' L D
+  Cross on R: B' L2 B2 D' B U R U
+  Cross on L: B R U2 B2 F' U B D
+  Cross on F: B' L U R' U2 B' L2 D
+  Cross on B: F L' U' R U2 L2 D' L
+Scramble: L' F2 R2 U' D' B R L' U L2 D' F' B
+  Cross on U: B2 R' D2 B L R' U' R'
+  Cross on D: L R U2 B' R F' L D
+  Cross on R: B' L2 B2 D' B U R U
+  Cross on L: B D U' B' R2 F2 L B2
+  Cross on F: B' L U' L2 D2 R D' L'
+  Cross on B: F L' U' R U2 F L2 D'
+Scramble: D' F B' R' U' D B U2 B R' L' D2 B2
+  Cross on U: B2 R' D2 B L R' U' R'
+  Cross on D: L U2 L2 B L' F' D' F'
+  Cross on R: B' L2 B2 D' B U R U
+  Cross on L: B U2 F2 D' F U B L'
+  Cross on F: B' D L U' L2 B' D2 R
+  Cross on B: F L' U' R U2 L2 D' L
+Scramble: B L F2 L U' D' B2 L2 F R L' D B
+  Cross on U: B2 R' D2 B L R' U' R'
+  Cross on D: L U2 F' L D2 F' D' B2
+  Cross on R: B' L2 B2 D' B U R U
+  Cross on L: B U2 F2 D' F U B L'
+  Cross on F: B' L U' L2 D2 R D' L'
+  Cross on B: F D' L' U L2 F D2 R'
+Scramble: L F B' U' R2 D R' L F U' D' L2 B2
+  Cross on U: B2 R' D2 B L R' U' R'
+  Cross on D: L U2 B' R F' L D L
+  Cross on R: B' L2 B2 D' B U R U
+  Cross on L: B U2 L' F2 D' F U L'
+  Cross on F: B' L U' L2 D2 R D' L'
+  Cross on B: F L' U' R U2 L2 D' L
+Scramble: U2 B' U' D L F2 R' F B' U' R L B2
+  Cross on U: B2 R' D' B L U' R' B'
+  Cross on D: L R U2 B' R F' L D
+  Cross on R: B' D' U' F B U2 R' B'
+  Cross on L: B R U2 B2 F' U B D
+  Cross on F: B' L U R' U2 B' L2 D
+  Cross on B: F R U2 B' L2 D' L U
+Scramble: R' L D B2 U' F' B R' U D F2 L2 B
+  Cross on U: B2 R' D' B L U' R' B'
+  Cross on D: L U2 F' L D2 F' D' B2
+  Cross on R: B' U2 F2 D F' U' B' R
+  Cross on L: B R U2 B2 F' U B D
+  Cross on F: B' L U R' U2 B' L2 D
+  Cross on B: F D' L' U L2 F D2 R'
+Scramble: L' F B' D' R' L B R2 B U' D' L2 B2
+  Cross on U: B2 R' D' B L U' R' B'
+  Cross on D: L U' B' R L D2 B' F'
+  Cross on R: B' U2 R F2 D F' U' R
+  Cross on L: B R U2 B2 F' U B D
+  Cross on F: B' L U R' U2 B' L2 D
+  Cross on B: F L' U' R U2 L2 D' L
+Scramble: D2 B' U D' R F2 L' F B' D' R L B2
+  Cross on U: B2 R' D' B L U' R' B'
+  Cross on D: L R U2 B' R F' L D
+  Cross on R: B' L' U2 B2 F U' B' D'
+  Cross on L: B D U' B' R2 F2 L B2
+  Cross on F: B' R' U2 F L2 D L' U'
+  Cross on B: F L' U' R U2 F L2 D'
+Scramble: R' L U' L2 D F' B R' F2 L2 U' D' B
+  Cross on U: B2 R' D' B L U' R' B'
+  Cross on D: L U2 F' L D2 F' D' B2
+  Cross on R: B' L' U2 B2 F U' B' D'
+  Cross on L: B U2 F2 D' F U B L'
+  Cross on F: B' R' U2 F L2 D L' U'
+  Cross on B: F D' L' U L2 F D2 R'
+Scramble: R F' B D R' L B' L2 B' U D R2 B2
+  Cross on U: B2 R' D' B L U' R' B'
+  Cross on D: L U2 B' R F' L D L
+  Cross on R: B' L' U2 B2 F U' B' D'
+  Cross on L: B U2 L' F2 D' F U L'
+  Cross on F: B' R' U2 F L2 D L' U'
+  Cross on B: F L' U' R U2 L2 D' L
+Scramble: U D' R' U2 L F' B D' F2 U2 R' L' B
+  Cross on U: B2 R' D' B L U' R' B'
+  Cross on D: L U2 L2 B L' F' D' F'
+  Cross on R: B' U2 F2 D F' U' B' R
+  Cross on L: B D U' B' R2 F2 L B2
+  Cross on F: B' D L U' L2 B' D2 R
+  Cross on B: F L' U' R U2 F L2 D'
+Scramble: B U F2 U R' L' B2 U2 F U' D L B
+  Cross on U: B2 R' D' B L U' R' B'
+  Cross on D: L U' B' R L D2 B' F'
+  Cross on R: B' U2 R F2 D F' U' R
+  Cross on L: B D U' B' R2 F2 L B2
+  Cross on F: B' L U' L2 D2 R D' L'
+  Cross on B: F L' U' R U2 F L2 D'
+Scramble: U' D R B2 L' F' B U' R L F2 D2 B
+  Cross on U: B2 R' D' B L U' R' B'
+  Cross on D: L U2 L2 B L' F' D' F'
+  Cross on R: B' D' U' F B U2 R' B'
+  Cross on L: B U2 F2 D' F U B L'
+  Cross on F: B' D L U' L2 B' D2 R
+  Cross on B: F R U2 B' L2 D' L U
+Scramble: L' U' D B' D2 F2 R L D' B2 D' F' B
+  Cross on U: B2 R' D' B L U' R' B'
+  Cross on D: L U2 B' R F' L D L
+  Cross on R: B' D' U' F B U2 R' B'
+  Cross on L: B U2 L' F2 D' F U L'
+  Cross on F: B' L U' L2 D2 R D' L'
+  Cross on B: F R U2 B' L2 D' L U
+Scramble: D' L' U B D2 R F2 L' U' R2 F B' L B2
+  Cross on U: B2 R' D' B L U' R' B'
+  Cross on D: L R U2 B' R F' L D
+  Cross on R: B' U2 F2 D F' U' B' R
+  Cross on L: B U2 F2 D' F U B L'
+  Cross on F: B' L U' L2 D2 R D' L'
+  Cross on B: F L' U' R U2 L2 D' L
+Scramble: U B R' L' D F U' L U2 R F2 L2 B
+  Cross on U: U2 L B' U' F R' U' F'
+  Cross on D: B2 U2 D F R' D' L B'
+  Cross on R: B U2 R L' U' R' B' U
+  Cross on L: B' F L B U L' D F
+  Cross on F: R' U2 L2 D L' U' R' F'
+  Cross on B: R L D' U' B2 L R B
+Scramble: L B U' D' R F L' D L2 U F2 D2 B
+  Cross on U: U2 R' B U F' L U F
+  Cross on D: B2 U2 D' F' L D R' B
+  Cross on R: B F' R' B' U' R D' F'
+  Cross on L: B' U2 L' R U L B U'
+  Cross on F: R' U2 L2 D L' U' R' F'
+  Cross on B: R L D' U' B2 L R B
+Scramble: U' B' R F R2 U' L' D' F R U D2 L2 B2
+  Cross on U: R' L' U2 B' F' L' R' U'
+  Cross on D: B2 F L D2 B L' F' D
+  Cross on R: B F2 U R2 F U' B' R
+  Cross on L: B' D F U' L2 F' U2 L'
+  Cross on F: R' U2 L2 D L' U' R' F'
+  Cross on B: R L D' U' B2 L R B
+Scramble: D R' U' F B L' D' R B' R2 F' D2 B2
+  Cross on U: F L' B R' U2 F B U
+  Cross on D: R' L' B F D2 L' R' D'
+  Cross on R: F' R' B F R U D F
+  Cross on L: F L B' F' U D' B U2
+  Cross on F: F2 L' D F R U' F U2
+  Cross on B: B2 U2 B U' R B D L'
+Scramble: D' L U F' B' R D L' B L2 F D2 B2
+  Cross on U: F L' B R' U2 F B U
+  Cross on D: R' L' B F D2 L' R' D'
+  Cross on R: F' R' B F U' D B' U2
+  Cross on L: F L B' F' L' U' D' F'
+  Cross on F: F2 R D' F' L' U F' U2
+  Cross on B: B2 U2 B' U L' B' D' R
+Scramble: R' D' B L F R2 D' R' U F D2 L2 F B2
+  Cross on U: F L' B R' U2 F B U
+  Cross on D: R' L' B F D2 L' R' D'
+  Cross on R: F' B2 U' R2 B' U F R
+  Cross on L: F D U L2 F B U L'
+  Cross on F: F L' R' F2 U' D' L' R'
+  Cross on B: B' L R B2 U D L R

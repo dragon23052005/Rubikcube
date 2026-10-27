@@ -1,0 +1,1 @@
+{"name":"speedcube-academy-ui","private":true,"scripts":{"build:css":"tailwindcss -i ui/tailwind.css -o src/main/resources/static/tailwind.css --minify","check":"node --check src/main/resources/static/app.js"},"devDependencies":{"@tailwindcss/cli":"4.1.18","tailwindcss":"4.1.18"}}

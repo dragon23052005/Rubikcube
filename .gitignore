@@ -1,0 +1,8 @@
+target/
+var/
+node_modules/
+*.log
+.env
+__pycache__/
+.idea/
+.env.*

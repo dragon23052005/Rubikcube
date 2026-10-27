@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#4f46e5" />
+    <meta
+      name="description"
+      content="Thư viện công thức Rubik và không gian luyện tập của bạn."
+    />
+    <title>Speedcube Academy — Học từng bước, nhanh từng ngày</title>
+    <link rel="stylesheet" href="/tailwind.css" />
+    <link rel="stylesheet" href="/app.css" />
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("sca-theme") || "light";
+      } catch (e) {}
+    </script>
+    <script src="/vendor/lucide.js" defer></script>
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Đến nội dung chính</a>
+    <div class="shell">
+      <aside class="sidebar" id="sidebar">
+        <a href="/" class="brand"
+          ><span class="brand-mark"><i data-lucide="box"></i></span
+          ><span>speedcube<span class="brand-sub">ACADEMY</span></span></a
+        >
+        <div class="workspace-label">KHÔNG GIAN HỌC TẬP</div>
+        <nav aria-label="Điều hướng chính">
+          <a href="/" data-nav="home"
+            ><i data-lucide="layout-dashboard"></i>Tổng quan</a
+          ><a href="/algorithms" data-nav="algorithms"
+            ><i data-lucide="library"></i>Thư viện thuật toán<span
+              class="nav-count"
+              id="nav-total"
+              >…</span
+            ></a
+          ><a href="/practice" data-nav="practice"
+            ><i data-lucide="zap"></i>Luyện tập<span class="tiny-dot"></span></a
+          ><a href="/favorites" data-nav="favorites"
+            ><i data-lucide="bookmark"></i>Đã lưu</a
+          ><a href="/progress" data-nav="progress"
+            ><i data-lucide="chart-no-axes-combined"></i>Tiến độ của tôi</a
+          >
+        </nav>
+        <div class="workspace-label">KHÁM PHÁ</div>
+        <nav aria-label="Loại Rubik">
+          <a href="/methods?puzzle=3x3"><i data-lucide="box"></i>Rubik 3×3</a
+          ><a href="/methods?puzzle=sq1"><i data-lucide="shapes"></i>Square-1</a
+          ><a href="/guide"
+            ><i data-lucide="book-open"></i>Ký hiệu & hướng dẫn</a
+          >
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="tip-card">
+            <span class="tip-icon"><i data-lucide="lightbulb"></i></span
+            ><strong>Mỗi ngày, một chút tiến bộ</strong>
+            <p>Chỉ 10 phút luyện tập để ghi nhớ tốt hơn.</p>
+            <a href="/practice"
+              >Bắt đầu ngay <i data-lucide="arrow-up-right"></i
+            ></a>
+          </div>
+          <div class="profile">
+            <span class="avatar">B</span>
+            <div>
+              <strong>Không gian của bạn</strong
+              ><small>Tiến độ lưu trên thiết bị</small>
+            </div>
+            <i data-lucide="hard-drive"></i>
+          </div>
+        </div>
+      </aside>
+      <div class="page">
+        <header class="topbar">
+          <button
+            class="icon-btn mobile-menu"
+            id="menu-btn"
+            aria-label="Mở điều hướng"
+            aria-expanded="false"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+          <div class="top-breadcrumb" id="top-crumb">
+            Không gian học tập <span>/</span> <strong>Tổng quan</strong>
+          </div>
+          <form class="global-search" id="global-search">
+            <i data-lucide="search"></i
+            ><input
+              aria-label="Tìm công thức toàn thư viện"
+              placeholder="Tìm công thức, phương pháp…"
+              name="q"
+            /><kbd>/</kbd>
+          </form>
+          <button
+            class="icon-btn"
+            id="theme-btn"
+            aria-label="Đổi chế độ sáng tối"
+          >
+            <i data-lucide="moon"></i></button
+          ><a href="/guide" class="icon-btn help" aria-label="Hướng dẫn"
+            ><i data-lucide="circle-help"></i></a
+          ><span class="avatar small">B</span>
+        </header>
+        <main class="relative" id="main" tabindex="-1">
+          <div class="loading">
+            <div class="skeleton"></div>
+            <div class="skeleton"></div>
+            <p>Đang tải thư viện…</p>
+          </div>
+        </main>
+        <footer>
+          <span>© 2026 Speedcube Academy</span
+          ><span>Học từng bước. Nhanh từng ngày.</span
+          ><a href="/guide#source"
+            >Dữ liệu & ghi nguồn <i data-lucide="arrow-up-right"></i
+          ></a>
+        </footer>
+      </div>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

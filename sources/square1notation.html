@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<title>CubeZone - Square-1 solution method - Overview</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NH801LR252"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NH801LR252');
+</script>
+</head>
+<body>
+
+<!-- BANNER START -->
+<table class="head" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;</td>
+<td><a href="index.html"><img src="images/cubelogogrey.png" alt=""></a></td>
+<td width="100%">
+<h1>Lars Vandenbergh's CubeZone</h1>
+<div class="quote">Speedcubing taken one step further</div>
+</td>
+</tr>
+</table>
+<!-- BANNER END -->
+
+<!-- NAVIGATION START -->
+<div class="navigation">
+&nbsp;&nbsp;<em>Algorithms</em>&nbsp;&nbsp;
+<a href="zbf2l.html">ZB F2L</a> |
+<a href="oll.html">OLL</a> |
+<a href="pll.html">PLL</a> |
+<a href="coll.html">COLL</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>Methods</em>&nbsp;&nbsp;
+<a href="square1.html" class="selected">Square-1</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>Tools</em>&nbsp;&nbsp;
+<a href="imagecube.html">ImageCube</a> |
+<a href="imagerevenge.html">ImageRevenge</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>Articles</em>&nbsp;&nbsp;
+<a href="crossstudy.html">Cross study</a>
+<a href="xcrossstudy.html">XCross study</a>
+</div>
+<!-- NAVIGATION END -->
+
+<!-- SUBNAVIGATION SQUARE-1 START -->
+<div class="subnavigation">
+&nbsp;&nbsp;<a href="square1.html">Overview</a> |
+<a href="square1notation.html" class="selected">Notation</a> |
+<a href="square1step1.html">Step 1</a> |
+<a href="square1step2.html">Step 2</a> |
+<a href="square1step3.html">Step 3</a> |
+<a href="square1step4.html">Step 4</a> |
+<a href="square1step5.html">Step 5</a> |
+<a href="square1step6.html">Step 6</a>
+</div>
+<!-- SUBNAVIGATION SQUARE-1 END -->
+
+<h2>Square-1 solution method - Notation</h2>
+
+<p>
+There are two types of moves you can do on Square-1:
+<table summary="move types on Square-1" width="100%">
+<tr align="center">
+<td><img src="images/square1/turntopbottom.png" alt="Turning top or bottom layers"></td>
+<td><img src="images/square1/twistright.png" alt="Twisting right hand side"></td>
+</tr>
+<tr align="center">
+<td><em>Turning the bottom and top layers</small></td>
+<td><em>Twisting the right hand side 180&deg;</small></td>
+</tr>
+</table>
+</p>
+<p>
+Each algorithm or move sequence on Square-1 is made up of turning the bottom and top layers, twisting the right hand side, turning the bottom and top layers, twisting the right hand side, and so on.
+</p>
+<p>
+Since the small pieces in the bottom and top layers have a 30&deg; angle and the large pieces have a 60&deg; angle, every turn of the bottom and top layer will be a multiple of 30&deg;. Hence the easiest way to write down a turn of the bottom and top layers is like a tuple:
+<table align="center">
+<tr valign="top">
+<td><em>(a,b)</em>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>where <em>a</em> denotes the multiple of 30&deg; you have to turn the top layer<br>and <em>b</em> denotes the multiple of 30&deg; you have to turn the bottom layer.</td>
+</tr>
+</table>
+</p>
+<p>
+Positive values of <em>a</em> and <em>b</em> are used for clockwise turns, whereas negative values mean anti-clockwise turns.
+</p>
+<p>
+A 180&deg; twist of the right hand side is simply denoted by a forward slash:
+</p>
+<p align="center">
+<em>/</em>&nbsp;&nbsp;&nbsp;&nbsp; means twisting the right hand side 180&deg;.
+</p>
+<p>
+So a complete algorithm may look like this:
+</p>
+<p align="center">
+<em>/ (-3,0) / (3,3) / (0,-3) /</em>
+</p>
+<p>
+This algorithm swaps two adjacent corners in both layers when the puzzle is in the cube shape. The correct way to perform this algorithm would be to:
+<table>
+	<tr>
+		<td align="center"><em>/</em></td>
+		<td>twist the right hand side 180&deg;,</td>
+	</tr>
+	<tr>
+		<td align="center"><em>(-3,0)</em></td>
+		<td>turn the top layer 90&deg; anti-clockwise,</td>
+	</tr>
+	<tr>
+		<td align="center"><em>/</em></td>
+		<td>twist the right hand side 180&deg;,</td>
+	</tr>
+	<tr>
+		<td align="center"><em>(3,3)</em></td>
+		<td>turn both the bottom and top layers 90&deg; clockwise,</td>
+	</tr>
+	<tr>
+		<td align="center"><em>/</em></td>
+		<td>twist the right hand side 180&deg;,</td>
+	</tr>
+	<tr>
+		<td align="center"><em>(0,-3)</em></td>
+		<td>turn the bottom layer 90&deg; anti-clockwise</td>
+	</tr>
+	<tr>
+		<td align="center"><em>/</em></td>
+		<td>and finally twist the right hand side 180&deg;.</td>
+	</tr>
+</table>
+
+<p>
+If you're having trouble working out how far you have to turn the bottom and top layers, you can use the following rule of thumb: a <em>small piece</em> counts as <em>1</em> and a <em>large piece</em> counts as <em>2</em>. So if you have to perform <em>(2,0)</em>, it means that you either have to turn one large piece past the middle of the puzzle or two small pieces past the middle of the puzzle. Use the seperation line between the two pieces of the middle layer as a guide.
+</p>
+
+<!-- FOOTER START -->
+<table class="footer" cellspacing="0" cellpadding="2" width="100%">
+<tr>
+<td align="left">This page is maintained by <a href="mailto:lars@cubezone.be">Lars Vandenbergh</a></td>
+<td align="center"><a href="http://www.cubezone.be/"><img src="images/cubelogogreysmall.png" alt="CubeZone"></a></td>
+<td align="right">Last update on 28th May 2007</td>
+</tr>
+</table>
+<!-- FOOTER END -->
+
+</body>
+</html>

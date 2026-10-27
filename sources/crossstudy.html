@@ -1,0 +1,377 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<title>CubeZone - Cross study</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NH801LR252"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NH801LR252');
+</script>
+</head>
+<body>
+
+<!-- BANNER START -->
+<table class="head" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;</td>
+<td><a href="index.html"><img src="images/cubelogogrey.png" alt=""></a></td>
+<td width="100%">
+<h1>Lars Vandenbergh's CubeZone</h1>
+<div class="quote">Speedcubing taken one step further</div>
+</td>
+</tr>
+</table>
+<!-- BANNER END -->
+
+<!-- NAVIGATION START -->
+<div class="navigation">
+&nbsp;&nbsp;<em>Algorithms</em>&nbsp;&nbsp;
+<a href="zbf2l.html">ZB F2L</a> |
+<a href="oll.html">OLL</a> |
+<a href="pll.html">PLL</a> |
+<a href="coll.html">COLL</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>Methods</em>&nbsp;&nbsp;
+<a href="square1.html">Square-1</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>Tools</em>&nbsp;&nbsp;
+<a href="imagecube.html">ImageCube</a> |
+<a href="imagerevenge.html">ImageRevenge</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>Articles</em>&nbsp;&nbsp;
+<a href="crossstudy.html" class="selected">Cross study</a>
+<a href="xcrossstudy.html">XCross study</a>
+</div>
+<!-- NAVIGATION END -->
+
+<h2>Cross study</h2>
+
+<p>
+This short article describes the results of a computer analysis I did for solving the cross of the first layer in the least number of moves. In this study we are trying to determine the required number of moves to solve the cross for all possible cases if we would always be able to see an optimal solution (God's algorithm). From that information we can then calculate the average and maximum number of moves that a "perfect" cross solver would need to solve the cross from a random state.
+</p>
+
+<p>
+Most cross-first speedcubers always start with the same color when building the cross. A lot of people can still comfortably build the cross on the opposite face of their prefered color, and a few people are completely color-neutral and start building the cross on whichever face it seems the easiest. In this computer study we have investigated all three scenarios.
+</p>
+
+<h3>Fixed color cross solving</h3>
+
+<p>
+When solving the cross on the same face, there are 4 edge pieces that we need to take into account. They can each be oriented in 2 ways and can placed in 12 locations. The amount of cases we need to explore in this scenario is 2<sup>4</sup> x (12 x 11 x 10 x 9) = 190,080. In the following table you can see how many cases can optimally be solved in a certain number of moves, both in face turn metric and quarter turn metric:
+</p>
+
+<center>
+<table class="noborder" cellspacing="10" width="100%">
+<tr align="center">
+<td width="50%"><em>Face turn metric</em></td>
+<td width="50%"><em>Quarter turn metric</em></td>
+</tr>
+<tr align="center" valign="top">
+<td>
+<table class="border" cellspacing="0" cellpadding="4" align="center">
+<tr class="head">
+<td>Depth</td>
+<td># cases</td>
+<td>Distribution</td>
+<td>Cumulative</td>
+</tr>
+<tr class="figures">
+<td>0</td><td>1</td><td>0.00%</td><td>&lt; 0.01%</td>
+</tr>
+<tr class="figures">
+<td>1</td><td>15</td><td>0.01%</td><td>0.01%</td>
+</tr>
+<tr class="figures">
+<td>2</td><td>158</td><td>0.08%</td><td>0.09%</td>
+</tr>
+<tr class="figures">
+<td>3</td><td>1,394</td><td>0.73%</td><td>0.82%</td>
+</tr>
+<tr class="figures">
+<td>4</td><td>9,809</td><td>5.16%</td><td>5.99%</td>
+</tr>
+<tr class="figures">
+<td>5</td><td>46,381</td><td>24.40%</td><td>30.39%</td>
+</tr>
+<tr class="figures">
+<td>6</td><td>97,254</td><td>51.16%</td><td>81.55%</td>
+</tr>
+<tr class="figures">
+<td>7</td><td>34,966</td><td>18.40%</td><td>99.95%</td>
+</tr>
+<tr class="figures">
+<td>8</td><td>102</td><td>0.05%</td><td>100.00%</td>
+</tr>
+</table>
+</td>
+<td>
+<table class="border" cellspacing="0" cellpadding="4" align="center">
+<tr class="head">
+<td>Depth</td>
+<td># cases</td>
+<td>Distribution</td>
+<td>Cumulative</td>
+</tr>
+<tr class="figures">
+<td>0</td><td>1</td><td>0.00%</td><td>&lt; 0.01%</td>
+</tr>
+<tr class="figures">
+<td>1</td><td>10</td><td>0.01%</td><td>0.01%</td>
+</tr>
+<tr class="figures">
+<td>2</td><td>73</td><td>0.04%</td><td>0.04%</td>
+</tr>
+<tr class="figures">
+<td>3</td><td>500</td><td>0.26%</td><td>0.31%</td>
+</tr>
+<tr class="figures">
+<td>4</td><td>3,078</td><td>1.62%</td><td>1.93%</td>
+</tr>
+<tr class="figures">
+<td>5</td><td>15,528</td><td>8.17%</td><td>10.10%</td>
+</tr>
+<tr class="figures">
+<td>6</td><td>57,180</td><td>30.08%</td><td>40.18%</td>
+</tr>
+<tr class="figures">
+<td>7</td><td>91,654</td><td>48.22%</td><td>88.40%</td>
+</tr>
+<tr class="figures">
+<td>8</td><td>21,849</td><td>11.49%</td><td>99.89%</td>
+</tr>
+<tr class="figures">
+<td>9</td><td>207</td><td>0.11%</td><td>100.00%</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr align="center">
+<td><em>Average: 5.81 moves</em></td>
+<td><em>Average: 6.59 moves</em></td>
+</tr>
+</table>
+</center>
+
+<p>
+The scrambles for the 102 worst cases that require 8 moves to solve in face turn metric, can be found <a href="worst_cases_fixed_cross_ftm.txt">here</a>. The cross solution for the fixed cross is also listed for each scramble.
+</p>
+
+<h3>Opposite color cross solving</h3>
+
+<p>
+When solving the cross on either of two opposite faces, there are 8 edge pieces that we need to take into account. They can each be oriented in 2 ways and can placed in 12 locations. The amount of cases we need to explore in this scenario is 2<sup>8</sup> x (12 x 11 x 10 x 9 x 8 x 7 x 6 x 5) = 5,109,350,400. In the following table you can see how many cases can optimally be solved in a certain number of moves, both in face turn metric and quarter turn metric:
+</p>
+
+<center>
+<table class="noborder" cellspacing="10" width="100%">
+<tr align="center">
+<td width="50%"><em>Face turn metric</em></td>
+<td width="50%"><em>Quarter turn metric</em></td>
+</tr>
+<tr align="center" valign="top">
+<td>
+<table class="border" cellspacing="0" cellpadding="4" align="center">
+<tr class="head">
+<td>Depth</td>
+<td># cases</td>
+<td>Distribution</td>
+<td>Cumulative</td>
+</tr>
+<tr class="figures">
+<td>0</td><td>53,759</td><td>0.00%</td><td>&lt; 0.01%</td>
+</tr>
+<tr class="figures">
+<td>1</td><td>806,253</td><td>0.02%</td><td>0.02%</td>
+</tr>
+<tr class="figures">
+<td>2</td><td>8,484,602</td><td>0.17%</td><td>0.18%</td>
+</tr>
+<tr class="figures">
+<td>3</td><td>74,437,062</td><td>1.46%</td><td>1.64%</td>
+</tr>
+<tr class="figures">
+<td>4</td><td>506,855,983</td><td>9.92%</td><td>11.56%</td>
+</tr>
+<tr class="figures">
+<td>5</td><td>2,031,420,585</td><td>39.76%</td><td>51.32%</td>
+</tr>
+<tr class="figures">
+<td>6</td><td>2,311,536,662</td><td>45.24%</td><td>96.56%</td>
+</tr>
+<tr class="figures">
+<td>7</td><td>175,751,822</td><td>3.44%</td><td>&gt; 99.99%</td>
+</tr>
+<tr class="figures">
+<td>8</td><td>3,672</td><td>0.00%</td><td>100.00%</td>
+</tr>
+</table>
+</td>
+<td>
+<table class="border" cellspacing="0" cellpadding="4" align="center">
+<tr class="head">
+<td>Depth</td>
+<td># cases</td>
+<td>Distribution</td>
+<td>Cumulative</td>
+</tr>
+<tr class="figures">
+<td>0</td><td>53,759</td><td>0.00%</td><td>&lt; 0.01%</td>
+</tr>
+<tr class="figures">
+<td>1</td><td>537,496</td><td>0.01%</td><td>0.01%</td>
+</tr>
+<tr class="figures">
+<td>2</td><td>3,920,873</td><td>0.08%</td><td>0.09%</td>
+</tr>
+<tr class="figures">
+<td>3</td><td>26,775,612</td><td>0.52%</td><td>0.61%</td>
+</tr>
+<tr class="figures">
+<td>4</td><td>162,620,494</td><td>3.18%</td><td>3.80%</td>
+</tr>
+<tr class="figures">
+<td>5</td><td>773,798,728</td><td>15.14%</td><td>18.94%</td>
+</tr>
+<tr class="figures">
+<td>6</td><td>2,260,615,130</td><td>44.24%</td><td>63.18%</td>
+</tr>
+<tr class="figures">
+<td>7</td><td>1,794,284,224</td><td>35.12%</td><td>98.30%</td>
+</tr>
+<tr class="figures">
+<td>8</td><td>86,731,327</td><td>1.70%</td><td>&gt; 99.99%</td>
+</tr>
+<tr class="figures">
+<td>9</td><td>12,757</td><td>0.00%</td><td>100.00%</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr align="center">
+<td><em>Average: 5.39 moves</em></td>
+<td><em>Average: 6.15 moves</em></td>
+</tr>
+</table>
+</center>
+
+<p>
+The scrambles for the 3672 worst cases that require 8 moves to solve in face turn metric, can be found <a href="worst_cases_opposite_cross_ftm.txt">here</a>. The cross solutions for the 2 opposite crosses are also listed for each scramble.
+</p>
+
+<h3>Color neutral cross solving</h3>
+
+<p>
+When solving the cross on any of the six faces, there are 12 edge pieces that we need to take into account. They can each be oriented in 2 ways and can placed in 12 locations. However since we are using all the edge pieces and edge pieces can only be flipped in pairs, the orientation of the 12th edge can be derived from the orientation all the others. The amount of cases we need to explore in this scenario is 2<sup>11</sup> x 12! = 980,995,276,800. In the following table you can see how many cases can optimally be solved in a certain number of moves, both in face turn metric and quarter turn metric:
+</p>
+
+<center>
+<table class="noborder" cellspacing="10" width="100%">
+<tr align="center">
+<td width="50%"><em>Face turn metric</em></td>
+<td width="50%"><em>Quarter turn metric</em></td>
+</tr>
+<tr align="center" valign="top">
+<td>
+<table class="border" cellspacing="0" cellpadding="4" align="center">
+<tr class="head">
+<td>Depth</td>
+<td># cases</td>
+<td>Distribution</td>
+<td>Cumulative</td>
+</tr>
+<tr class="figures">
+<td>0</td><td>30,942,374</td><td>0.00%</td><td>&lt; 0.01%</td>
+</tr>
+<tr class="figures">
+<td>1</td><td>462,820,266</td><td>0.05%</td><td>0.05%</td>
+</tr>
+<tr class="figures">
+<td>2</td><td>4,839,379,314</td><td>0.49%</td><td>0.54%</td>
+</tr>
+<tr class="figures">
+<td>3</td><td>41,131,207,644</td><td>4.19%</td><td>4.74%</td>
+</tr>
+<tr class="figures">
+<td>4</td><td>239,671,237,081</td><td>24.43%</td><td>29.17%</td>
+</tr>
+<tr class="figures">
+<td>5</td><td>543,580,917,185</td><td>55.41%</td><td>84.58%</td>
+</tr>
+<tr class="figures">
+<td>6</td><td>151,019,930,400</td><td>15.39%</td><td>99.97%</td>
+</tr>
+<tr class="figures">
+<td>7</td><td>258,842,496</td><td>0.03%</td><td>&gt; 99.99%</td>
+</tr>
+<tr class="figures">
+<td>8</td><td>40</td><td>0.00%</td><td>100.00%</td>
+</tr>
+</table>
+</td>
+<td>
+<table class="border" cellspacing="0" cellpadding="4" align="center">
+<tr class="head">
+<td>Depth</td>
+<td># cases</td>
+<td>Distribution</td>
+<td>Cumulative</td>
+</tr>
+<tr class="figures">
+<td>0</td><td>30,942,374</td><td>0.00%</td><td>&lt; 0.01%</td>
+</tr>
+<tr class="figures">
+<td>1</td><td>308,828,676</td><td>0.03%</td><td>0.03%</td>
+</tr>
+<tr class="figures">
+<td>2</td><td>2,244,689,022</td><td>0.23%</td><td>0.26%</td>
+</tr>
+<tr class="figures">
+<td>3</td><td>15,116,501,844</td><td>1.54%</td><td>1.80%</td>
+</tr>
+<tr class="figures">
+<td>4</td><td>86,723,043,456</td><td>8.84%</td><td>10.64%</td>
+</tr>
+<tr class="figures">
+<td>5</td><td>333,077,773,019</td><td>33.95%</td><td>44.60%</td>
+</tr>
+<tr class="figures">
+<td>6</td><td>475,482,906,734</td><td>48.47%</td><td>93.07%</td>
+</tr>
+<tr class="figures">
+<td>7</td><td>67,953,971,216</td><td>6.93%</td><td>99.99%</td>
+</tr>
+<tr class="figures">
+<td>8</td><td>56,619,244</td><td>0.01%</td><td>&gt; 99.99%</td>
+</tr>
+<tr class="figures">
+<td>9</td><td>1,215</td><td>0.00%</td><td>100.00%</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr align="center">
+<td><em>Average: 4.81 moves</em></td>
+<td><em>Average: 5.50 moves</em></td>
+</tr>
+</table>
+</center>
+
+<p>
+The scrambles for the 40 worst cases that require 8 moves to solve in face turn metric, can be found <a href="worst_cases_color_neutral_cross_ftm.txt">here</a>. The cross solutions for all 6 possible crosses are also listed for each scramble.
+</p>
+
+<!-- FOOTER START -->
+<table class="footer" cellspacing="0" cellpadding="2" width="100%">
+<tr>
+<td align="left">This page is maintained by <a href="mailto:lars@cubezone.be">Lars Vandenbergh</a></td>
+<td align="center"><a href="http://www.cubezone.be/"><img src="images/cubelogogreysmall.png" alt="CubeZone"></a></td>
+<td align="right">Last update on 12th August 2026</td>
+</tr>
+</table>
+<!-- FOOTER END -->
+
+</body>
+</html>

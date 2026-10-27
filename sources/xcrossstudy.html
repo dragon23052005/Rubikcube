@@ -1,0 +1,781 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<title>CubeZone - Extended cross study</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NH801LR252"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NH801LR252');
+</script>
+</head>
+<body>
+
+<!-- BANNER START -->
+<table class="head" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;</td>
+<td><a href="index.html"><img src="images/cubelogogrey.png" alt=""></a></td>
+<td width="100%">
+<h1>Lars Vandenbergh's CubeZone</h1>
+<div class="quote">Speedcubing taken one step further</div>
+</td>
+</tr>
+</table>
+<!-- BANNER END -->
+
+<!-- NAVIGATION START -->
+<div class="navigation">
+&nbsp;&nbsp;<em>Algorithms</em>&nbsp;&nbsp;
+<a href="zbf2l.html">ZB F2L</a> |
+<a href="oll.html">OLL</a> |
+<a href="pll.html">PLL</a> |
+<a href="coll.html">COLL</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>Methods</em>&nbsp;&nbsp;
+<a href="square1.html">Square-1</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>Tools</em>&nbsp;&nbsp;
+<a href="imagecube.html">ImageCube</a> |
+<a href="imagerevenge.html">ImageRevenge</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>Articles</em>&nbsp;&nbsp;
+<a href="crossstudy.html">Cross study</a>
+<a href="xcrossstudy.html" class="selected">XCross study</a>
+</div>
+<!-- NAVIGATION END -->
+
+<h2>Extended cross study</h2>
+
+<p>
+This short article describes the results of a computer analysis I did for solving the extended cross (a.k.a. x-cross) in the least number of moves. In this study we are trying to determine the required number of moves to solve the cross and one F2L pair simultaneously for all possible cases if we would always be able to see an optimal solution (God's algorithm). From that information we can then calculate the average and maximum number of moves that a "perfect" extended cross solver would need to solve the extended cross from a random state.
+</p>
+
+<h3>Fixed cross color, fixed pair extended cross solving</h3>
+
+<p>
+When solving the cross on a fixed cross color and always solving the same specific pair with it, there is one single goal state.
+</p>
+
+<center>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxrrxrrxxxggxggxxxx&size=100"/>
+</center>
+
+</p>
+There are 5 edge pieces and 1 corner piece that we need to take into account. The edge pieces be oriented in 2 ways and can placed in 12 locations. The corner piece can be oriented in 3 ways and can be placed in 8 locations. The amount of cases we need to explore in this scenario is 2<sup>5</sup> x (12 x 11 x 10 x 9 x 8) x 3 x 8 = 72,990,720. In the following table you can see how many cases can optimally be solved in a certain number of moves, both in face turn metric and quarter turn metric:
+</p>
+
+<center>
+<table class="noborder" cellspacing="10" width="100%">
+<tr align="center">
+<td width="50%"><em>Face turn metric</em></td>
+<td width="50%"><em>Quarter turn metric</em></td>
+</tr>
+<tr align="center" valign="top">
+<td>
+<table class="border" cellspacing="0" cellpadding="4" align="center">
+<tr class="head">
+<td>Depth</td>
+<td># cases</td>
+<td>Distribution</td>
+<td>Cumulative</td>
+</tr>
+<tr class="figures">
+<td>0</td><td>1</td><td>&lt; 0.01%</td><td>&lt; 0.01%</td>
+</tr>
+<tr class="figures">
+<td>1</td><td>15</td><td>&lt; 0.01%</td><td>&lt; 0.01%</td>
+</tr>
+<tr class="figures">
+<td>2</td><td>172</td><td>&lt; 0.01%</td><td>&lt; 0.01%</td>
+</tr>
+<tr class="figures">
+<td>3</td><td>1,950</td><td>&lt; 0.01%</td><td>&lt; 0.01%</td>
+</tr>
+<tr class="figures">
+<td>4</td><td>21,535</td><td>0.03%</td><td>0.03%</td>
+</tr>
+<tr class="figures">
+<td>5</td><td>220,368</td><td>0.30%</td><td>0.33%</td>
+</tr>
+<tr class="figures">
+<td>6</td><td>1,989,591</td><td>2.73%</td><td>3.06%</td>
+</tr>
+<tr class="figures">
+<td>7</td><td>13,431,990</td><td>18.40%</td><td>21.46%</td>
+</tr>
+<tr class="figures">
+<td>8</td><td>40,963,892</td><td>56.12%</td><td>77.58%</td>
+</tr>
+<tr class="figures">
+<td>9</td><td>16,325,184</td><td>22.37%</td><td>99.95%</td>
+</tr>
+<tr class="figures">
+<td>10</td><td>36,022</td><td>0.05%</td><td>100.00%</td>
+</tr>
+</table>
+</td>
+<td>
+<table class="border" cellspacing="0" cellpadding="4" align="center">
+<tr class="head">
+<td>Depth</td>
+<td># cases</td>
+<td>Distribution</td>
+<td>Cumulative</td>
+</tr>
+<tr class="figures">
+<td>0</td><td>1</td><td>&lt; 0.01%</td><td>&lt; 0.01%</td>
+</tr>
+<tr class="figures">
+<td>1</td><td>10</td><td>&lt; 0.01%</td><td>&lt; 0.01%</td>
+</tr>
+<tr class="figures">
+<td>2</td><td>78</td><td>&lt; 0.01%</td><td>&lt; 0.01%</td>
+</tr>
+<tr class="figures">
+<td>3</td><td>615</td><td>&lt; 0.01%</td><td>&lt; 0.01%</td>
+</tr>
+<tr class="figures">
+<td>4</td><td>4,894</td><td>0.01%</td><td>0.01%</td>
+</tr>
+<tr class="figures">
+<td>5</td><td>38,144</td><td>0.05%</td><td>0.06%</td>
+</tr>
+<tr class="figures">
+<td>6</td><td>283,800</td><td>0.39%</td><td>0.45%</td>
+</tr>
+<tr class="figures">
+<td>7</td><td>1,926,895</td><td>2.64%</td><td>3.09%</td>
+</tr>
+<tr class="figures">
+<td>8</td><td>10,634,555</td><td>14.57%</td><td>17.66%</td>
+</tr>
+<tr class="figures">
+<td>9</td><td>33,667,220</td><td>46.13%</td><td>63.78%</td>
+</tr>
+<tr class="figures">
+<td>10</td><td>25,574,878</td><td>35.04%</td><td>98.82%</td>
+</tr>
+<tr class="figures">
+<td>11</td><td>859,599</td><td>1.18%</td><td>&gt; 99.99%</td>
+</tr>
+<tr class="figures">
+<td>12</td><td>31</td><td>&lt; 0.01%</td><td>100.00%</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr align="center">
+<td>
+<div style="display: flex; flex-direction: row; align-items: flex-end;flex-wrap: nowrap;justify-content: center">
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">0</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">1</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">2</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">3</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">4</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">5</div></div>
+<div style="width:15px; height:3px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(3px);">6</div></div>
+<div style="width:15px; height:19px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(19px);">7</div></div>
+<div style="width:15px; height:56px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(56px);">8</div></div>
+<div style="width:15px; height:22px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(22px);">9</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">10</div></div>
+</div>
+</td>
+<td>
+<div style="display: flex; flex-direction: row; align-items: flex-end;flex-wrap: nowrap;justify-content: center">
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">0</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">1</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">2</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">3</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">4</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">5</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">6</div></div>
+<div style="width:15px; height:3px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(3px);">7</div></div>
+<div style="width:15px; height:15px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(15px);">8</div></div>
+<div style="width:15px; height:46px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(46px);">9</div></div>
+<div style="width:15px; height:35px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(35px);">10</div></div>
+<div style="width:15px; height:1px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(1px);">11</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">12</div></div>
+</div>
+</td>
+</tr>
+<tr align="center">
+<td><em style="font-size: 150%">Average: 7.98 moves</em></td>
+<td><em style="font-size: 150%">Average: 9.16 moves</em></td>
+</tr>
+</table>
+</center>
+
+<h3>Fixed cross color, any pair extended cross solving</h3>
+
+<p>
+When solving the extended cross on a fixed cross color and solving any of the four F2L pairs with it that are available,
+there are four possible goal states:
+</p>
+
+<center>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxrrxrrxxxggxggxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxggxggxxxooxooxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxooxooxxxbbxbbxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxbbxbbxxxrrxrrxxxx&size=100"/>
+</center>
+
+</p>
+There are 8 edge pieces and 4 corner pieces that we need to take into account. The edge pieces can each be oriented in 2 ways and can placed in 12 locations. The corner pieces can each be oriented in 3 ways and can placed in 8 locations. The amount of cases we need to explore in this scenario is 2<sup>8</sup> x (12 x 11 x 10 x 9 x 8 x 7 x 6 x 5) x 3<sup>4</sup> x (8 x 7 x 6 x 5) = 695,280,402,432,000. In the following table you can see how many cases can optimally be solved in a certain number of moves, both in face turn metric and quarter turn metric:
+</p>
+
+<center>
+<table class="noborder" cellspacing="10" width="100%">
+<tr align="center">
+<td width="50%"><em>Face turn metric</em></td>
+<td width="50%"><em>Quarter turn metric</em></td>
+</tr>
+<tr align="center" valign="top">
+<td>
+<table class="border" cellspacing="0" cellpadding="4" align="center">
+<tr class="head">
+<td>Depth</td>
+<td># cases</td>
+<td>Distribution</td>
+<td>Cumulative</td>
+</tr>
+<tr class="figures">
+<td>0</td><td>37,908,599</td><td>&lt;0.01%</td><td>&lt;0.01%</td>
+</tr>
+<tr class="figures">
+<td>1</td><td>568,628,985</td><td>&lt;0.01%</td><td>&lt;0.01%</td>
+</tr>
+<tr class="figures">
+<td>2</td><td>6,517,572,994</td><td>&lt;0.01%</td><td>&lt;0.01%</td>
+</tr>
+<tr class="figures">
+<td>3</td><td>73,720,189,384</td><td>0.01%</td><td>0.01%</td>
+</tr>
+<tr class="figures">
+<td>4</td><td>807,161,926,701</td><td>0.12%</td><td>0.13%</td>
+</tr>
+<tr class="figures">
+<td>5</td><td>8,014,907,818,106</td><td>1.15%</td><td>1.28%</td>
+</tr>
+<tr class="figures">
+<td>6</td><td>64,989,168,195,161</td><td>9.35%</td><td>10.63%</td>
+</tr>
+<tr class="figures">
+<td>7</td><td>300,998,517,199,292</td><td>43.29%</td><td>53.92%</td>
+</tr>
+<tr class="figures">
+<td>8</td><td>310,250,210,240,321</td><td>44.62%</td><td>98.54%</td>
+</tr>
+<tr class="figures">
+<td>9</td><td>10,139,587,753,497</td><td>1.46%</td><td>&gt;99.99%</td>
+</tr>
+<tr class="figures">
+<td>10</td><td>4,998,960</td><td>&lt;0.01%</td><td>100.00%</td>
+</tr>
+</table>
+</td>
+<td>
+<table class="border" cellspacing="0" cellpadding="4" align="center">
+<tr class="head">
+<td>Depth</td>
+<td># cases</td>
+<td>Distribution</td>
+<td>Cumulative</td>
+</tr>
+<tr class="figures">
+<td>0</td><td>37,908,599</td><td>&lt;0.01%</td><td>&lt;0.01%</td>
+</tr>
+<tr class="figures">
+<td>1</td><td>379,085,990</td><td>&lt;0.01%</td><td>&lt;0.01%</td>
+</tr>
+<tr class="figures">
+<td>2</td><td>2,955,904,707</td><td>&lt;0.01%</td><td>&lt;0.01%</td>
+</tr>
+<tr class="figures">
+<td>3</td><td>23,277,082,436</td><td>&lt;0.01%</td><td>&lt;0.01%</td>
+</tr>
+<tr class="figures">
+<td>4</td><td>184,561,766,742</td><td>0.03%</td><td>0.03%</td>
+</tr>
+<tr class="figures">
+<td>5</td><td>1,424,250,006,349</td><td>0.20%</td><td>0.24%</td>
+</tr>
+<tr class="figures">
+<td>6</td><td>10,302,124,386,124</td><td>1.48%</td><td>1.72%</td>
+</tr>
+<tr class="figures">
+<td>7</td><td>64,295,434,247,771</td><td>9.25%</td><td>10.96%</td>
+</tr>
+<tr class="figures">
+<td>8</td><td>265,978,728,696,130</td><td>38.25%</td><td>49.22%</td>
+</tr>
+<tr class="figures">
+<td>9</td><td>328,403,123,358,565</td><td>47.23%</td><td>96.45%</td>
+</tr>
+<tr class="figures">
+<td>10</td><td>24,664,858,977,252</td><td>3.55%</td><td>&gt;99.99%</td>
+</tr>
+<tr class="figures">
+<td>11</td><td>671,011,315</td><td>&lt;0.01%</td><td>&gt;99.99%</td>
+</tr>
+<tr class="figures">
+<td>12</td><td>20</td><td>&lt;0.01%</td><td>100.0%</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr align="center">
+<td>
+<div style="display: flex; flex-direction: row; align-items: flex-end;flex-wrap: nowrap;justify-content: center">
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">0</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">1</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">2</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">3</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">4</div></div>
+<div style="width:15px; height:1px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(1px);">5</div></div>
+<div style="width:15px; height:9px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(9px);">6</div></div>
+<div style="width:15px; height:44px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(44px);">7</div></div>
+<div style="width:15px; height:44px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(44px);">8</div></div>
+<div style="width:15px; height:1px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(1px);">9</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">10</div></div>
+</div>
+</td>
+<td>
+<div style="display: flex; flex-direction: row; align-items: flex-end;flex-wrap: nowrap;justify-content: center">
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">0</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">1</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">2</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">3</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">4</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">5</div></div>
+<div style="width:15px; height:1px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(1px);">6</div></div>
+<div style="width:15px; height:9px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(9px);">7</div></div>
+<div style="width:15px; height:38px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(38px);">8</div></div>
+<div style="width:15px; height:47px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(47px);">9</div></div>
+<div style="width:15px; height:4px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(4px);">10</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">11</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">12</div></div>
+</div>
+</td>
+</tr>
+<tr align="center">
+<td><em style="font-size: 150%">Average: 7.35 moves</em></td>
+<td><em style="font-size: 150%">Average: 8.41 moves</em></td>
+</tr>
+</table>
+</center>
+
+<h3 id="pseudo">Fixed cross color, any pair or pseudo-pair extended cross solving</h3>
+
+<p>
+A pseudo-pair is where a corner of one F2L pair is paired with an edge of another F2L pair and inserted in the first two layers so that the F2L corner matches its adjacent cross edges and the F2L edge matches it adjacent centers. Also allowing these solutions, gives us 16 possible goal states in total:
+</p>
+
+<center>
+<div style="display: flex; flex-direction: row; align-items: center;flex-wrap: nowrap;justify-content: center;">
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxrrxrrxxxggxggxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxggxggxxxooxooxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxooxooxxxbbxbbxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxbbxbbxxxrrxrrxxxx&size=100"/>
+</center>
+<center>
+<div><em style="font-size: 150%">Normal pairs</em></div>
+</center>
+<center>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxbbxrrxxxrrxggxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxrrxggxxxggxooxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxggxooxxxooxbbxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxooxbbxxxbbxrrxxxx&size=100"/>
+</center>
+<center>
+<div><em style="font-size: 150%">Pseudo-pairs (D misaligned)</em></div>
+</center>
+<center>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxggxrrxxxooxggxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxooxggxxxbbxooxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxbbxooxxxrrxbbxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxrrxbbxxxggxrrxxxx&size=100"/>
+</center>
+<center>
+<div><em style="font-size: 150%">Pseudo-pairs (D' misaligned)</em></div>
+</center>
+<center>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxooxrrxxxbbxggxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxbbxggxxxrrxooxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxrrxooxxxggxbbxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxggxbbxxxooxrrxxxx&size=100"/>
+</center>
+<center>
+<div><em style="font-size: 150%">Pseudo-pairs (D2 misaligned)</em></div>
+</center>
+
+<p>
+The amount of pieces that can affect the solution is the same as for the previous analysis, namely all pieces that make up the first two layers of the chosen cross color. As a result, the amount of cases we need to explore is 695,280,402,432,000. In the following table you can see how many cases can optimally be solved in a certain number of moves, both in face turn metric and quarter turn metric:
+</p>
+
+<center>
+<table class="noborder" cellspacing="10" width="100%">
+<tr align="center">
+<td width="50%"><em>Face turn metric</em></td>
+<td width="50%"><em>Quarter turn metric</em></td>
+</tr>
+<tr align="center" valign="top">
+<td>
+<table class="border" cellspacing="0" cellpadding="4" align="center">
+<tr class="head">
+<td>Depth</td>
+<td># cases</td>
+<td>Distribution</td>
+<td>Cumulative</td>
+</tr>
+<tr class="figures">
+<td>0</td><td>627,766,346</td><td>&lt;0.01%</td><td>&lt;0.01%</td>
+</tr>
+<tr class="figures">
+<td>1</td><td>7,251,120,964</td><td>&lt;0.01%</td><td>&lt;0.01%</td>
+</tr>
+<tr class="figures">
+<td>2</td><td>62,464,024,268</td><td>0.01%</td><td>0.01%</td>
+</tr>
+<tr class="figures">
+<td>3</td><td>513,739,823,676</td><td>0.07%</td><td>0.08%</td>
+</tr>
+<tr class="figures">
+<td>4</td><td>4,163,018,268,375</td><td>0.60%</td><td>0.68%</td>
+</tr>
+<tr class="figures">
+<td>5</td><td>30,331,464,150,834</td><td>4.36%</td><td>5.05%</td>
+</tr>
+<tr class="figures">
+<td>6</td><td>169,391,840,767,736</td><td>24.36%</td><td>29.41%</td>
+</tr>
+<tr class="figures">
+<td>7</td><td>396,906,012,985,217</td><td>57.09%</td><td>86.49%</td>
+</tr>
+<tr class="figures">
+<td>8</td><td>93,889,548,415,811</td><td>13.50%</td><td>&gt;99.99%</td>
+</tr>
+<tr class="figures">
+<td>9</td><td>14,435,108,773</td><td>&lt;0.01%</td><td>100.00%</td>
+</tr>
+</table>
+</td>
+<td>
+<table class="border" cellspacing="0" cellpadding="4" align="center">
+<tr class="head">
+<td>Depth</td>
+<td># cases</td>
+<td>Distribution</td>
+<td>Cumulative</td>
+</tr>
+<tr class="figures">
+<td>0</td><td>627,766,346</td><td>&lt;0.01%</td><td>&lt;0.01%</td>
+</tr>
+<tr class="figures">
+<td>1</td><td>3,964,745,814</td><td>&lt;0.01%</td><td>&lt;0.01%</td>
+</tr>
+<tr class="figures">
+<td>2</td><td>19,236,821,735</td><td>&lt;0.01%</td><td>&lt;0.01%</td>
+</tr>
+<tr class="figures">
+<td>3</td><td>114,660,973,471</td><td>0.02%</td><td>0.02%</td>
+</tr>
+<tr class="figures">
+<td>4</td><td>799,153,707,102</td><td>0.11%</td><td>0.13%</td>
+</tr>
+<tr class="figures">
+<td>5</td><td>5,533,660,771,488</td><td>0.80%</td><td>0.93%</td>
+</tr>
+<tr class="figures">
+<td>6</td><td>35,850,454,668,353</td><td>5.16%</td><td>6.09%</td>
+</tr>
+<tr class="figures">
+<td>7</td><td>179,360,443,276,109</td><td>25.80%</td><td>31.88%</td>
+</tr>
+<tr class="figures">
+<td>8</td><td>381,893,073,419,578</td><td>54.93%</td><td>86.81%</td>
+</tr>
+<tr class="figures">
+<td>9</td><td>91,638,080,092,640</td><td>13.18%</td><td>99.99%</td>
+</tr>
+<tr class="figures">
+<td>10</td><td>67,046,184,444</td><td>0.01%</td><td>&gt;99.99%</td>
+</tr>
+<tr class="figures">
+<td>11</td><td>4,920</td><td>&lt;0.01%</td><td>100.00%</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr align="center">
+<td>
+<div style="display: flex; flex-direction: row; align-items: flex-end;flex-wrap: nowrap;justify-content: center">
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">0</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">1</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">2</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">3</div></div>
+<div style="width:15px; height:1px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(1px);">4</div></div>
+<div style="width:15px; height:4px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(4px);">5</div></div>
+<div style="width:15px; height:24px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(24px);">6</div></div>
+<div style="width:15px; height:57px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(57px);">7</div></div>
+<div style="width:15px; height:14px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(14px);">8</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">9</div></div>
+</div>
+</td>
+<td>
+<div style="display: flex; flex-direction: row; align-items: flex-end;flex-wrap: nowrap;justify-content: center">
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">0</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">1</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">2</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">3</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">4</div></div>
+<div style="width:15px; height:1px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(1px);">5</div></div>
+<div style="width:15px; height:5px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(5px);">6</div></div>
+<div style="width:15px; height:26px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(26px);">7</div></div>
+<div style="width:15px; height:55px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(55px);">8</div></div>
+<div style="width:15px; height:13px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(13px);">9</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">10</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">11</div></div>
+</div>
+</td>
+</tr>
+<tr align="center">
+<td><em style="font-size: 150%">Average: 6.78 moves</em></td>
+<td><em style="font-size: 150%">Average: 7.74 moves</em></td>
+</tr>
+</table>
+</center>
+
+<h3 id="dcn">Dual color neutral extended cross solving</h3>
+
+<p>
+When solving the extended cross on any of two opposite cross colors and solving any of the four F2L pairs with it that are available for the chosen cross color, there are eight possible goal states:
+</p>
+
+<center>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxrrxrrxxxggxggxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxggxggxxxooxooxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxooxooxxxbbxbbxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxbbxbbxxxrrxrrxxxx&size=100"/>
+</center>
+<center>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xyxyyyxyyxrrxrrxxxbbxbbxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xyxyyyxyyxggxggxxxrrxrrxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xyxyyyxyyxooxooxxxggxggxxxx&size=100"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xyxyyyxyyxbbxbbxxxooxooxxxx&size=100"/>
+</center>
+
+<p>
+All pieces of the cube are relevant and can affect the solution, hence there are 12 edge pieces and 8 corner pieces that we need to take into account. The edge pieces can each be oriented in 2 ways but the orientation of the 12th edge is fixed once the orientation of the other 11 edges is known. The corner pieces can each be oriented in 3 ways but the orientation of the 8th corner is fixed once the orientation of the other 7 corners is known. The edges can placed in 12 locations and the corners can placed in 8 locations but since the total permutation has to be even, only half of the placements are possible.
+</p>
+
+<p>The amount of cases we need to explore in this scenario is 2<sup>11</sup> x (12 x 11 x 10 x 9 x 8 x 7 x 6 x 5 x 4 x 3 x 2 x 1) x 3<sup>7</sup> x (8 x 7 x 6 x 5 x 4 x 3 x 2 x 1) / 2 = 43,252,003,274,489,856,000. In the following table you can see how many cases can optimally be solved in a certain number of moves in face turn metric:
+</p>
+
+<center>
+<table class="noborder" cellspacing="10" width="100%">
+<tr align="center">
+<td width="50%"><em>Face turn metric</em></td>
+</tr>
+<tr align="center" valign="top">
+<td>
+<table class="border" cellspacing="0" cellpadding="4" align="center">
+<tr class="head">
+<td>Depth</td>
+<td># cases</td>
+<td>Distribution</td>
+<td>Cumulative</td>
+</tr>
+<tr class="figures">
+<td>0</td><td>4,716,424,212,835</td><td>&lt;0.01%</td><td>&lt;0.01%</td>
+</tr>
+<tr class="figures">
+<td>1</td><td>70,745,641,178,769</td><td>&lt;0.01%</td><td>&lt;0.01%</td>
+</tr>
+<tr class="figures">
+<td>2</td><td>810,857,443,881,702</td><td>&lt;0.01%</td><td>&lt;0.01%</td>
+</tr>
+<tr class="figures">
+<td>3</td><td>9,170,346,730,536,014</td><td>0.02%</td><td>0.02%</td>
+</tr>
+<tr class="figures">
+<td>4</td><td>100,310,430,395,386,237</td><td>0.23%</td><td>0.26%</td>
+</tr>
+<tr class="figures">
+<td>5</td><td>988,610,325,518,351,156</td><td>2.29%</td><td>2.54%</td>
+</tr>
+<tr class="figures">
+<td>6</td><td>7,572,499,433,656,586,893</td><td>17.51%</td><td>20.05%</td>
+</tr>
+<tr class="figures">
+<td>7</td><td>25,284,885,906,675,108,640</td><td>58.46%</td><td>78.51%</td>
+</tr>
+<tr class="figures">
+<td>8</td><td>9,285,684,102,206,260,127</td><td>21.47%</td><td>99.98%</td>
+</tr>
+<tr class="figures">
+<td>9</td><td>9,956,409,778,123,023</td><td>0.02%</td><td>&gt;99.99%</td>
+</tr>
+<tr class="figures">
+<td>10</td><td>20,230,604</td><td>&lt;0.01%</td><td>100.00%</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr align="center">
+<td>
+<div style="display: flex; flex-direction: row; align-items: flex-end;flex-wrap: nowrap;justify-content: center">
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">0</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">1</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">2</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">3</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">4</div></div>
+<div style="width:15px; height:2px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(2px);">5</div></div>
+<div style="width:15px; height:18px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(18px);">6</div></div>
+<div style="width:15px; height:58px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(58px);">7</div></div>
+<div style="width:15px; height:21px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(21px);">8</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">9</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">10</div></div>
+</div>
+</td>
+</tr>
+<tr align="center">
+<td><em style="font-size: 150%">Average: 6.99 moves</em></td>
+</tr>
+</table>
+</center>
+
+<h3 id="cn">Color neutral extended cross solving</h3>
+
+<p>
+When solving the extended cross on any of the six cross colors and solving any of the four F2L pairs with it that are available for the chosen cross color, there are 24 possible goal states:
+</p>
+
+<center>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxrrxrrxxxggxggxxxx&size=75"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxggxggxxxooxooxxxx&size=75"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxooxooxxxbbxbbxxxx&size=75"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xwxwwwxwwxbbxbbxxxrrxrrxxxx&size=75"/>
+</center>
+<center>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xyxyyyxyyxrrxrrxxxbbxbbxxxx&size=75"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xyxyyyxyyxggxggxxxrrxrrxxxx&size=75"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xyxyyyxyyxooxooxxxggxggxxxx&size=75"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xyxyyyxyyxbbxbbxxxooxooxxxx&size=75"/>
+</center>
+<center>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xrxrrrxrrxwwxwwxxxbbxbbxxxx&size=75"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xrxrrrxrrxbbxbbxxxyyxyyxxxx&size=75"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xrxrrrxrrxyyxyyxxxggxggxxxx&size=75"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xrxrrrxrrxggxggxxxwwxwwxxxx&size=75"/>
+</center>
+<center>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xoxoooxooxwwxwwxxxggxggxxxx&size=75"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xoxoooxooxbbxbbxxxwwxwwxxxx&size=75"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xoxoooxooxyyxyyxxxbbxbbxxxx&size=75"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xoxoooxooxggxggxxxyyxyyxxxx&size=75"/>
+</center>
+<center>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xbxbbbxbbxwwxwwxxxooxooxxxx&size=75"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xbxbbbxbbxooxooxxxyyxyyxxxx&size=75"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xbxbbbxbbxyyxyyxxxrrxrrxxxx&size=75"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xbxbbbxbbxrrxrrxxxwwxwwxxxx&size=75"/>
+</center>
+<center>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xgxgggxggxwwxwwxxxrrxrrxxxx&size=75"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xgxgggxggxooxooxxxwwxwwxxxx&size=75"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xgxgggxggxyyxyyxxxooxooxxxx&size=75"/>
+<img style="transform: scale(1,-1);" src="https://cubezone.be/imagecube/imagecube.php?stickers=xgxgggxggxrrxrrxxxyyxyyxxxx&size=75"/>
+</center>
+
+<p>
+The amount of pieces that can affect the solution is the same as for the previous analysis, namely all pieces of the cube. As a result, the amount of cases we need to explore is 43,252,003,274,489,856,000. In the following table you can see how many cases can optimally be solved in a certain number of moves in face turn metric:
+</p>
+
+<center>
+<table class="noborder" cellspacing="10" width="100%">
+<tr align="center">
+<td width="50%"><em>Face turn metric</em></td>
+</tr>
+<tr align="center" valign="top">
+<td>
+<table class="border" cellspacing="0" cellpadding="4" align="center">
+<tr class="head">
+<td>Depth</td>
+<td># cases</td>
+<td>Distribution</td>
+<td>Cumulative</td>
+</tr>
+<tr class="figures">
+<td>0</td><td>14,346,813,869,419</td><td>&lt;0.01%</td><td>&lt;0.01%</td>
+</tr>
+<tr class="figures">
+<td>1</td><td>302,297,794,977,447</td><td>&lt;0.01%</td><td>&lt;0.01%</td>
+</tr>
+<tr class="figures">
+<td>2</td><td>2,913,219,825,766,572</td><td>0.01%</td><td>0.01%</td>
+</tr>
+<tr class="figures">
+<td>3</td><td>30,373,642,321,879,023</td><td>0.07%</td><td>0.08%</td>
+</tr>
+<tr class="figures">
+<td>4</td><td>319,373,501,209,675,971</td><td>0.74%</td><td>0.82%</td>
+</tr>
+<tr class="figures">
+<td>5</td><td>2,931,014,455,925,901,636</td><td>6.78%</td><td>7.59%</td>
+</tr>
+<tr class="figures">
+<td>6</td><td>17,393,952,120,035,183,141</td><td>40.22%</td><td>47.81%</td>
+</tr>
+<tr class="figures">
+<td>7</td><td>21,858,979,943,325,100,908</td><td>50.54%</td><td>98.35%</td>
+</tr>
+<tr class="figures">
+<td>8</td><td>715,079,409,089,138,750</td><td>1.65%</td><td>&gt;99.99%</td>
+</tr>
+<tr class="figures">
+<td>9</td><td>338,148,362,695</td><td>&lt;0.01%</td><td>&gt;99.99%</td>
+</tr>
+<tr class="figures">
+<td>10</td><td>438</td><td>&lt;0.01%</td><td>100.00%</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr align="center">
+<td>
+<div style="display: flex; flex-direction: row; align-items: flex-end;flex-wrap: nowrap;justify-content: center">
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">0</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">1</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">2</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">3</div></div>
+<div style="width:15px; height:1px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(1px);">4</div></div>
+<div style="width:15px; height:7px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(7px);">5</div></div>
+<div style="width:15px; height:40px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(40px);">6</div></div>
+<div style="width:15px; height:51px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(51px);">7</div></div>
+<div style="width:15px; height:2px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(2px);">8</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">9</div></div>
+<div style="width:15px; height:0px; background-color: #aaf;border:solid black 1px;margin:1px"><div style="transform: translateY(0px);">10</div></div>
+</div>
+</td>
+</tr>
+<tr align="center">
+<td><em style="font-size: 150%">Average: 6.45 moves</em></td>
+</tr>
+</table>
+</center>
+
+<!-- FOOTER START -->
+<table class="footer" cellspacing="0" cellpadding="2" width="100%">
+<tr>
+<td align="left">This page is maintained by <a href="mailto:lars@cubezone.be">Lars Vandenbergh</a></td>
+<td align="center"><a href="http://www.cubezone.be/"><img src="images/cubelogogreysmall.png" alt="CubeZone"></a></td>
+<td align="right">Last update on 17th September 2026</td>
+</tr>
+</table>
+<!-- FOOTER END -->
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<title>CubeZone - ImageRevenge</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NH801LR252"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NH801LR252');
+</script>
+</head>
+<body>
+
+<!-- BANNER START -->
+<table class="head" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;</td>
+<td><a href="index.html"><img src="images/cubelogogrey.png" alt=""></a></td>
+<td width="100%">
+<h1>Lars Vandenbergh's CubeZone</h1>
+<div class="quote">Speedcubing taken one step further</div>
+</td>
+</tr>
+</table>
+<!-- BANNER END -->
+
+<!-- NAVIGATION START -->
+<div class="navigation">
+&nbsp;&nbsp;<em>Algorithms</em>&nbsp;&nbsp;
+<a href="zbf2l.html">ZB F2L</a> |
+<a href="oll.html">OLL</a> |
+<a href="pll.html">PLL</a> |
+<a href="coll.html">COLL</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>Methods</em>&nbsp;&nbsp;
+<a href="square1.html">Square-1</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>Tools</em>&nbsp;&nbsp;
+<a href="imagecube.html">ImageCube</a> |
+<a href="imagerevenge.html" class="selected">ImageRevenge</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>Articles</em>&nbsp;&nbsp;
+<a href="crossstudy.html">Cross study</a>
+<a href="xcrossstudy.html">XCross study</a>
+</div>
+<!-- NAVIGATION END -->
+
+<h2>ImageRevenge</h2>
+
+<h3>A PHP script for generating static 3D views of the 4x4x4 Rubik's Cube</h3>
+
+<p>ImageRevenge is a PHP script I wrote for generating static images of the 4x4x4 Rubik's Cube. It can be used for building websites explaining methods or for illustrating certain move sequences. It is inspired by <a href="imagecube.html">ImageCube</a>, which serves the same purpose for the 3x3x3 Rubik's Cube. The main advantages of it are that:</p>
+<ul>
+<li>It generates a standard PNG image with a transparent background that can be viewed in any web browser. It doesn't use Java, JavaScript or any type of client side scripting.</li>
+<li>You can set up cases on a cube very easily. The examples below were all made in a matter of seconds. It's just a matter of entering the colors of the stickers.</li>
+<li>It's very light-weight since it's only a PNG image that is generated. A lot of web sites use 3D Java cubes which look nice and are very useful but that are also quite demanding in terms of page load time and computing power. For situations where having a complete 3D view isn't necessary, this script gives you a good alternative.</li>
+</ul> 
+
+<h4>Examples</h4>
+
+<center>
+<em>Example 1: Illustrating the centres first system</em>
+<table summary="centres first system">
+<tr align="center">
+<td><img src="https://cubezone.be/imagerevenge/imagerevenge.php?stickers=obbowgwrwwgowogrrwrgggwgogowobybybbyywogbbbryyyr&size=150" alt="Scrambled cube"></td>
+<td><img src="https://cubezone.be/imagerevenge/imagerevenge.php?stickers=obrryyygryyboboobybwgggwgggroowrgwwbgrrbwrrwgogg&size=150" alt="Centres solved"></td>
+<td><img src="https://cubezone.be/imagerevenge/imagerevenge.php?stickers=rbbyoyygoyygbrrgoggooggooggobrrgwyyoyrrbyrrbywwb&size=150" alt="Edge pairs solved"></td>
+<td><img src="https://cubezone.be/imagerevenge/imagerevenge.php?stickers=yyyyyyyyyyyyyyyyrrrrrrrrrrrrrrrrgggggggggggggggg&size=150" alt="3x3x3 step solved"></td>
+</tr>
+<tr align="center">
+<td><small>Scrambled cube</small></td>
+<td><small>Centres solved</small></td>
+<td><small>Edge pairs solved</small></td>
+<td><small>3x3x3 step solved</small></td>
+</tr>
+</table>
+
+<br><br>
+
+<em>Example 2: Various sizes</em>
+<table summary="Various sizes">
+<tr align="center">
+<td><img src="https://cubezone.be/imagerevenge/imagerevenge.php?stickers=yyyyygggygrrygrgrygrryggryyyrrrrgyrgyyrgrrrggggg&size=50" alt="50x50 pixels"></td>
+<td><img src="https://cubezone.be/imagerevenge/imagerevenge.php?stickers=yyyyygggygrrygrgrygrryggryyyrrrrgyrgyyrgrrrggggg&size=75" alt="75x75 pixels"></td>
+<td><img src="https://cubezone.be/imagerevenge/imagerevenge.php?stickers=yyyyygggygrrygrgrygrryggryyyrrrrgyrgyyrgrrrggggg&size=100" alt="100x100 pixels"></td>
+<td><img src="https://cubezone.be/imagerevenge/imagerevenge.php?stickers=yyyyygggygrrygrgrygrryggryyyrrrrgyrgyyrgrrrggggg&size=150" alt="150x150 pixels"></td>
+<td><img src="https://cubezone.be/imagerevenge/imagerevenge.php?stickers=yyyyygggygrrygrgrygrryggryyyrrrrgyrgyyrgrrrggggg&size=200" alt="200x200 pixels"></td>
+</tr>
+<tr align="center">
+<td><small>50x50 pixels</small></td>
+<td><small>75x75 pixels</small></td>
+<td><small>100x100 pixels</small></td>
+<td><small>150x150 pixels</small></td>
+<td><small>200x200 pixels</small></td>
+</tr>
+</table>
+
+<br><br>
+
+<em>Example 3: Ignoring parts of the cube</em>
+<table summary="Ignoring parts of the cube" cellspacing="15">
+<tr align="center">
+<td><img src="https://cubezone.be/imagerevenge/imagerevenge.php?stickers=xxxxxyyxxyrxxxxxxxxxxryxxrrxxxxxxxxxxggxxggxxxxx&size=150" alt="Only showing centres"></td>
+<td><img src="https://cubezone.be/imagerevenge/imagerevenge.php?stickers=xbrxyyygryybxboxxybxgggwgggrxowrxwwxgrrbwrrwxogx&size=150" alt="Ignoring corners"></td>
+<td><img src="https://cubezone.be/imagerevenge/imagerevenge.php?stickers=yxxyxxxxxxxxyxxygxxbxxxxxxxxrxxrrxxgxxxxxxxxgxxg&size=150" alt="Only showing corners"></td>
+</tr>
+<tr class="center">
+<td><small>Only showing centres</small></td>
+<td><small>Ignoring corners</small></td>
+<td><small>Only showing corners</small></td>
+</tr>
+</table>
+</center>
+
+<h4>How to use it</h4>
+
+<p>The images above are all generated by <a href="https://cubezone.be/imagerevenge/imagerevenge.php">imagerevenge.php</a>. This script accepts two input parameters:</p>
+<ul>
+<li><b>stickers</b>: this is a 48 character string describing the stickers of the visible part of the cube. It will first describe the U face, then the F face and finally the R face. The stickers are described in "reading order", which means from the top left to the bottom right as you look at it. The symbols used are:
+<ul>
+<li>r: for red</li>
+<li>o: for orange</li>
+<li>g: for green</li>
+<li>b: for blue</li>
+<li>w: for white</li>
+<li>y: for yellow</li>
+<li>x: for grey</li>
+</ul>
+</li>
+<li>
+<b>size</b>: this is the size (width and height) of the image in pixels. If you don't include this parameter, the script will just take 200 pixels as the size.
+</li>
+</ul>
+
+<p>
+So to generate a cube with the centres solved, like the one shown above, one could use:<br>
+<center><b>&lt;img src="https://cubezone.be/imagerevenge/imagerevenge.php?stickers=obrryyygryyboboobybwgggwgggroowrgwwbgrrbwrrwgogg&size=150"&gt;</b></center><br>
+For more examples you can check out the source code of this HTML page. You can also use <a href="https://cubezone.be/imagerevenge/imagerevenge.php?stickers=obrryyygryyboboobybwgggwgggroowrgwwbgrrbwrrwgogg&size=150">this direct link to the ImageRevenge script</a> and play around with the parameters to see what effect it has.
+</p>
+
+<h4>Source code</h4>
+
+<ul>
+<li><a href="imagerevenge.txt">Soure code in text format:</a> This is the original PHP code of ImageRevenge. If your want to use ImageRevenge on your website, feel free to do so. If your web server supports PHP and you want to make extensive use of my script, I advice you to copy the contents of this text file in a php-file and link your images to it. Keep in mind that this PHP script uses the GD image library, so you will have to check if your web server supports it and has it enabled.</li>
+</ul>
+
+<!-- FOOTER START -->
+<table class="footer" cellspacing="0" cellpadding="2" width="100%">
+<tr>
+<td align="left">This page is maintained by <a href="mailto:lars@cubezone.be">Lars Vandenbergh</a></td>
+<td align="center"><a href="https://www.cubezone.be/"><img src="images/cubelogogreysmall.png" alt="CubeZone"></a></td>
+<td align="right">Last update on 2nd January 2026</td>
+</tr>
+</table>
+<!-- FOOTER END -->
+
+</body>
+</html>

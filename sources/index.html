@@ -1,0 +1,217 @@
+<html>
+<head>
+<title>Lars Vandenbergh's CubeZone</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NH801LR252"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NH801LR252');
+</script>
+<!-- cubing.js -->
+<script src="https://cdn.cubing.net/v0/js/scramble-display" type="module"></script>
+</head>
+<body>
+
+<!-- BANNER START -->
+<table class="head" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;</td>
+<td><a href="index.html"><img src="images/cubelogogrey.png" alt=""></a></td>
+<td width="100%">
+<h1>Lars Vandenbergh's CubeZone</h1>
+<div class="quote">Speedcubing taken one step further</div>
+
+</td>
+</tr>
+</table>
+<!-- BANNER END -->
+
+<!-- NAVIGATION START -->
+<div class="navigation">
+&nbsp;&nbsp;<em>Algorithms</em>&nbsp;&nbsp;
+<a href="zbf2l.html">ZB F2L</a> |
+<a href="oll.html">OLL</a> |
+<a href="pll.html">PLL</a> |
+
+<a href="coll.html">COLL</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>Methods</em>&nbsp;&nbsp;
+<a href="square1.html">Square-1</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>Tools</em>&nbsp;&nbsp;
+<a href="imagecube.html">ImageCube</a> |
+<a href="imagerevenge.html">ImageRevenge</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>Articles</em>&nbsp;&nbsp;
+<a href="crossstudy.html">Cross study</a>
+<a href="xcrossstudy.html">XCross study</a>
+</div>
+<!-- NAVIGATION END -->
+
+<h2>News</h2>
+
+<h3>Color neutral XCross study</h3>
+<p>
+The move count stats for <a href="xcrossstudy.html#cn">full color neutral XCross solving</a> are up. Despite all my efforts to reduce the amount of unique cube states to explore, it still took 10 days to compute.
+</p>
+<p>
+I'll be working on compiling a list of scrambles for the 438 worst cases where there is no XCross solution shorter than 10 moves in face turn metric on any color.</p>
+<p>Here's an example that has nothing but 10 move XCrosses and nothing but 8 move crosses:</p>
+<center><scramble-display scramble="R2 U' L2 D' U' R' F' L2 R2 D' L' U F' R2 F' R' B F R F2" visualization="3D"></scramble-display></center>
+<center><small>Cube visualization by <a href="https://github.com/cubing/scramble-display" target="_blank">&lt;scramble-display&gt;</a></small></center>
+<center><br/></center>
+<center><em>Scramble: R2 U' L2 D' U' R' F' L2 R2 D' L' U F' R2 F' R' B F R F2</em></center>
+<center><br/></center>
+<center><em>Optimal XCross on white: z2 F  D2 R2 L  U' R' B  D' L' F'</em></center>
+<center><em>Optimal XCross on yellow: F  R  F  B' L' D2 F' U' L  D'</em></center>
+<center><em>Optimal XCross on orange: z' F  D2 R2 L  U' R' B  D' L' F'</em></center>
+<center><em>Optimal XCross on red: z  F  L' F' L2 B' U' D2 L' F' D</em></center>
+<center><em>Optimal XCross on green: x' F  R' B  U  F2 L2 B  L  D' L2</em></center>
+<center><em>Optimal XCross on blue: x  F  B  L' U  F2 D2 B  L  D  R</em></center>
+<center><br/></center>
+<center><em>Optimal cross on white: z2 F  R  L  D2 F  B  L  D</em></center>
+<center><em>Optimal cross on yellow: F  R  L  D2 F  B  L  D</em></center>
+<center><em>Optimal cross on orange: z' F  R  L  D2 F  B  L  D</em></center>
+<center><em>Optimal cross on red: z  F  R  L  D2 F  B  L  D</em></center>
+<center><em>Optimal cross on green: x' F  R  B  L' B2 R2 F  D'</em></center>
+<center><em>Optimal cross on blue: x  F  R  B  L' B2 R2 F  D'</em></center>
+
+<p align="right"><small>(17th September 2026)</small></p>
+
+<h3>Validation and fixing mistakes</h3>
+
+<p>I was in the process of generating scrambles for the worst cases for dual color neutral XCross and came to the conclusion that I had made a mistake in the code that sets up all the required cases for doing the original study. Needless to say that this discovery was an unpleasant surprise.</p>
+
+<p>The mistake in the code revolved around fixing the permutation parity of the entire cube. Since we are involving every single corner and edge of the cube, we need to ensure that the permutation parity of the edges and corners are either both even or both odd. There was code in place to make this happen using a lookup table but due to the hugely parallel nature of CUDA kernels, the odd and even permutations got mixed up sometimes and so half of the scrambles being analyzed were actually illegal scrambles with two pieces swapped.</p>
+
+<p>I had to rethink the strategy a bit such that each block of threads accessing the same shared memory would be garantueed to have the same permutation parity. That way a block of threads would explore either only even permutations or only odd permutations, hence eliminating the risk of any mix ups.</p>
+
+<p>This was a bit of a wake up call and prompted me to invest more time into validating the correctness of the analysis. I made a version that is able to output the cube states being analyzed in ACube format, along with the solution lenghts for XCross. With this output I can than verify the correctness of the result using other online tools such as <a href="https://www.cubing.net/ACube.js/" target="_blank">ACube.js</a>, <a href="https://or18.github.io/RubiksSolverDemo/" target="_blank">or18's solver</a> and <a href="https://www.cstimer.net/" target="_blank">CsTimer</a>.</p>
+
+<p>Obviously I can't practically verify all 2.8 quintillion scrambles like this, not even in an automated way, but I was able to verify a decent sample of the worst cases where each XCross on either white or yellow is 10 moves.</p>
+
+<p>Here's an example of such a worst case scramble:</p>
+<center><scramble-display scramble="B2 F2 L2 B2 F2 D R U' R2 B' L F' L2 U R' F' L' R2 D2 L" visualization="3D"></scramble-display></center>
+<center><small>Cube visualization by <a href="https://github.com/cubing/scramble-display" target="_blank">&lt;scramble-display&gt;</a></small></center>
+<center><br/></center>
+<center><em>Scramble: B2 F2 L2 B2 F2 D R U' R2 B' L F' L2 U R' F' L' R2 D2 L</em></center>
+<center><br/></center>
+<center><em>Optimal XCross on white: F  D  R  B' R2 B2 U  B' U2 R'</em></center>
+<center><em>Optimal XCross on yellow: F  R  L  U2 D2 B  U  F  L  D'</em></center>
+
+<p>I redid the whole calculation for dual color neutral XCross and updated the histogram on the <a href="xcrossstudy.html#dcn">XCross study page</a>. The differences are so tiny that it hardly changes the end result: the weighted average is 6.99 moves instead of 6.98 moves.</p>
+
+<p>In the meantime, I've worked on a framework for analyzing color neutral XCross that takes advantage of rotations and mirrors to significantly reduce the amount of compute that is required. The amount of unique scrambles to be explored using this method will be 901,694,525,936,762,880, a reduction by a factor of almost 48 compared to naively exploring all 43,252,003,274,489,856,000 states of the cube.</p>
+
+<p align="right"><small>(23rd August 2026)</small></p>
+
+<h3>Dual color neutral XCross study</h3>
+<p>
+After 172 hours of number crunching, I have generated the move count stats for <a href="xcrossstudy.html#dcn">dual color neutral XCross solving</a>.
+</p>
+<p>
+This is by far the most challenging move count study I've ever done and required analyzing 2,833,536,722,455,756,800 unique scrambles. That's 2.8 x 10<sup>18</sup> or 2.8 quintillion. Using symmetries, I was then able to extroplate the results to all 43,252,003,274,489,856,000 states of the cube and calculate the correct statistical distribution and average.
+</p>
+<p>
+The costs for the compute power was obviously a tad higher compared to last time but nothing extraordinary. However, if you want to support my work, <a href="https://ko-fi.com/jazzthief8150518">buy me a coffee!</a>
+</p>
+<p>
+The code for doing the analysis for full color neutral XCross is in the works. Because there is no color bias at all, I'll be able to take full advantage of the symmetries of the cube and reduce the amount of computations by about a factor of 3 compared to dual color neutral.
+</p>
+<p align="right"><small>(3rd August 2026)</small></p>
+
+<h3>Pseudo XCross study</h3>
+<p>
+The analysis for pseudo extended cross is complete. The results have been added to the <a href="xcrossstudy.html#pseudo">extended cross study</a> page.
+</p>
+<p>
+I'm currently working on an analysis for double extended cross (cross + 2 F2 pairs) and already have some early results, but I'm going to park this project for a while until after Euro 2026 in Arnhem.
+</p>
+<p>
+I'm still finding several new ways to make the code that computes the results even faster. The record for computing the histogram for all cases for XCross on any of 4 F2L pairs now stands at 3 minutes. I achieved this on a rented GPU pod with 8 RTX 5090 graphics cards, which cost me a total of 1.02 dollars in rent.
+</p>
+<p>
+I think I can start dreaming about doing dual color neutral and full color neutral variants of the studies.
+</p>
+<p align="right"><small>(12th July 2026)</small>
+</p>
+
+<h3>XCross study updated</h3>
+<p>
+I've corrected some minor mistakes in the <a href="xcrossstudy.html">extended cross study</a> and have also added the results for Quarter Turn Metric, both for a fixed pair and for any of 4 pairs on a fixed cross color.
+</p>
+<p>
+I'm getting the hang of writing CUDA kernels and can now run the analysis in 90 minutes on a GeForce RTX 3080. This opens the door for generating other interesting stats.
+</p>
+<p>
+My main point of focus now will be a move count analysis for pseudo extended cross.
+</p>
+<p align="right"><small>(9th July 2026)</small>
+</p>
+
+<h3>New XCross study posted</h3>
+
+<p>
+I'm currently working on another optimal move count study, this time for the <a href="xcrossstudy.html">extended cross</a> (cross + 1 F2L pair combined). The results for solving the extended cross on a fixed cross color combined with either a fixed pair or any pair of choice (i.e. 1 of 4 possibile pairs) are already complete for face turn metric and can be found on the <a href="xcrossstudy.html">XCross study page</a>.
+</p>
+<p>
+This analysis posed a few new challenges since it involves checking over 700 times the amount of cube states compared to the color neutral cross study. The latter study I first did in 2008 and took weeks to calculate with the help of several people from the cubing community who borrowed their CPU time.
+</p>
+<p>
+I'm still experimenting with various approaches using NodeJS workers, multithreaded C++ and CUDA. I think the CUDA implementation has the most potential as it was able to calculate the average in just over a day and the full histogram in 10 days.
+</p>
+<p>
+I was quite new to GPU accelerated computing when I started this project and I hope I can improve on the current framework I have to be able to do more move count studies, maybe even ones that require even more cube states to explore than the 690+ trillion states I had to check for the extended cross on a fixed cross color.
+</p>
+
+<p align="right"><small>(3rd July 2026)</small>
+</p>
+
+<h3>Cross study updated</h3>
+
+<p>
+Many people have asked me over the years what the scrambles are for the 8 move crosses based on my <a href="crossstudy.html">cross study</a>. Unfortunately, the way the computer study was done back in 2008 didn't allow recuperating the cube states for the worst possible crosses afterwards. 
+</p>
+<p>The last few weeks I've been working on a full reimplementation of the code that generated these results and I'm happy to say that the all the results are consistent and I get the exact same stats.
+</p>
+<p>
+Now that I have something that runs the whole analysis on a modern machine and finishes in 2-3 days, I was finally customize it to also generate the scrambles for the worst cases. The <a href="crossstudy.html">cross study</a> page has been updated accordingly and now links to the scrambles for each cross solving method (fixed, opposite and color neutral).
+</p>
+<p>
+Here are the direct links to the scrambles as well:
+<ul>
+<li> <a href="worst_cases_fixed_cross_ftm.txt">8 move fixed color crosses (102 cases)</a></li>
+<li> <a href="worst_cases_opposite_cross_ftm.txt">8 move opposite color crosses (3672 cases)</a></li>
+<li> <a href="worst_cases_color_neutral_cross_ftm.txt">8 move color neutral crosses (40 cases)</a></li>
+</ul>
+</p>
+<p align="right"><small>(26th May 2026)</small>
+</p>
+
+<h3>ImageCube and ImageRevenge scripts fixed</h3>
+
+<p>
+The PHP scripts for <a href="imagecube.html">ImageCube</a> and <a href="imagerevenge.html">ImageRevenge</a> have been fixed for modern PHP versions and are now hosted on cubezone.be again.
+</p>
+<p align="right"><small>(2nd January 2026)</small>
+</p>
+
+<em><a href="archive.html">News archive</a></em>
+
+<p>	
+</p>
+
+<!-- FOOTER START -->
+<table class="footer" cellspacing="0" cellpadding="2" width="100%">
+<tr>
+<td align="left">This page is maintained by <a href="mailto:lars@cubezone.be">Lars Vandenbergh</a></td>
+<td align="center"><a href="http://www.cubezone.be/"><img src="images/cubelogogreysmall.png" alt="CubeZone"></a></td>
+
+<td align="right">Last update on 3rd August 2026</td>
+</tr>
+</table>
+<!-- FOOTER END -->
+
+</body>
+</html>
