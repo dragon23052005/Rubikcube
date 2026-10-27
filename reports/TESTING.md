@@ -1,5 +1,21 @@
 # Kết quả kiểm tra — 27/10/2026
 
+## Cập nhật 2×2 — Ortega
+
+12 kiểm thử Java đạt, gồm kiểm tra 7 OLL/5 PBL tách khỏi OLL 3×3, giữ phép lật gương PBL sau khi lưu/đọc DB và xử lý thứ tự thuộc tính JSON. 4 kiểm thử Python mới đạt cho dữ liệu nguồn, ảnh PNG, số lượng/ID và bất biến pha trên mô hình 24 sticker góc. Catalog hiện có 518 mục, 517 có công thức chính, 45 biến thể.
+
+Đã kiểm tra trực tiếp trên trình duyệt: danh mục 2×2 có hai phương pháp; lọc PBL hiện 5 case, chuyển OLL hiện 7 case; ảnh thứ hai PBL có đúng `scaleX(-1)`; Practice chọn đúng Rubik 2×2 và hiện công thức khi mở đáp án. HTTP smoke check đạt trên bản chạy mới. Ảnh bàn giao: `2x2-pbl.png`.
+
+## Cập nhật PLL — J Perm
+
+Bản cập nhật đạt 10 kiểm thử Java và 4 kiểm thử Python cho mô hình 3×3/ghép PLL. Cả 21 case ghép một-một; 4 chuỗi trùng, 17 chuỗi khác được thêm làm Cách 2. Không ghi đè công thức chính hoặc ID tiến độ. 21 ảnh lấy từ hàng case đang hiển thị ở J Perm, công thức của hàng được đối chiếu với dữ liệu nguồn.
+
+Đã kiểm tra bản đang phục vụ tại localhost: 21 PLL, 21 tham chiếu, 17 biến thể mới. Trình duyệt xác nhận Aa hiển thị Cách 1 và Cách 2 với ảnh/hướng cầm riêng, nút copy báo thành công; T dùng ảnh J Perm và không tạo biến thể trùng. Thư viện hiện đúng tên case và liên kết Cách 2. Ảnh kiểm tra: `pll-jperm-way2.png`.
+
+## Cập nhật Cube Shape từ ảnh tham chiếu
+
+Bản mới vượt qua **9 kiểm thử Java** (thêm kiểm tra seed CS không bị nhân đôi và API đủ 5 case) và **4 kiểm thử Python về mô hình hình dạng**. Tổng catalog hiện là 506; kiểm kê CubeZone gốc bên dưới vẫn là 501. Năm công thức bổ sung đều dùng lát cắt hợp lệ và đưa hai tầng về dạng vuông trong mô hình hình dạng. Xem `CUBESHAPE.md`; đây không phải xác minh màu/hoán vị.
+
 - Java: Oracle JDK 21.0.10.
 - Maven Wrapper 3.9.9: `clean package` **BUILD SUCCESS**.
 - JUnit / Spring Boot: **8 kiểm thử, 0 lỗi, 0 thất bại**. Xem `target/surefire-reports/vn.speedcube.academy.AcademyTests.txt` sau khi build.

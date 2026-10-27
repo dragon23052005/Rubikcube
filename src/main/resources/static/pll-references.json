@@ -1,0 +1,212 @@
+[
+  {
+    "id": "pll-1",
+    "provider": "J Perm",
+    "caseName": "Aa",
+    "algorithm": "x L2 D2 L' U' L D2 L' U L'",
+    "imagePath": "/images/jperm/pll-aa.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "ALTERNATIVE_SEQUENCE",
+    "category": "Adjacent Corner Swap"
+  },
+  {
+    "id": "pll-2",
+    "provider": "J Perm",
+    "caseName": "Ab",
+    "algorithm": "x' L2 D2 L U L' D2 L U' L",
+    "imagePath": "/images/jperm/pll-ab.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "ALTERNATIVE_SEQUENCE",
+    "category": "Adjacent Corner Swap"
+  },
+  {
+    "id": "pll-3",
+    "provider": "J Perm",
+    "caseName": "E",
+    "algorithm": "x' L' U L D' L' U' L D L' U' L D' L' U L D",
+    "imagePath": "/images/jperm/pll-e.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "ALTERNATIVE_SEQUENCE",
+    "category": "Diagonal Corner Swap"
+  },
+  {
+    "id": "pll-4",
+    "provider": "J Perm",
+    "caseName": "Ub",
+    "algorithm": "M2 U' M U2 M' U' M2",
+    "imagePath": "/images/jperm/pll-ub.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "ALTERNATIVE_SEQUENCE",
+    "category": "Edges Only"
+  },
+  {
+    "id": "pll-5",
+    "provider": "J Perm",
+    "caseName": "Ua",
+    "algorithm": "M2 U M U2 M' U M2",
+    "imagePath": "/images/jperm/pll-ua.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "ALTERNATIVE_SEQUENCE",
+    "category": "Edges Only"
+  },
+  {
+    "id": "pll-6",
+    "provider": "J Perm",
+    "caseName": "Z",
+    "algorithm": "M' U M2 U M2 U M' U2 M2",
+    "imagePath": "/images/jperm/pll-z.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "ALTERNATIVE_SEQUENCE",
+    "category": "Edges Only"
+  },
+  {
+    "id": "pll-7",
+    "provider": "J Perm",
+    "caseName": "H",
+    "algorithm": "M2 U M2 U2 M2 U M2",
+    "imagePath": "/images/jperm/pll-h.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "ALTERNATIVE_SEQUENCE",
+    "category": "Edges Only"
+  },
+  {
+    "id": "pll-8",
+    "provider": "J Perm",
+    "caseName": "Jb",
+    "algorithm": "R U R' F' R U R' U' R' F R2 U' R'",
+    "imagePath": "/images/jperm/pll-jb.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "SAME_SEQUENCE",
+    "category": "Adjacent Corner Swap"
+  },
+  {
+    "id": "pll-9",
+    "provider": "J Perm",
+    "caseName": "Ja",
+    "algorithm": "x R2 F R F' R U2 r' U r U2",
+    "imagePath": "/images/jperm/pll-ja.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "ALTERNATIVE_SEQUENCE",
+    "category": "Adjacent Corner Swap"
+  },
+  {
+    "id": "pll-10",
+    "provider": "J Perm",
+    "caseName": "Rb",
+    "algorithm": "R2 F R U R U' R' F' R U2 R' U2 R",
+    "imagePath": "/images/jperm/pll-rb.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "ALTERNATIVE_SEQUENCE",
+    "category": "Adjacent Corner Swap"
+  },
+  {
+    "id": "pll-11",
+    "provider": "J Perm",
+    "caseName": "Ra",
+    "algorithm": "R U' R' U' R U R D R' U' R D' R' U2 R'",
+    "imagePath": "/images/jperm/pll-ra.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "ALTERNATIVE_SEQUENCE",
+    "category": "Adjacent Corner Swap"
+  },
+  {
+    "id": "pll-12",
+    "provider": "J Perm",
+    "caseName": "T",
+    "algorithm": "R U R' U' R' F R2 U' R' U' (R U R') F'",
+    "imagePath": "/images/jperm/pll-t.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "SAME_SEQUENCE",
+    "category": "Adjacent Corner Swap"
+  },
+  {
+    "id": "pll-13",
+    "provider": "J Perm",
+    "caseName": "F",
+    "algorithm": "R' U' F' R U R' U' R' F R2 U' R' U' R U R' U R",
+    "imagePath": "/images/jperm/pll-f.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "ALTERNATIVE_SEQUENCE",
+    "category": "Adjacent Corner Swap"
+  },
+  {
+    "id": "pll-14",
+    "provider": "J Perm",
+    "caseName": "V",
+    "algorithm": "R' U R' U' y R' F' R2 U' R' U R' F R F",
+    "imagePath": "/images/jperm/pll-v.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "ALTERNATIVE_SEQUENCE",
+    "category": "Diagonal Corner Swap"
+  },
+  {
+    "id": "pll-15",
+    "provider": "J Perm",
+    "caseName": "Y",
+    "algorithm": "F R U' R' U' R U R' F' R U R' U' R' F R F'",
+    "imagePath": "/images/jperm/pll-y.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "SAME_SEQUENCE",
+    "category": "Diagonal Corner Swap"
+  },
+  {
+    "id": "pll-16",
+    "provider": "J Perm",
+    "caseName": "Nb",
+    "algorithm": "R' (U R U' R') F' U' F R U R' F R' F' R U' R",
+    "imagePath": "/images/jperm/pll-nb.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "SAME_SEQUENCE",
+    "category": "Diagonal Corner Swap"
+  },
+  {
+    "id": "pll-17",
+    "provider": "J Perm",
+    "caseName": "Na",
+    "algorithm": "R U R' U R U R' F' R U R' U' R' F R2 U' R' U2 R U' R'",
+    "imagePath": "/images/jperm/pll-na.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "ALTERNATIVE_SEQUENCE",
+    "category": "Diagonal Corner Swap"
+  },
+  {
+    "id": "pll-18",
+    "provider": "J Perm",
+    "caseName": "Gd",
+    "algorithm": "R U R' (U' D) R2 U' R U' R' U R' U R2 D'",
+    "imagePath": "/images/jperm/pll-gd.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "ALTERNATIVE_SEQUENCE",
+    "category": "Adjacent Corner Swap"
+  },
+  {
+    "id": "pll-19",
+    "provider": "J Perm",
+    "caseName": "Gc",
+    "algorithm": "R2 U' R U' R U R' U R2 (U D') R U' R' D",
+    "imagePath": "/images/jperm/pll-gc.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "ALTERNATIVE_SEQUENCE",
+    "category": "Adjacent Corner Swap"
+  },
+  {
+    "id": "pll-20",
+    "provider": "J Perm",
+    "caseName": "Gb",
+    "algorithm": "R' U' R (U D') R2 U R' U R U' R U' R2 D",
+    "imagePath": "/images/jperm/pll-gb.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "ALTERNATIVE_SEQUENCE",
+    "category": "Adjacent Corner Swap"
+  },
+  {
+    "id": "pll-21",
+    "provider": "J Perm",
+    "caseName": "Ga",
+    "algorithm": "R2 U R' U R' U' R U' R2 (U' D) R' U R D'",
+    "imagePath": "/images/jperm/pll-ga.png",
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "relation": "ALTERNATIVE_SEQUENCE",
+    "category": "Adjacent Corner Swap"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "name": "H",
+    "text": "NameHCaseGroup0 CornersAlgorithmR2 U2 R U2 R2Best-Avg-",
+    "images": [
+      {
+        "image": "/images/jperm/2x2-oll-h-1.png",
+        "style": null
+      }
+    ]
+  },
+  {
+    "name": "Pi",
+    "text": "NamePiCaseGroup0 CornersAlgorithmR U2 R2 U' R2 U' R2 U2 RBest-Avg-",
+    "images": [
+      {
+        "image": "/images/jperm/2x2-oll-pi-1.png",
+        "style": null
+      }
+    ]
+  },
+  {
+    "name": "Antisune",
+    "text": "NameAntisuneCaseGroup1 CornerAlgorithmR U2 R' U' R U' R'Best-Avg-",
+    "images": [
+      {
+        "image": "/images/jperm/2x2-oll-antisune-1.png",
+        "style": null
+      }
+    ]
+  },
+  {
+    "name": "Sune",
+    "text": "NameSuneCaseGroup1 CornerAlgorithmR U R' U R U2 R'Best-Avg-",
+    "images": [
+      {
+        "image": "/images/jperm/2x2-oll-sune-1.png",
+        "style": null
+      }
+    ]
+  },
+  {
+    "name": "L",
+    "text": "NameLCaseGroup2 CornersAlgorithmF R' F' R U R U' R'Best-Avg-",
+    "images": [
+      {
+        "image": "/images/jperm/2x2-oll-l-1.png",
+        "style": null
+      }
+    ]
+  },
+  {
+    "name": "T",
+    "text": "NameTCaseGroup2 CornersAlgorithmR U R' U' R' F R F'Best-Avg-",
+    "images": [
+      {
+        "image": "/images/jperm/2x2-oll-t-1.png",
+        "style": null
+      }
+    ]
+  },
+  {
+    "name": "U",
+    "text": "NameUCaseGroup2 CornersAlgorithmF R U R' U' F'Best-Avg-",
+    "images": [
+      {
+        "image": "/images/jperm/2x2-oll-u-1.png",
+        "style": null
+      }
+    ]
+  }
+]

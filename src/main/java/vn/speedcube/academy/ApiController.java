@@ -10,16 +10,16 @@ public class ApiController {
  private final CatalogService catalog; private final ProgressRepository progress;
  public ApiController(CatalogService c,ProgressRepository p){catalog=c;progress=p;}
  @GetMapping("/catalog") public Object catalog(){return catalog.snapshot();}
- @GetMapping("/puzzles") public Object puzzles(){return List.of(Map.of("id","3x3","name","Rubik 3×3","count",catalog.all().stream().filter(c->c.puzzle.equals("3x3")).count()),Map.of("id","sq1","name","Square-1","count",catalog.all().stream().filter(c->c.puzzle.equals("sq1")).count()));}
+ @GetMapping("/puzzles") public Object puzzles(){return catalog.puzzleSummary();}
  @GetMapping("/methods") public Object methods(){return catalog.counts();}
  @GetMapping({"/algorithms","/algorithms/search"}) public Object list(@RequestParam(defaultValue="") String q,@RequestParam(defaultValue="") String puzzle,@RequestParam(defaultValue="") String method,@RequestParam(defaultValue="") String category,@RequestParam(defaultValue="0") @Min(0) int page,@RequestParam(defaultValue="24") @Min(1) @Max(100) int size,@RequestParam(defaultValue="number") String sort){
   if(page<0||size<1||size>100)throw new IllegalArgumentException("Phân trang không hợp lệ");
   String query=q.toLowerCase(Locale.ROOT);
-  var stream=catalog.all().stream().filter(c->(puzzle.isBlank()||c.puzzle.equals(puzzle))&&(method.isBlank()||c.method.equals(method))&&(category.isBlank()||c.category.equals(category))&&(c.name+" "+c.number+" "+c.algorithm+" "+c.method).toLowerCase(Locale.ROOT).contains(query));
+  var stream=catalog.all().stream().filter(c->(puzzle.isBlank()||c.puzzle.equals(puzzle))&&(method.isBlank()||c.method.equals(method))&&(category.isBlank()||c.category.equals(category))&&(c.name+" "+c.puzzle+" "+c.number+" "+c.algorithm+" "+c.method+" "+String.join(" ",c.getAlternatives())).toLowerCase(Locale.ROOT).contains(query));
   var items=(sort.equals("length")?stream.sorted(Comparator.comparingInt(c->c.algorithm.length())):stream).toList();
   return Map.of("items",items.stream().skip((long)page*size).limit(size).map(AlgorithmDto::from).toList(),"total",items.size(),"page",page,"size",size);
  }
- @GetMapping("/algorithms/statistics") public Object stats(){return Map.of("total",catalog.all().size(),"methods",catalog.counts(),"sourceMatched",catalog.all().stream().filter(c->!c.algorithm.isBlank()).count(),"sourceEmpty",catalog.all().stream().filter(c->c.algorithm.isBlank()).map(c->c.id).toList(),"solverVerified",0);}
+ @GetMapping("/algorithms/statistics") public Object stats(){return Map.of("total",catalog.all().size(),"methods",catalog.counts(),"sourceMatched",catalog.all().stream().filter(c->c.verificationStatus.equals("SOURCE_MATCHED")).count(),"shapeChecked",catalog.all().stream().filter(c->c.verificationStatus.equals("USER_REFERENCE_SHAPE_CHECKED")).count(),"sourceEmpty",catalog.all().stream().filter(c->c.algorithm.isBlank()).map(c->c.id).toList(),"solverVerified",0);}
  @GetMapping("/algorithms/{id}") public Object detail(@PathVariable String id){return AlgorithmDto.from(catalog.get(id));}
  public record ProgressRequest(boolean learned,boolean favorite,boolean review){
   @AssertTrue(message="Case đã thuộc không đồng thời ở trạng thái cần luyện") public boolean isConsistent(){return !(learned&&review);}

@@ -1,0 +1,149 @@
+[
+  {
+    "name": "Aa",
+    "image": "/images/jperm/pll-aa.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameAaCaseGroupAdjacent Corner SwapAlgorithmx L2 D2 L' U' L D2 L' U L'Best-Avg-"
+  },
+  {
+    "name": "Ab",
+    "image": "/images/jperm/pll-ab.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameAbCaseGroupAdjacent Corner SwapAlgorithmx' L2 D2 L U L' D2 L U' LBest-Avg-"
+  },
+  {
+    "name": "F",
+    "image": "/images/jperm/pll-f.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameFCaseGroupAdjacent Corner SwapAlgorithmR' U' F' R U R' U' R' F R2 U' R' U' R U R' U RBest-Avg-"
+  },
+  {
+    "name": "Ga",
+    "image": "/images/jperm/pll-ga.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameGaCaseGroupAdjacent Corner SwapAlgorithmR2 U R' U R' U' R U' R2 U' D R' U R D'Best-Avg-"
+  },
+  {
+    "name": "Gb",
+    "image": "/images/jperm/pll-gb.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameGbCaseGroupAdjacent Corner SwapAlgorithmR' U' R U D' R2 U R' U R U' R U' R2 DBest-Avg-"
+  },
+  {
+    "name": "Gc",
+    "image": "/images/jperm/pll-gc.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameGcCaseGroupAdjacent Corner SwapAlgorithmR2 U' R U' R U R' U R2 U D' R U' R' DBest-Avg-"
+  },
+  {
+    "name": "Gd",
+    "image": "/images/jperm/pll-gd.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameGdCaseGroupAdjacent Corner SwapAlgorithmR U R' U' D R2 U' R U' R' U R' U R2 D'Best-Avg-"
+  },
+  {
+    "name": "Ja",
+    "image": "/images/jperm/pll-ja.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameJaCaseGroupAdjacent Corner SwapAlgorithmx R2 F R F' R U2 r' U r U2Best-Avg-"
+  },
+  {
+    "name": "Jb",
+    "image": "/images/jperm/pll-jb.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameJbCaseGroupAdjacent Corner SwapAlgorithmR U R' F' R U R' U' R' F R2 U' R'Best-Avg-"
+  },
+  {
+    "name": "Ra",
+    "image": "/images/jperm/pll-ra.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameRaCaseGroupAdjacent Corner SwapAlgorithmR U' R' U' R U R D R' U' R D' R' U2 R'Best-Avg-"
+  },
+  {
+    "name": "Rb",
+    "image": "/images/jperm/pll-rb.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameRbCaseGroupAdjacent Corner SwapAlgorithmR2 F R U R U' R' F' R U2 R' U2 RBest-Avg-"
+  },
+  {
+    "name": "T",
+    "image": "/images/jperm/pll-t.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameTCaseGroupAdjacent Corner SwapAlgorithmR U R' U' R' F R2 U' R' U' R U R' F'Best-Avg-"
+  },
+  {
+    "name": "E",
+    "image": "/images/jperm/pll-e.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameECaseGroupDiagonal Corner SwapAlgorithmx' L' U L D' L' U' L D L' U' L D' L' U L DBest-Avg-"
+  },
+  {
+    "name": "Na",
+    "image": "/images/jperm/pll-na.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameNaCaseGroupDiagonal Corner SwapAlgorithmR U R' U R U R' F' R U R' U' R' F R2 U' R' U2 R U' R'Best-Avg-"
+  },
+  {
+    "name": "Nb",
+    "image": "/images/jperm/pll-nb.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameNbCaseGroupDiagonal Corner SwapAlgorithmR' U R U' R' F' U' F R U R' F R' F' R U' RBest-Avg-"
+  },
+  {
+    "name": "V",
+    "image": "/images/jperm/pll-v.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameVCaseGroupDiagonal Corner SwapAlgorithmR' U R' U' y R' F' R2 U' R' U R' F R FBest-Avg-"
+  },
+  {
+    "name": "Y",
+    "image": "/images/jperm/pll-y.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameYCaseGroupDiagonal Corner SwapAlgorithmF R U' R' U' R U R' F' R U R' U' R' F R F'Best-Avg-"
+  },
+  {
+    "name": "H",
+    "image": "/images/jperm/pll-h.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameHCaseGroupEdges OnlyAlgorithmM2 U M2 U2 M2 U M2Best-Avg-"
+  },
+  {
+    "name": "Ua",
+    "image": "/images/jperm/pll-ua.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameUaCaseGroupEdges OnlyAlgorithmM2 U M U2 M' U M2Best-Avg-"
+  },
+  {
+    "name": "Ub",
+    "image": "/images/jperm/pll-ub.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameUbCaseGroupEdges OnlyAlgorithmM2 U' M U2 M' U' M2Best-Avg-"
+  },
+  {
+    "name": "Z",
+    "image": "/images/jperm/pll-z.png",
+    "style": null,
+    "sourceUrl": "https://www.jperm.net/algs/pll",
+    "visibleText": "NameZCaseGroupEdges OnlyAlgorithmM' U M2 U M2 U M' U2 M2Best-Avg-"
+  }
+]

@@ -50,7 +50,7 @@ Hoặc trên Linux/macOS:
 ./mvnw clean package
 ```
 
-JAR: `target/academy-1.0.0.jar`. Có 8 kiểm thử JUnit/Spring Boot cho số lượng nguồn, ảnh, ký hiệu Square-1, API/phân trang, cách ly tiến độ theo session, các trang và bộ bài tập nghiên cứu. Kiểm thử mặc định dùng H2 ở chế độ PostgreSQL; đây không phải kiểm thử PostgreSQL thật.
+JAR: `target/academy-1.0.0.jar`. Có 12 kiểm thử JUnit/Spring Boot cho số lượng nguồn, ảnh, ký hiệu Square-1, API/phân trang, cách ly tiến độ theo session, các trang và bộ bài tập nghiên cứu. Kiểm thử mặc định dùng H2 ở chế độ PostgreSQL; đây không phải kiểm thử PostgreSQL thật.
 
 ## Chức năng
 
@@ -76,9 +76,11 @@ Xem [kiểm kê chi tiết](reports/INVENTORY.md) và [báo cáo kiểm tra tự
 | COLL | 40 |
 | ZB F2L | 306 vị trí, **305 có công thức** |
 | Square-1 CO / EO / CP / EP / Middle | 5 / 7 / 8 / 54 / 3 |
-| Tổng mục nhận diện | **501** |
-| Có công thức chính | **500** |
-| Biến thể bổ sung | **25** |
+| CS bổ sung từ ảnh tham chiếu | 5 |
+| 2×2 OLL / PBL | 7 / 5 |
+| Tổng mục nhận diện | **518** |
+| Có công thức chính | **517** |
+| Biến thể bổ sung | **45** (25 gốc + 17 PLL + 3 cho 2×2) |
 
 **Một ô nguồn trống:** ConF2L_1, vị trí 6 (`zb-f2l-6`). Ứng dụng giữ hình, hiển thị rõ nguồn trống, tắt copy và loại khỏi luyện tập. Không tự bịa công thức. Chưa xác minh các chuỗi bằng solver độc lập, do đó không triển khai mô phỏng xoay. Không tuyên bố đã hoàn chỉnh/xác minh toàn bộ dữ liệu.
 
@@ -146,3 +148,15 @@ docker run --rm -p 8080:8080 -e DB_URL=jdbc:postgresql://host.docker.internal:54
 ```
 
 Trên Linux hãy cấu hình địa chỉ PostgreSQL phù hợp với mạng container. Chưa xác nhận Docker/PostgreSQL runtime trên máy bàn giao vì Docker Engine hiện trả lỗi API 500. Kiểm thử Java, H2 và kiểm tra trình duyệt được ghi riêng trong `reports/TESTING.md`.
+
+## Cube Shape mới từ ảnh tham chiếu
+
+Đã bổ sung 5 case CS với 6 hình SVG mới, có mặt trong thư viện, chi tiết, luyện tập và tiến độ. Xem [bảng công thức và phạm vi kiểm chứng](reports/CUBESHAPE.md). `user-cases.json` tự chèn các ID chưa có khi khởi động, giữ nguyên dữ liệu/tiến độ cũ. `python tools/test_cubeshape.py` chạy kiểm tra hình dạng. Màu SVG phân biệt góc/cạnh, không thể hiện màu sticker.
+
+## PLL kết hợp J Perm
+
+21 case PLL giữ nguyên ID và công thức CubeZone. Thêm 21 ảnh J Perm; 4 case trùng chuỗi chỉ thêm hình, 17 case khác có Cách 2 với ảnh/hướng cầm riêng. [Báo cáo ghép nguồn](reports/PLL-JPERM.md). `python tools/test_pll_matching.py` kiểm tra ghép theo trạng thái; `pll-references.json` tự cập nhật tham chiếu khi khởi động mà không nhân đôi biến thể.
+
+## Rubik 2×2 — Ortega
+
+Nguồn J Perm: 7 OLL và 5 PBL, với 17 ảnh nguồn và 3 công thức thay thế. PBL có hai hình; hình thứ hai giữ phép lật gương như nguồn. Dữ liệu `jperm-2x2.json` được chèn bổ sung theo ID, không đụng tiến độ cũ. Bộ lọc, Dashboard, chi tiết và luyện tập đọc các loại Rubik từ `/api/puzzles`. Chạy `python tools/test_jperm_2x2.py` để kiểm tra nguồn, ảnh và bất biến pha Ortega.

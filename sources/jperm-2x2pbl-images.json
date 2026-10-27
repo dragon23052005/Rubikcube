@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Adj/Adj",
+    "text": "NameAdj/AdjCaseGroupAdjacent DAlgorithmR2 U' B2 U2 R2 U' R2Best-Avg-",
+    "images": [
+      {
+        "image": "/images/jperm/2x2-pbl-adj-adj-1.png",
+        "style": null
+      },
+      {
+        "image": "/images/jperm/2x2-pbl-adj-adj-2.png",
+        "style": "transform: scaleX(-1);"
+      }
+    ]
+  },
+  {
+    "name": "Adj/Diag",
+    "text": "NameAdj/DiagCaseGroupDiagonal DAlgorithmR U' R F2 R' U R'Best-Avg-",
+    "images": [
+      {
+        "image": "/images/jperm/2x2-pbl-adj-diag-1.png",
+        "style": null
+      },
+      {
+        "image": "/images/jperm/2x2-pbl-adj-diag-2.png",
+        "style": "transform: scaleX(-1);"
+      }
+    ]
+  },
+  {
+    "name": "Diag/Diag",
+    "text": "NameDiag/DiagCaseGroupDiagonal DAlgorithmR2 F2 R2Best-Avg-",
+    "images": [
+      {
+        "image": "/images/jperm/2x2-pbl-diag-diag-1.png",
+        "style": null
+      },
+      {
+        "image": "/images/jperm/2x2-pbl-diag-diag-2.png",
+        "style": "transform: scaleX(-1);"
+      }
+    ]
+  },
+  {
+    "name": "Adj U",
+    "text": "NameAdj UCaseGroupSolved DAlgorithmR U R' U' R' F R2 U' R' U' R U R' F'Best-Avg-",
+    "images": [
+      {
+        "image": "/images/jperm/2x2-pbl-adj-u-1.png",
+        "style": null
+      },
+      {
+        "image": "/images/jperm/2x2-pbl-adj-u-2.png",
+        "style": "transform: scaleX(-1);"
+      }
+    ]
+  },
+  {
+    "name": "Diag U",
+    "text": "NameDiag UCaseGroupSolved DAlgorithmF R U' R' U' R U R' F' R U R' U' R' F R F'Best-Avg-",
+    "images": [
+      {
+        "image": "/images/jperm/2x2-pbl-diag-u-1.png",
+        "style": null
+      },
+      {
+        "image": "/images/jperm/2x2-pbl-diag-u-2.png",
+        "style": "transform: scaleX(-1);"
+      }
+    ]
+  }
+]

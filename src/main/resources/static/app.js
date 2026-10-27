@@ -52,6 +52,9 @@ const names = {
   PLL: "Hoán vị tầng cuối",
   COLL: "Góc & định hướng tầng cuối",
   "ZB F2L": "F2L & định hướng cạnh",
+  CS: "Cube Shape — đưa về hình lập phương",
+  "2×2 OLL": "Định hướng mặt trên — Ortega",
+  "2×2 PBL": "Hoán vị cả hai tầng — Ortega",
   CO: "Đưa góc về đúng tầng",
   EO: "Đưa cạnh về đúng tầng",
   CP: "Hoán vị góc",
@@ -68,6 +71,9 @@ const methods = (p) =>
         "PLL",
         "COLL",
         "ZB F2L",
+        "2×2 OLL",
+        "2×2 PBL",
+        "CS",
         "CO",
         "EO",
         "CP",
@@ -79,6 +85,9 @@ const methods = (p) =>
         "PLL",
         "COLL",
         "ZB F2L",
+        "2×2 OLL",
+        "2×2 PBL",
+        "CS",
         "CO",
         "EO",
         "CP",
@@ -144,8 +153,8 @@ function cubeArt(square = false) {
   return `<svg viewBox="-4 -3 120 140" aria-hidden="true">${top}${left}${right}</svg>`;
 }
 function visual(c, cls = "") {
-  let imgs = c.images.filter(Boolean);
-  return `<div class="case-visual ${imgs.length > 1 ? "multi" : ""} ${cls}">${imgs.length ? imgs.map((url, i) => `<img src="${esc(url)}" loading="lazy" decoding="async" width="120" height="120" alt="${esc(c.name)} — ${c.puzzle === "sq1" ? (i ? "mặt dưới nhìn từ dưới" : "mặt trên") : i ? "hoán vị góc" : "nhận diện"}">`).join("") : "<p>Nguồn chưa cung cấp hình nhận diện</p>"}${
+  let imgs = c.reference?.relation === "SAME_SEQUENCE" ? [c.reference.imagePath] : c.images.filter(Boolean);
+  return `<div class="case-visual ${imgs.length > 1 ? "multi" : ""} ${c.method === "CS" ? "cube-shape-visual" : ""} ${cls}">${imgs.length ? imgs.map((url, i) => `<img src="${esc(url)}" loading="lazy" decoding="async" width="120" height="120" style="transform:${esc(c.imageTransforms?.[i]||"none")}" alt="${esc(c.name)} — ${c.method === "2×2 PBL" ? "hình "+(i+1)+" theo J Perm" : c.puzzle === "sq1" ? (i ? "mặt dưới nhìn từ dưới" : "mặt trên") : i ? "hoán vị góc" : "nhận diện"}">`).join("") : "<p>Nguồn chưa cung cấp hình nhận diện</p>"}${
     c.recognition
       ? `<div class="recognition-grid" aria-label="Màu hoán vị góc">${c.recognition
           .split(" ")
@@ -187,14 +196,23 @@ function stats() {
     )
     .join("")}</div>`;
 }
-function puzzleCard(p) {
-  let ms = methods(p),
-    total = data.filter((c) => c.puzzle === p).length;
-  return `<article class="puzzle-card"><div class="puzzle-card-top"><a href="/methods?puzzle=${p}" class="puzzle-icon" aria-label="Khám phá ${p === "sq1" ? "Square-1" : "Rubik 3×3"}">${cubeArt(p === "sq1")}</a><div class="puzzle-title"><h3><a href="/methods?puzzle=${p}">${p === "sq1" ? "Square-1" : "Rubik 3×3"}</a></h3><p>${p === "sq1" ? "Hình dạng mới. Thử thách mới." : "Từ những bước đầu đến sub-20."}</p></div><span class="badge ${p === "sq1" ? "green" : ""}">${p === "sq1" ? "Thử thách" : "Phổ biến"}</span></div><div class="method-chips">${ms.map((m) => `<a class="method-chip" href="/algorithms?method=${encodeURIComponent(m)}">${m === "Middle" ? "Middle layer" : m}<b>${count(m)}</b></a>`).join("")}${p === "sq1" ? '<a class="method-chip" href="/guide#square1">Cube Shape <b>Hướng dẫn</b></a>' : ""}</div><div class="puzzle-card-footer"><span>${ms.length} bộ công thức · ${total} case</span><a href="/methods?puzzle=${p}">Khám phá ${icon("arrow-right")}</a></div></article>`;
+let puzzleTypes=[];
+function puzzleName(id){return puzzleTypes.find(p=>p.id===id)?.name||id;}
+function puzzleCodes(){return puzzleTypes.map(p=>p.id).sort((a,b)=>['3x3','2x2','sq1'].indexOf(a)-['3x3','2x2','sq1'].indexOf(b));}
+function cube2Art(){
+ const faces=[[[50,8],[102,34],[50,60],[-2,34]], [[-2,36],[50,62],[50,118],[-2,92]], [[52,62],[104,36],[104,92],[52,118]]];
+ let cells='';faces.forEach((f,k)=>{const point=(u,v)=>[(1-u)*(1-v)*f[0][0]+u*(1-v)*f[1][0]+u*v*f[2][0]+(1-u)*v*f[3][0],(1-u)*(1-v)*f[0][1]+u*(1-v)*f[1][1]+u*v*f[2][1]+(1-u)*v*f[3][1]];for(let r=0;r<2;r++)for(let c=0;c<2;c++)cells+=`<polygon points="${[[c/2,r/2],[(c+1)/2,r/2],[(c+1)/2,(r+1)/2],[c/2,(r+1)/2]].map(([u,v])=>point(u,v).join(',')).join(' ')}" fill="${['#d1caff','#9185de','#e6e0ff'][k]}" stroke="#655d9a" stroke-width="2.3"/>`;});
+ return `<svg viewBox="-8 0 120 126" aria-hidden="true">${cells}</svg>`;
 }
+function puzzleCard(p){
+ const ms=methods(p),total=data.filter(c=>c.puzzle===p).length;
+ const subtitle=p==='sq1'?'Hình dạng mới. Thử thách mới.':p==='2x2'?'Ortega · Từ từng mặt đến cả khối.':'Từ những bước đầu đến sub-20.';
+ return `<article class="puzzle-card"><div class="puzzle-card-top"><a href="/methods?puzzle=${p}" class="puzzle-icon" aria-label="Khám phá ${esc(puzzleName(p))}">${p==='2x2'?cube2Art():cubeArt(p==='sq1')}</a><div class="puzzle-title"><h3><a href="/methods?puzzle=${p}">${esc(puzzleName(p))}</a></h3><p>${subtitle}</p></div><span class="badge ${p==='sq1'?'green':''}">${p==='2x2'?'Ortega':p==='sq1'?'Thử thách':'Phổ biến'}</span></div><div class="method-chips">${ms.map(m=>`<a class="method-chip" href="/algorithms?method=${encodeURIComponent(m)}">${esc(m.replace('2×2 ',''))}<b>${count(m)}</b></a>`).join('')}${p==='sq1'?'<a class="method-chip" href="/guide#square1">29 hình cơ bản <b>Hướng dẫn</b></a>':''}</div><div class="puzzle-card-footer"><span>${ms.length} bộ công thức · ${total} case</span><a href="/methods?puzzle=${p}">Khám phá ${icon('arrow-right')}</a></div></article>`;
+}
+
 function card(c) {
   let s = state(c.id);
-  return `<article class="algorithm-card"><div style="position:relative"><a href="/algorithms/${c.id}" aria-label="Xem chi tiết ${esc(c.name)}">${visual(c)}</a><span class="badge" style="position:absolute;top:10px;left:10px">${c.method} #${String(c.number).padStart(2, "0")}</span><button class="icon-btn favorite-btn ${s.favorite ? "saved" : ""}" style="position:absolute;right:6px;top:6px" data-action="favorite" data-id="${c.id}" aria-label="${s.favorite ? "Bỏ lưu" : "Lưu"} ${esc(c.name)}" aria-pressed="${!!s.favorite}">${icon(s.favorite ? "bookmark-check" : "bookmark")}</button></div><div class="card-body"><div class="card-name"><h3><a href="/algorithms/${c.id}">${esc(c.name)}</a></h3>${s.learned ? '<span class="badge green">✓ Đã thuộc</span>' : ""}</div><div class="card-category">${esc(c.category)}</div><div class="alg-line">${esc(c.algorithm) || "Ô công thức trống tại nguồn"}</div>${c.algorithm.length > 45 ? `<details><summary>Xem đầy đủ</summary><div class="full-alg">${esc(c.algorithm) || "Ô công thức trống tại nguồn"}</div></details>` : ""}${c.alternatives.length ? `<a class="variant-link" href="/algorithms/${c.id}">${c.alternatives.length} biến thể · Xem chi tiết</a>` : ""}</div><div class="card-actions"><button data-action="copy" data-id="${c.id}" ${!c.algorithm ? "disabled" : ""}>${icon("copy")} Sao chép</button><button class="${s.learned ? "learned" : ""}" data-action="learned" data-id="${c.id}" ${!c.algorithm ? "disabled" : ""} aria-pressed="${!!s.learned}">${icon(s.learned ? "circle-check" : "circle")} ${s.learned ? "Đã thuộc" : "Đánh dấu"}</button></div></article>`;
+  return `<article class="algorithm-card"><div style="position:relative"><a href="/algorithms/${c.id}" aria-label="Xem chi tiết ${esc(c.name)}">${visual(c)}</a><span class="badge" style="position:absolute;top:10px;left:10px">${c.method} #${String(c.number).padStart(2, "0")}</span><button class="icon-btn favorite-btn ${s.favorite ? "saved" : ""}" style="position:absolute;right:6px;top:6px" data-action="favorite" data-id="${c.id}" aria-label="${s.favorite ? "Bỏ lưu" : "Lưu"} ${esc(c.name)}" aria-pressed="${!!s.favorite}">${icon(s.favorite ? "bookmark-check" : "bookmark")}</button></div><div class="card-body"><div class="card-name"><h3><a href="/algorithms/${c.id}">${esc(c.name)}</a></h3>${s.learned ? '<span class="badge green">✓ Đã thuộc</span>' : ""}</div><div class="card-category">${esc(c.category)}</div><div class="alg-line">${esc(c.algorithm) || "Ô công thức trống tại nguồn"}</div>${c.algorithm.length > 45 ? `<details><summary>Xem đầy đủ</summary><div class="full-alg">${esc(c.algorithm) || "Ô công thức trống tại nguồn"}</div></details>` : ""}${c.alternatives.length ? `<a class="variant-link" href="/algorithms/${c.id}">${c.alternatives.length} biến thể · Xem chi tiết</a>` : ""}${referenceCard(c)}</div><div class="card-actions"><button data-action="copy" data-id="${c.id}" ${!c.algorithm ? "disabled" : ""}>${icon("copy")} Sao chép</button><button class="${s.learned ? "learned" : ""}" data-action="learned" data-id="${c.id}" ${!c.algorithm ? "disabled" : ""} aria-pressed="${!!s.learned}">${icon(s.learned ? "circle-check" : "circle")} ${s.learned ? "Đã thuộc" : "Đánh dấu"}</button></div></article>`;
 }
 function home() {
   let recent = history
@@ -206,7 +224,7 @@ function home() {
           .map((id) => data.find((c) => c.id === id))
           .filter(Boolean);
   $("#main").innerHTML =
-    `<div class="intro"><div><h1>Sẵn sàng cho bước tiến mới? <span style="font-size:22px">✦</span></h1><p>Một công thức mới hôm nay. Một lần giải tốt hơn ngày mai.</p></div><span class="date-chip">${icon("calendar-days")}${new Intl.DateTimeFormat("vi-VN", { day: "numeric", month: "long", year: "numeric" }).format(new Date())}</span></div><section class="hero"><div class="hero-content"><span class="eyebrow">${icon("sparkles")} KHÔNG GIAN DÀNH CHO SPEEDCUBER</span><h1>Làm chủ mọi<br>công thức Rubik</h1><p>Khám phá, ghi nhớ và luyện tập thuật toán theo cách của bạn. Tất cả trong một không gian.</p><div class="actions"><a class="btn primary" href="/algorithms">Khám phá thuật toán ${icon("arrow-right")}</a><a class="btn light" href="/practice">${icon("play")} Bắt đầu luyện tập</a></div></div><div class="hero-art"><div class="orbit"></div><div class="cube-art">${cubeArt()}</div><span class="art-label">${icon("sparkles")} Your next personal best starts here</span></div></section>${stats()}<section><div class="section-heading"><div><h2>Chọn Rubik của bạn</h2><p>Mỗi loại Rubik, một hành trình chinh phục.</p></div><a class="text-link" href="/puzzles">Tất cả danh mục ${icon("arrow-right")}</a></div><div class="puzzle-grid">${puzzleCard("3x3")}${puzzleCard("sq1")}</div></section><div class="lower-grid"><section><div class="section-heading"><h2>${recent.length ? "Tiếp tục hành trình" : "Bắt đầu khám phá"}</h2><a class="text-link" href="/algorithms">Xem thư viện ${icon("arrow-right")}</a></div><div class="recent-list">${suggest.map((c) => `<a class="recent-row" href="/algorithms/${c.id}"><div class="mini-image"><img src="${esc(c.images[0])}" alt="" width="37" height="37" loading="lazy"></div><div><strong>${esc(c.name)}</strong><p>${esc(names[c.method])} · ${c.puzzle === "sq1" ? "Square-1" : "3×3"}</p></div><span class="badge ${state(c.id).learned ? "green" : ""}">${state(c.id).learned ? "✓ Đã thuộc" : "Khám phá"}</span><span class="icon-btn">${icon("chevron-right")}</span></a>`).join("")}</div></section><section><div class="section-heading"><h2>Luyện một chút, nhớ lâu hơn</h2></div><div class="practice-banner"><span class="icon-tile">${icon("zap")}</span><h3>Biến công thức thành phản xạ</h3><p>Nhìn hình, nhớ công thức và kiểm tra đáp án. Bạn đã sẵn sàng chưa?</p><a class="btn primary" href="/practice">${icon("play")} Vào phòng luyện tập ${icon("arrow-right")}</a><small>Không áp lực thời gian. Tiến bộ theo nhịp của bạn.</small></div></section></div>`;
+    `<div class="intro"><div><h1>Sẵn sàng cho bước tiến mới? <span style="font-size:22px">✦</span></h1><p>Một công thức mới hôm nay. Một lần giải tốt hơn ngày mai.</p></div><span class="date-chip">${icon("calendar-days")}${new Intl.DateTimeFormat("vi-VN", { day: "numeric", month: "long", year: "numeric" }).format(new Date())}</span></div><section class="hero"><div class="hero-content"><span class="eyebrow">${icon("sparkles")} KHÔNG GIAN DÀNH CHO SPEEDCUBER</span><h1>Làm chủ mọi<br>công thức Rubik</h1><p>Khám phá, ghi nhớ và luyện tập thuật toán theo cách của bạn. Tất cả trong một không gian.</p><div class="actions"><a class="btn primary" href="/algorithms">Khám phá thuật toán ${icon("arrow-right")}</a><a class="btn light" href="/practice">${icon("play")} Bắt đầu luyện tập</a></div></div><div class="hero-art"><div class="orbit"></div><div class="cube-art">${cubeArt()}</div><span class="art-label">${icon("sparkles")} Your next personal best starts here</span></div></section>${stats()}<section><div class="section-heading"><div><h2>Chọn Rubik của bạn</h2><p>Mỗi loại Rubik, một hành trình chinh phục.</p></div><a class="text-link" href="/puzzles">Tất cả danh mục ${icon("arrow-right")}</a></div><div class="puzzle-grid">${puzzleCodes().map(puzzleCard).join("")}</div></section><div class="lower-grid"><section><div class="section-heading"><h2>${recent.length ? "Tiếp tục hành trình" : "Bắt đầu khám phá"}</h2><a class="text-link" href="/algorithms">Xem thư viện ${icon("arrow-right")}</a></div><div class="recent-list">${suggest.map((c) => `<a class="recent-row" href="/algorithms/${c.id}"><div class="mini-image"><img src="${esc(c.images[0])}" alt="" width="37" height="37" loading="lazy"></div><div><strong>${esc(c.name)}</strong><p>${esc(names[c.method])} · ${esc(puzzleName(c.puzzle))}</p></div><span class="badge ${state(c.id).learned ? "green" : ""}">${state(c.id).learned ? "✓ Đã thuộc" : "Khám phá"}</span><span class="icon-btn">${icon("chevron-right")}</span></a>`).join("")}</div></section><section><div class="section-heading"><h2>Luyện một chút, nhớ lâu hơn</h2></div><div class="practice-banner"><span class="icon-tile">${icon("zap")}</span><h3>Biến công thức thành phản xạ</h3><p>Nhìn hình, nhớ công thức và kiểm tra đáp án. Bạn đã sẵn sàng chưa?</p><a class="btn primary" href="/practice">${icon("play")} Vào phòng luyện tập ${icon("arrow-right")}</a><small>Không áp lực thời gian. Tiến bộ theo nhịp của bạn.</small></div></section></div>`;
   hydrate();
 }
 function options(vals, selected, all) {
@@ -215,7 +233,7 @@ function options(vals, selected, all) {
     vals
       .map(
         (v) =>
-          `<option value="${esc(v)}" ${v === selected ? "selected" : ""}>${esc(v === "3x3" ? "Rubik 3×3" : v === "sq1" ? "Square-1" : v)}</option>`,
+          `<option value="${esc(v)}" ${v === selected ? "selected" : ""}>${esc(puzzleCodes().includes(v) ? puzzleName(v) : v)}</option>`,
       )
       .join("")
   );
@@ -248,7 +266,7 @@ function library() {
       path === "/favorites" ? "Bộ sưu tập của bạn" : "Thư viện thuật toán",
       "Tìm đúng case. Hiểu cách xoay. Ghi nhớ theo cách của bạn.",
     ) +
-    `<div class="library-layout"><aside class="filter-panel" id="filters" aria-label="Bộ lọc"><button class="icon-btn filter-close" data-action="close-filter" aria-label="Đóng bộ lọc">${icon("x")}</button><h3>${icon("sliders-horizontal")} Bộ lọc</h3><label class="field"><span>Loại Rubik</span><select id="f-puzzle">${options(["3x3", "sq1"], filters.puzzle, "Tất cả Rubik")}</select></label><label class="field"><span>Phương pháp</span><select id="f-method">${options(methods(filters.puzzle), filters.method, "Tất cả phương pháp")}</select></label><label class="field"><span>Nhóm case</span><select id="f-category"></select></label><label class="field"><span>Trạng thái học</span><select id="f-status"><option value="">Tất cả case</option value="new">Chưa học</option><option value="learned">Đã thuộc</option><option value="review">Cần luyện thêm</option><option value="favorite">Đã lưu</option></select></label><button class="btn" data-action="reset">${icon("rotate-ccw")} Xóa bộ lọc</button><p class="filter-note">Bộ lọc được ghi nhớ trên thiết bị của bạn.</p></aside><section><div class="toolbar"><button class="btn filter-toggle" data-action="filter" aria-label="Mở bộ lọc" aria-expanded="false">${icon("sliders-horizontal")}<span>Bộ lọc</span></button><label class="search-box">${icon("search")}<input id="case-search" aria-label="Tìm theo tên, số hoặc công thức" placeholder="Tên, số case, công thức…" value="${esc(query)}"></label><select id="f-sort" aria-label="Sắp xếp"><option value="number">Theo số case</option><option value="length">Công thức ngắn</option></select></div><div class="result-meta" id="result-meta"></div><div class="algorithm-grid" id="case-grid"></div><div id="pagination"></div></section></div><p class="source-note">Công thức & hình: <a href="https://cubezone.be/" target="_blank" rel="noopener">Lars Vandenbergh · CubeZone</a>. Số thứ tự theo nguồn, không mặc định là hệ đánh số WCA. <a href="/guide#source">Xem tình trạng kiểm chứng</a>.</p>`;
+    `<div class="library-layout"><aside class="filter-panel" id="filters" aria-label="Bộ lọc"><button class="icon-btn filter-close" data-action="close-filter" aria-label="Đóng bộ lọc">${icon("x")}</button><h3>${icon("sliders-horizontal")} Bộ lọc</h3><label class="field"><span>Loại Rubik</span><select id="f-puzzle">${options(puzzleCodes(), filters.puzzle, "Tất cả Rubik")}</select></label><label class="field"><span>Phương pháp</span><select id="f-method">${options(methods(filters.puzzle), filters.method, "Tất cả phương pháp")}</select></label><label class="field"><span>Nhóm case</span><select id="f-category"></select></label><label class="field"><span>Trạng thái học</span><select id="f-status"><option value="">Tất cả case</option value="new">Chưa học</option><option value="learned">Đã thuộc</option><option value="review">Cần luyện thêm</option><option value="favorite">Đã lưu</option></select></label><button class="btn" data-action="reset">${icon("rotate-ccw")} Xóa bộ lọc</button><p class="filter-note">Bộ lọc được ghi nhớ trên thiết bị của bạn.</p></aside><section><div class="toolbar"><button class="btn filter-toggle" data-action="filter" aria-label="Mở bộ lọc" aria-expanded="false">${icon("sliders-horizontal")}<span>Bộ lọc</span></button><label class="search-box">${icon("search")}<input id="case-search" aria-label="Tìm theo tên, số hoặc công thức" placeholder="Tên, số case, công thức…" value="${esc(query)}"></label><select id="f-sort" aria-label="Sắp xếp"><option value="number">Theo số case</option><option value="length">Công thức ngắn</option></select></div><div class="result-meta" id="result-meta"></div><div class="algorithm-grid" id="case-grid"></div><div id="pagination"></div></section></div><p class="source-note">Dữ liệu CubeZone, J Perm & case từ ảnh tham chiếu. Nguồn gốc: <a href="https://cubezone.be/" target="_blank" rel="noopener">Lars Vandenbergh · CubeZone</a>. Số thứ tự theo nguồn, không mặc định là hệ đánh số WCA. <a href="/guide#source">Xem tình trạng kiểm chứng</a>.</p>`;
   $("#f-status").value = filters.status;
   $("#f-sort").value = filters.sort;
   categories();
@@ -306,7 +324,7 @@ function filtered() {
             ? !state(c.id).learned
             : state(c.id)[filters.status])) &&
         (
-          c.name +
+          c.name + " " + c.puzzle +
           " " +
           c.number +
           " " +
@@ -368,7 +386,7 @@ function detail() {
       [c.method, "/algorithms?method=" + encodeURIComponent(c.method)],
       [c.name],
     ]) +
-    `<div class="detail-grid"><section class="detail-visual">${visual(c)}<div class="visual-caption">${c.puzzle === "sq1" ? "Trái: mặt trên · Phải: mặt dưới nhìn từ dưới" : "Hình nhận diện theo hướng quan sát của nguồn"}<br>Số thứ tự theo CubeZone</div></section><section class="detail-content"><span class="badge">${c.puzzle === "sq1" ? "Square-1" : "Rubik 3×3"}</span><span class="badge">${c.method} #${c.number}</span><h1>${esc(c.name)}</h1><p>${esc(names[c.method])} · ${esc(c.category)}</p><div class="algorithm-block"><label>CÔNG THỨC CHÍNH</label><code>${esc(c.algorithm) || "Ô công thức trống tại nguồn"}</code><button class="btn primary" data-action="copy" data-id="${id}" ${!c.algorithm ? "disabled" : ""}>${icon("copy")} Sao chép công thức</button></div>${c.alternatives.map((alg, i) => `<div class="algorithm-block"><label>BIẾN THỂ ${i + 1}</label><code>${esc(alg)}</code><button class="btn" data-action="copy-alt" data-index="${i}" data-id="${id}">${icon("copy")} Sao chép</button></div>`).join("")}<div class="actions"><button class="btn ${state(id).learned ? "green" : ""}" data-action="detail-learned" data-id="${id}" ${!c.algorithm ? "disabled" : ""} aria-pressed="${!!state(id).learned}">${icon("circle-check")} ${state(id).learned ? "Đã thuộc" : "Đánh dấu đã thuộc"}</button><button class="btn" data-action="detail-favorite" data-id="${id}" aria-pressed="${!!state(id).favorite}">${icon("bookmark")} ${state(id).favorite ? "Đã lưu" : "Lưu case"}</button><a class="btn" href="/practice?method=${encodeURIComponent(c.method)}">${icon("zap")} Luyện tập</a></div><div class="guide-box"><h3>Cách đọc & hướng cầm</h3>${c.puzzle === "sq1" ? "<p>Giữ hướng mặt trên và mặt dưới như hình. (a,b) là số bước 30° của tầng trên và dưới; số âm xoay ngược chiều kim đồng hồ khi nhìn trực diện từng tầng. Dấu / xoay lát cắt 180°.</p>" : "<p>Đặt Rubik theo đúng hướng trong hình nguồn trước khi thực hiện. U là mặt trên, F là mặt trước, R là mặt phải. Dấu ' là ngược chiều kim đồng hồ khi nhìn thẳng vào mặt xoay; 2 là xoay 180°.</p>"}<div class="notation-row">${(c.puzzle ===
+    `<div class="detail-grid"><section class="detail-visual">${visual(c)}<div class="visual-caption">${c.puzzle === "sq1" ? (c.method === "CS" ? "Trên: tầng trên · Dưới: tầng dưới nhìn từ dưới" : "Trái: mặt trên · Phải: mặt dưới nhìn từ dưới") : (c.puzzle === "2x2" ? "Hình J Perm · giữ nguyên thứ tự và hướng nhìn của nguồn" : c.reference?.relation === "SAME_SEQUENCE" ? "Hình J Perm · cùng chuỗi công thức" : "Hình CubeZone · hướng cầm cho Cách 1")}<br>${c.puzzle === "2x2" ? "Ortega 2×2" : c.method === "CS" ? "SVG mới · tham chiếu từ ảnh bạn cung cấp" : "Số thứ tự theo CubeZone"}</div></section><section class="detail-content"><span class="badge">${esc(puzzleName(c.puzzle))}</span><span class="badge">${c.method} #${c.number}</span><h1>${esc(c.name)}</h1><p>${esc(names[c.method])} · ${esc(c.category)}</p><div class="algorithm-block"><label>${c.reference ? "CÁCH 1 · CUBEZONE" : "CÔNG THỨC CHÍNH"}</label><code>${esc(c.algorithm) || "Ô công thức trống tại nguồn"}</code><button class="btn primary" data-action="copy" data-id="${id}" ${!c.algorithm ? "disabled" : ""}>${icon("copy")} Sao chép công thức</button></div>${jpermCredit(c)}${c.alternatives.map((alg, i) => alternativeBlock(c,alg,i)).join("")}<div class="actions"><button class="btn ${state(id).learned ? "green" : ""}" data-action="detail-learned" data-id="${id}" ${!c.algorithm ? "disabled" : ""} aria-pressed="${!!state(id).learned}">${icon("circle-check")} ${state(id).learned ? "Đã thuộc" : "Đánh dấu đã thuộc"}</button><button class="btn" data-action="detail-favorite" data-id="${id}" aria-pressed="${!!state(id).favorite}">${icon("bookmark")} ${state(id).favorite ? "Đã lưu" : "Lưu case"}</button><a class="btn" href="/practice?method=${encodeURIComponent(c.method)}">${icon("zap")} Luyện tập</a></div><div class="guide-box"><h3>Cách đọc & hướng cầm</h3>${c.puzzle === "sq1" ? "<p>Giữ hướng mặt trên và mặt dưới như hình. (a,b) là số bước 30° của tầng trên và dưới; số âm xoay ngược chiều kim đồng hồ khi nhìn trực diện từng tầng. Dấu / xoay lát cắt 180°.</p>" : "<p>Đặt Rubik theo đúng hướng trong hình nguồn trước khi thực hiện. U là mặt trên, F là mặt trước, R là mặt phải. Dấu ' là ngược chiều kim đồng hồ khi nhìn thẳng vào mặt xoay; 2 là xoay 180°.</p>"}<div class="notation-row">${(c.puzzle ===
     "sq1"
       ? [
           ["(a,b)", "Xoay tầng trên và dưới theo đơn vị 30°"],
@@ -384,23 +402,25 @@ function detail() {
           ["x y z", "Xoay toàn khối"],
         ]
     )
+      .filter(([v])=>c.puzzle !== "2x2" || v !== "r")
       .map(
         ([v, t]) => `<abbr class="notation" title="${esc(t)}">${esc(v)}</abbr>`,
       )
       .join(
         "",
-      )}</div><p><a href="/guide">Xem giải thích ký hiệu đầy đủ</a></p></div><p class="source-note">${esc(c.description)}<br><a href="${c.sourceUrl}" target="_blank" rel="noopener">Mở trang nguồn CubeZone ${icon("external-link")}</a></p></section></div><div class="detail-nav">${index > 0 ? `<a class="btn" href="/algorithms/${siblings[index - 1].id}">${icon("arrow-left")} Case trước</a>` : "<span></span>"}${index < siblings.length - 1 ? `<a class="btn" href="/algorithms/${siblings[index + 1].id}">Case tiếp theo ${icon("arrow-right")}</a>` : ""}</div>`;
+      )}</div><p><a href="/guide">Xem giải thích ký hiệu đầy đủ</a></p></div><p class="source-note">${esc(c.description)}<br><a href="${c.sourceUrl}" target="_blank" rel="noopener">${c.puzzle === "2x2" ? "Mở trang nguồn J Perm" : c.method === "CS" ? "Xem ảnh tham chiếu" : "Mở trang nguồn CubeZone"} ${icon("external-link")}</a></p></section></div><div class="detail-nav">${index > 0 ? `<a class="btn" href="/algorithms/${siblings[index - 1].id}">${icon("arrow-left")} Case trước</a>` : "<span></span>"}${index < siblings.length - 1 ? `<a class="btn" href="/algorithms/${siblings[index + 1].id}">Case tiếp theo ${icon("arrow-right")}</a>` : ""}</div>`;
   hydrate();
+  if(location.hash === "#jperm") document.getElementById("jperm")?.scrollIntoView({block:"start"});
 }
 function methodPage() {
   let p = params.get("puzzle") || "3x3";
   $("#main").innerHTML =
     crumb([
       ["Danh mục Rubik", "/puzzles"],
-      [p === "sq1" ? "Square-1" : "Rubik 3×3"],
+      [puzzleName(p)],
     ]) +
     title(
-      p === "sq1" ? "Chinh phục Square-1" : "Khám phá Rubik 3×3",
+      "Khám phá " + puzzleName(p),
       "Chọn phương pháp phù hợp với hành trình của bạn.",
     ) +
     `<div class="method-grid">${methods(p)
@@ -411,7 +431,7 @@ function methodPage() {
       })
       .join(
         "",
-      )}</div>${p === "sq1" ? '<div class="guide-box"><h3>Cube Shape & Parity</h3><p>Cube Shape có 29 hình dạng một tầng, 90 tổ hợp hai tầng; nguồn trình bày như hướng dẫn, không phải 90 công thức độc lập. Parity nằm trong các nhóm hoán vị cạnh, không được đếm thành bộ case trùng lặp.</p><a href="/guide#square1">Đọc hướng dẫn Square-1</a></div>' : ""}`;
+      )}</div>${p === "sq1" ? '<div class="guide-box"><h3>Cube Shape & Parity</h3><p><a class="btn primary" href="/algorithms?method=CS">5 case Cube Shape mới</a> <a class="btn" href="/practice?method=CS">Luyện Cube Shape</a></p><p>Cube Shape có 29 hình dạng một tầng, 90 tổ hợp hai tầng; nguồn trình bày như hướng dẫn, không phải 90 công thức độc lập. Parity nằm trong các nhóm hoán vị cạnh, không được đếm thành bộ case trùng lặp.</p><a href="/guide#square1">Đọc hướng dẫn Square-1</a></div>' : ""}`;
   hydrate();
 }
 function progressPage() {
@@ -445,7 +465,7 @@ function practicePage() {
       "Một case. Một bước tiến.",
       "Nhìn hình, nhớ công thức rồi kiểm tra đáp án. Luyện theo nhịp của bạn.",
     ) +
-    `<div class="practice-wrap"><div class="practice-config"><label>Loại Rubik<select id="p-puzzle">${options(["3x3", "sq1"], p, "Tất cả Rubik")}</select></label><label>Phương pháp<select id="p-method">${options(methods(p), initial, "Tất cả phương pháp")}</select></label><label>Phạm vi<select id="p-scope"><option value="all">Tất cả case</option><option value="new">Chưa thuộc</option><option value="review">Cần luyện thêm</option><option value="favorite">Đã lưu</option></select></label></div><div id="practice-stage"></div><div class="keyboard-help"><kbd>Space</kbd> Hiện đáp án <span> · </span><kbd>1</kbd> Đã thuộc <span> · </span><kbd>2</kbd> Cần luyện <span> · </span><kbd>→</kbd> Bỏ qua</div></div>`;
+    `<div class="practice-wrap"><div class="practice-config"><label>Loại Rubik<select id="p-puzzle">${options(puzzleCodes(), p, "Tất cả Rubik")}</select></label><label>Phương pháp<select id="p-method">${options(methods(p), initial, "Tất cả phương pháp")}</select></label><label>Phạm vi<select id="p-scope"><option value="all">Tất cả case</option><option value="new">Chưa thuộc</option><option value="review">Cần luyện thêm</option><option value="favorite">Đã lưu</option></select></label></div><div id="practice-stage"></div><div class="keyboard-help"><kbd>Space</kbd> Hiện đáp án <span> · </span><kbd>1</kbd> Đã thuộc <span> · </span><kbd>2</kbd> Cần luyện <span> · </span><kbd>→</kbd> Bỏ qua</div></div>`;
   $("#p-puzzle").onchange = () => {
     $("#p-method").innerHTML = options(
       methods($("#p-puzzle").value),
@@ -485,7 +505,7 @@ function practiceStage() {
     return;
   }
   $("#practice-stage").innerHTML =
-    `<article class="practice-card"><div class="practice-card-head"><span class="badge">${c.method} · ${c.puzzle === "sq1" ? "Square-1" : "3×3"}</span><span>Lượt ${round} · ${sessionLearned} lần nhớ đúng</span></div>${visual(c)}<div class="practice-answer">${revealed ? `<h2>${esc(c.name)}</h2><code>${esc(c.algorithm) || "Ô công thức trống tại nguồn"}</code><div class="actions"><button class="btn" data-action="rate-review">${icon("repeat-2")} Cần luyện thêm</button><button class="btn green" data-action="rate-learned">${icon("check")} Đã thuộc</button><button class="btn" data-action="copy" data-id="${c.id}" aria-label="Sao chép đáp án">${icon("copy")}</button></div>` : `<h2>Bạn nhớ công thức này chứ?</h2><p style="font-size:11px;margin:0 0 20px">Quan sát hình và thử nhớ các bước xoay.</p><button class="btn primary" data-action="reveal">${icon("eye")} Hiện đáp án</button>`}<div style="margin-top:16px"><button class="btn" data-action="skip">Bỏ qua ${icon("arrow-right")}</button></div></div></article>`;
+    `<article class="practice-card"><div class="practice-card-head"><span class="badge">${c.method} · ${esc(puzzleName(c.puzzle))}</span><span>Lượt ${round} · ${sessionLearned} lần nhớ đúng</span></div>${visual(c)}<div class="practice-answer">${revealed ? `<h2>${esc(c.name)}</h2><code>${esc(c.algorithm) || "Ô công thức trống tại nguồn"}</code>${c.reference?.relation === "ALTERNATIVE_SEQUENCE" ? `<p><a class="text-link" href="/algorithms/${c.id}#jperm">Xem Cách 2 · J Perm và hướng cầm</a></p>` : ""}<div class="actions"><button class="btn" data-action="rate-review">${icon("repeat-2")} Cần luyện thêm</button><button class="btn green" data-action="rate-learned">${icon("check")} Đã thuộc</button><button class="btn" data-action="copy" data-id="${c.id}" aria-label="Sao chép đáp án">${icon("copy")}</button></div>` : `<h2>Bạn nhớ công thức này chứ?</h2><p style="font-size:11px;margin:0 0 20px">Quan sát hình và thử nhớ các bước xoay.</p><button class="btn primary" data-action="reveal">${icon("eye")} Hiện đáp án</button>`}<div style="margin-top:16px"><button class="btn" data-action="skip">Bỏ qua ${icon("arrow-right")}</button></div></div></article>`;
   hydrate();
 }
 function guide() {
@@ -512,10 +532,10 @@ function guide() {
       )
       .join(
         "",
-      )}</table></section><section class="guide-box" id="square1"><h3>Square-1 có ký hiệu riêng</h3><p><strong>(a,b)</strong>: xoay tầng trên a bước và tầng dưới b bước, mỗi bước 30°. Chiều dương là chiều kim đồng hồ khi nhìn trực diện tầng đó. <strong>/</strong>: xoay lát cắt 180°.</p><p>Hai hình nguồn lần lượt là mặt trên nhìn từ trên và mặt dưới nhìn từ dưới. Giữ đúng hướng trước khi bắt đầu; chỉ cắt khi các mảnh cho phép.</p><p><strong>Cube Shape:</strong> nguồn liệt kê 29 hình dạng một tầng và 90 tổ hợp hai tầng, cùng hướng dẫn ghép cạnh. Không có bảng 90 công thức đi kèm trong HTML hiện tại.</p><p><strong>CO:</strong> nguồn mô tả là bước trực giác, minh họa 5 ví dụ. Chúng được lưu như ví dụ nguồn, không coi là một bộ CO đầy đủ theo chuẩn khác.</p><p><strong>Parity:</strong> các nhóm EP bao gồm trường hợp hoán vị lẻ; nguồn không có trang parity riêng.</p><a href="https://cubezone.be/square1notation.html" target="_blank" rel="noopener">Ký hiệu Square-1 tại nguồn ${icon("external-link")}</a><p><a href="https://cubezone.be/square1step1.html" target="_blank" rel="noopener">Hướng dẫn Cube Shape tại nguồn</a></p></section></div><section class="guide-box"><h3>Phòng nghiên cứu Cross</h3><p>Thử sức với 102 bài Cross một màu, 3.672 bài hai màu đối diện và 40 bài color neutral từ nghiên cứu của CubeZone. Các bài có scramble và lời giải, được tách khỏi case nhận diện.</p><a class="btn primary" href="/cross">Mở bài tập Cross</a></section><section class="guide-box" id="source"><h3>Dữ liệu & tình trạng kiểm chứng</h3><p>Công thức, hình nhận diện và thứ tự case được nhập từ các trang HTML công khai của Lars Vandenbergh tại <a href="https://cubezone.be/" target="_blank" rel="noopener">CubeZone</a>. Bản quyền nội dung và hình ảnh thuộc tác giả gốc; không có tuyên bố cấp phép lại. Cần được tác giả cho phép trước khi phân phối công khai bộ ảnh.</p><p>“Đã đối chiếu nguồn” nghĩa là importer ghép hình và công thức trong cùng ô hoặc bảng nguồn, có kiểm tra số lượng và tệp ảnh. Có 1 ô ZB F2L trống tại nguồn (ConF2L_1, vị trí 6), được giữ hình và loại khỏi luyện tập. Chưa kiểm chứng trạng thái bằng bộ giải độc lập; vì vậy ứng dụng không cung cấp mô phỏng xoay.</p><p>Số case ở đây là thứ tự tại CubeZone, không tự động tương đương số OLL/PLL của WCA hoặc một thư viện khác.</p><table class="guide-table"><thead><tr><th>Phương pháp</th><th>Đã nhập</th><th>Tình trạng</th></tr></thead><tbody>${methods()
+      )}</table></section><section class="guide-box" id="square1"><h3>Square-1 có ký hiệu riêng</h3><p><a class="btn primary" href="/algorithms?method=CS">Khám phá 5 case Cube Shape mới</a></p><p><strong>(a,b)</strong>: xoay tầng trên a bước và tầng dưới b bước, mỗi bước 30°. Chiều dương là chiều kim đồng hồ khi nhìn trực diện tầng đó. <strong>/</strong>: xoay lát cắt 180°.</p><p>Hai hình nguồn lần lượt là mặt trên nhìn từ trên và mặt dưới nhìn từ dưới. Giữ đúng hướng trước khi bắt đầu; chỉ cắt khi các mảnh cho phép.</p><p><strong>Cube Shape:</strong> nguồn liệt kê 29 hình dạng một tầng và 90 tổ hợp hai tầng, cùng hướng dẫn ghép cạnh. Không có bảng 90 công thức đi kèm trong HTML hiện tại.</p><p><strong>CO:</strong> nguồn mô tả là bước trực giác, minh họa 5 ví dụ. Chúng được lưu như ví dụ nguồn, không coi là một bộ CO đầy đủ theo chuẩn khác.</p><p><strong>Parity:</strong> các nhóm EP bao gồm trường hợp hoán vị lẻ; nguồn không có trang parity riêng.</p><a href="https://cubezone.be/square1notation.html" target="_blank" rel="noopener">Ký hiệu Square-1 tại nguồn ${icon("external-link")}</a><p><a href="https://cubezone.be/square1step1.html" target="_blank" rel="noopener">Hướng dẫn Cube Shape tại nguồn</a></p></section></div><section class="guide-box"><h3>Phòng nghiên cứu Cross</h3><p>Thử sức với 102 bài Cross một màu, 3.672 bài hai màu đối diện và 40 bài color neutral từ nghiên cứu của CubeZone. Các bài có scramble và lời giải, được tách khỏi case nhận diện.</p><a class="btn primary" href="/cross">Mở bài tập Cross</a></section><section class="guide-box"><h3>Rubik 2×2 — Ortega</h3><p>Hoàn thành một mặt, dùng OLL để hoàn thành mặt đối diện, rồi dùng PBL để hoán vị cả hai tầng. Nguồn J Perm có 7 OLL và 5 PBL; PBL giữ nguyên hai hình và góc nhìn từ nguồn. 2×2 không có lớp giữa M/E/S.</p><a class="btn primary" href="/methods?puzzle=2x2">Khám phá Rubik 2×2</a></section><section class="guide-box" id="source"><h3>Dữ liệu & tình trạng kiểm chứng</h3><p>Thư viện gốc được nhập từ các trang HTML công khai của Lars Vandenbergh tại <a href="https://cubezone.be/" target="_blank" rel="noopener">CubeZone</a>. Bản quyền nội dung và hình ảnh thuộc tác giả gốc; không có tuyên bố cấp phép lại. Cần được tác giả cho phép trước khi phân phối công khai bộ ảnh.</p><p>“Đã đối chiếu nguồn” nghĩa là importer ghép hình và công thức trong cùng ô hoặc bảng nguồn, có kiểm tra số lượng và tệp ảnh. Có 1 ô ZB F2L trống tại nguồn (ConF2L_1, vị trí 6), được giữ hình và loại khỏi luyện tập. Chưa kiểm chứng trạng thái bằng bộ giải độc lập; vì vậy ứng dụng không cung cấp mô phỏng xoay.</p><p>Năm case CS là bộ bổ sung từ ảnh bạn cung cấp, có SVG mới và kiểm tra hình dạng riêng. Với các bộ gốc, số case là thứ tự tại CubeZone, không tự động tương đương số OLL/PLL của WCA hoặc một thư viện khác.</p><table class="guide-table"><thead><tr><th>Phương pháp</th><th>Đã nhập</th><th>Tình trạng</th></tr></thead><tbody>${methods()
       .map(
         (m) =>
-          `<tr><td>${m}</td><td>${count(m)}</td><td>Đối chiếu HTML nguồn</td></tr>`,
+          `<tr><td>${m}</td><td>${count(m)}</td><td>${m === "CS" ? "Ảnh tham chiếu · kiểm tra hình dạng" : "Đối chiếu HTML nguồn"}</td></tr>`,
       )
       .join("")}</tbody></table></section>`;
   loadShapes();
@@ -692,9 +712,9 @@ $("#global-search").onsubmit = (e) => {
 };
 async function init() {
   try {
-    let response = await fetch("/api/catalog");
-    if (!response.ok) throw Error();
-    data = await response.json();
+    let [response,puzzleResponse] = await Promise.all([fetch("/api/catalog"),fetch("/api/puzzles")]);
+    if (!response.ok || !puzzleResponse.ok) throw Error();
+    [data,puzzleTypes] = await Promise.all([response.json(),puzzleResponse.json()]);
     $("#nav-total").textContent = data.length;
     $("#theme-btn").innerHTML = icon(
       document.documentElement.dataset.theme === "dark" ? "sun" : "moon",
@@ -732,7 +752,7 @@ async function init() {
           "Hành trình bắt đầu từ đây",
           "Chọn loại Rubik bạn muốn khám phá hôm nay.",
         ) +
-        `<div class="puzzle-grid">${puzzleCard("3x3")}${puzzleCard("sq1")}</div>`;
+        `<div class="puzzle-grid">${puzzleCodes().map(puzzleCard).join("")}</div>`;
     } else if (path === "/progress") progressPage();
     else if (path === "/practice") practicePage();
     else if (path === "/guide") guide();
@@ -799,7 +819,7 @@ globalInput.addEventListener("input", () => {
   }
   let matches = data
     .filter((c) =>
-      (c.name + " " + c.method + " " + c.number + " " + c.algorithm)
+      (c.name + " " + c.puzzle + " " + c.method + " " + c.number + " " + c.algorithm + " " + c.alternatives.join(" "))
         .toLowerCase()
         .includes(q),
     )
@@ -947,4 +967,22 @@ async function crossPage() {
     $("#cross-stage").innerHTML =
       "<p>Chưa thể tải bộ bài tập. Vui lòng tải lại trang.</p>";
   }
+}
+
+function jpermImage(c, className = '') {
+  const r=c.reference;
+  return r?`<img class="${className}" src="${esc(r.imagePath)}" alt="${esc(r.caseName)} Perm — hình J Perm theo hướng cầm của công thức J Perm" loading="lazy" width="150" height="150">`:'';
+}
+function jpermCredit(c) {
+  const r=c.reference;if(!r||r.relation!=='SAME_SEQUENCE')return '';
+  return `<div class="reference-credit" id="jperm">${icon('image')} Hình minh họa từ <a href="${esc(r.sourceUrl)}" target="_blank" rel="noopener">J Perm · ${esc(r.caseName)}</a>. Công thức trùng sau khi chuẩn hóa ngoặc và lượt xoay liên tiếp.</div>`;
+}
+function referenceCard(c) {
+  const r=c.reference;if(!r)return '';
+  if(r.relation==='SAME_SEQUENCE')return `<a class="reference-card same" href="/algorithms/${c.id}#jperm">${icon('image')} Hình minh họa J Perm ${icon('arrow-up-right')}</a>`;
+  return `<a class="reference-card" href="/algorithms/${c.id}#jperm">${jpermImage(c)}<span><strong>Cách 2 · J Perm</strong><small>${esc(r.caseName)} Perm · xem hướng cầm</small></span>${icon('chevron-right')}</a>`;
+}
+function alternativeBlock(c,alg,index) {
+  const r=c.reference,jperm=r&&r.relation==='ALTERNATIVE_SEQUENCE'&&r.algorithm===alg;
+  return `<section class="algorithm-block ${jperm?'jperm-alternative':''}" ${jperm?'id="jperm"':''}><label>${jperm?'CÁCH 2 · J PERM':'BIẾN THỂ '+(index+1)}</label>${jperm?`<div class="reference-recognition">${jpermImage(c)}<p>Đặt Rubik theo đúng hình J Perm trước khi thực hiện cách này. Hướng cầm có thể khác Cách 1.<br><a href="${esc(r.sourceUrl)}" target="_blank" rel="noopener">J Perm · ${esc(r.caseName)} ${icon('external-link')}</a></p></div>`:''}<code>${esc(alg)}</code><button class="btn ${jperm?'primary':''}" data-action="copy-alt" data-index="${index}" data-id="${c.id}">${icon('copy')} ${jperm?'Sao chép Cách 2':'Sao chép'}</button></section>`;
 }

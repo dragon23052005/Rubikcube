@@ -1,0 +1,258 @@
+[
+  {
+    "id": "2x2-oll-l",
+    "puzzle": "2x2",
+    "method": "2×2 OLL",
+    "number": 1,
+    "name": "OLL · L",
+    "category": "2 góc định hướng",
+    "algorithm": "F R' F' R U R U' R'",
+    "alternatives": [
+      "F R U' R' U' R U R' F'"
+    ],
+    "images": [
+      "/images/jperm/2x2-oll-l-1.png"
+    ],
+    "imageTransforms": [
+      ""
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.jperm.net/algs/2x2oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Công thức và ảnh từ J Perm, bộ Ortega 2×2. Ảnh ứng với công thức mặc định; giữ nguyên thứ tự và hướng hiển thị từ nguồn. Biến thể có thể cần đổi hướng cầm — đối chiếu nguồn trước khi thực hiện. Chưa xác minh trạng thái bằng solver độc lập."
+  },
+  {
+    "id": "2x2-oll-u",
+    "puzzle": "2x2",
+    "method": "2×2 OLL",
+    "number": 2,
+    "name": "OLL · U",
+    "category": "2 góc định hướng",
+    "algorithm": "F R U R' U' F'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/2x2-oll-u-1.png"
+    ],
+    "imageTransforms": [
+      ""
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.jperm.net/algs/2x2oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Công thức và ảnh từ J Perm, bộ Ortega 2×2. Ảnh ứng với công thức mặc định; giữ nguyên thứ tự và hướng hiển thị từ nguồn. Biến thể có thể cần đổi hướng cầm — đối chiếu nguồn trước khi thực hiện. Chưa xác minh trạng thái bằng solver độc lập."
+  },
+  {
+    "id": "2x2-oll-t",
+    "puzzle": "2x2",
+    "method": "2×2 OLL",
+    "number": 3,
+    "name": "OLL · T",
+    "category": "2 góc định hướng",
+    "algorithm": "R U R' U' R' F R F'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/2x2-oll-t-1.png"
+    ],
+    "imageTransforms": [
+      ""
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.jperm.net/algs/2x2oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Công thức và ảnh từ J Perm, bộ Ortega 2×2. Ảnh ứng với công thức mặc định; giữ nguyên thứ tự và hướng hiển thị từ nguồn. Biến thể có thể cần đổi hướng cầm — đối chiếu nguồn trước khi thực hiện. Chưa xác minh trạng thái bằng solver độc lập."
+  },
+  {
+    "id": "2x2-oll-pi",
+    "puzzle": "2x2",
+    "method": "2×2 OLL",
+    "number": 4,
+    "name": "OLL · Pi",
+    "category": "0 góc định hướng",
+    "algorithm": "R U2 (R2 U' R2 U' R2) U2 R",
+    "alternatives": [
+      "F R U R' U' R U R' U' F'"
+    ],
+    "images": [
+      "/images/jperm/2x2-oll-pi-1.png"
+    ],
+    "imageTransforms": [
+      ""
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.jperm.net/algs/2x2oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Công thức và ảnh từ J Perm, bộ Ortega 2×2. Ảnh ứng với công thức mặc định; giữ nguyên thứ tự và hướng hiển thị từ nguồn. Biến thể có thể cần đổi hướng cầm — đối chiếu nguồn trước khi thực hiện. Chưa xác minh trạng thái bằng solver độc lập."
+  },
+  {
+    "id": "2x2-oll-h",
+    "puzzle": "2x2",
+    "method": "2×2 OLL",
+    "number": 5,
+    "name": "OLL · H",
+    "category": "0 góc định hướng",
+    "algorithm": "R2 U2 R U2 R2",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/2x2-oll-h-1.png"
+    ],
+    "imageTransforms": [
+      ""
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.jperm.net/algs/2x2oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Công thức và ảnh từ J Perm, bộ Ortega 2×2. Ảnh ứng với công thức mặc định; giữ nguyên thứ tự và hướng hiển thị từ nguồn. Biến thể có thể cần đổi hướng cầm — đối chiếu nguồn trước khi thực hiện. Chưa xác minh trạng thái bằng solver độc lập."
+  },
+  {
+    "id": "2x2-oll-antisune",
+    "puzzle": "2x2",
+    "method": "2×2 OLL",
+    "number": 6,
+    "name": "OLL · Antisune",
+    "category": "1 góc định hướng",
+    "algorithm": "R U2 R' U' R U' R'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/2x2-oll-antisune-1.png"
+    ],
+    "imageTransforms": [
+      ""
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.jperm.net/algs/2x2oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Công thức và ảnh từ J Perm, bộ Ortega 2×2. Ảnh ứng với công thức mặc định; giữ nguyên thứ tự và hướng hiển thị từ nguồn. Biến thể có thể cần đổi hướng cầm — đối chiếu nguồn trước khi thực hiện. Chưa xác minh trạng thái bằng solver độc lập."
+  },
+  {
+    "id": "2x2-oll-sune",
+    "puzzle": "2x2",
+    "method": "2×2 OLL",
+    "number": 7,
+    "name": "OLL · Sune",
+    "category": "1 góc định hướng",
+    "algorithm": "R U R' U R U2 R'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/2x2-oll-sune-1.png"
+    ],
+    "imageTransforms": [
+      ""
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.jperm.net/algs/2x2oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Công thức và ảnh từ J Perm, bộ Ortega 2×2. Ảnh ứng với công thức mặc định; giữ nguyên thứ tự và hướng hiển thị từ nguồn. Biến thể có thể cần đổi hướng cầm — đối chiếu nguồn trước khi thực hiện. Chưa xác minh trạng thái bằng solver độc lập."
+  },
+  {
+    "id": "2x2-pbl-adj-u",
+    "puzzle": "2x2",
+    "method": "2×2 PBL",
+    "number": 1,
+    "name": "PBL · Adj U",
+    "category": "Tầng D đã đúng",
+    "algorithm": "R U R' U' R' F R2 U' R' U' R U R' F'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/2x2-pbl-adj-u-1.png",
+      "/images/jperm/2x2-pbl-adj-u-2.png"
+    ],
+    "imageTransforms": [
+      "",
+      "scaleX(-1)"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.jperm.net/algs/2x2pbl",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Công thức và ảnh từ J Perm, bộ Ortega 2×2. Ảnh ứng với công thức mặc định; giữ nguyên thứ tự và hướng hiển thị từ nguồn. Biến thể có thể cần đổi hướng cầm — đối chiếu nguồn trước khi thực hiện. Chưa xác minh trạng thái bằng solver độc lập."
+  },
+  {
+    "id": "2x2-pbl-diag-u",
+    "puzzle": "2x2",
+    "method": "2×2 PBL",
+    "number": 2,
+    "name": "PBL · Diag U",
+    "category": "Tầng D đã đúng",
+    "algorithm": "F R U' R' U' R U R' F' R U R' U' R' F R F'",
+    "alternatives": [
+      "R' U R' F2 R F' U R' F2 R F' R"
+    ],
+    "images": [
+      "/images/jperm/2x2-pbl-diag-u-1.png",
+      "/images/jperm/2x2-pbl-diag-u-2.png"
+    ],
+    "imageTransforms": [
+      "",
+      "scaleX(-1)"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.jperm.net/algs/2x2pbl",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Công thức và ảnh từ J Perm, bộ Ortega 2×2. Ảnh ứng với công thức mặc định; giữ nguyên thứ tự và hướng hiển thị từ nguồn. Biến thể có thể cần đổi hướng cầm — đối chiếu nguồn trước khi thực hiện. Chưa xác minh trạng thái bằng solver độc lập."
+  },
+  {
+    "id": "2x2-pbl-adj-adj",
+    "puzzle": "2x2",
+    "method": "2×2 PBL",
+    "number": 3,
+    "name": "PBL · Adj/Adj",
+    "category": "Đổi góc kề nhau ở D",
+    "algorithm": "R2 U' B2 U2 R2 U' R2",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/2x2-pbl-adj-adj-1.png",
+      "/images/jperm/2x2-pbl-adj-adj-2.png"
+    ],
+    "imageTransforms": [
+      "",
+      "scaleX(-1)"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.jperm.net/algs/2x2pbl",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Công thức và ảnh từ J Perm, bộ Ortega 2×2. Ảnh ứng với công thức mặc định; giữ nguyên thứ tự và hướng hiển thị từ nguồn. Biến thể có thể cần đổi hướng cầm — đối chiếu nguồn trước khi thực hiện. Chưa xác minh trạng thái bằng solver độc lập."
+  },
+  {
+    "id": "2x2-pbl-adj-diag",
+    "puzzle": "2x2",
+    "method": "2×2 PBL",
+    "number": 4,
+    "name": "PBL · Adj/Diag",
+    "category": "Đổi góc đối diện ở D",
+    "algorithm": "R U' R F2 R' U R'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/2x2-pbl-adj-diag-1.png",
+      "/images/jperm/2x2-pbl-adj-diag-2.png"
+    ],
+    "imageTransforms": [
+      "",
+      "scaleX(-1)"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.jperm.net/algs/2x2pbl",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Công thức và ảnh từ J Perm, bộ Ortega 2×2. Ảnh ứng với công thức mặc định; giữ nguyên thứ tự và hướng hiển thị từ nguồn. Biến thể có thể cần đổi hướng cầm — đối chiếu nguồn trước khi thực hiện. Chưa xác minh trạng thái bằng solver độc lập."
+  },
+  {
+    "id": "2x2-pbl-diag-diag",
+    "puzzle": "2x2",
+    "method": "2×2 PBL",
+    "number": 5,
+    "name": "PBL · Diag/Diag",
+    "category": "Đổi góc đối diện ở D",
+    "algorithm": "R2 F2 R2",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/2x2-pbl-diag-diag-1.png",
+      "/images/jperm/2x2-pbl-diag-diag-2.png"
+    ],
+    "imageTransforms": [
+      "",
+      "scaleX(-1)"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.jperm.net/algs/2x2pbl",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Công thức và ảnh từ J Perm, bộ Ortega 2×2. Ảnh ứng với công thức mặc định; giữ nguyên thứ tự và hướng hiển thị từ nguồn. Biến thể có thể cần đổi hướng cầm — đối chiếu nguồn trước khi thực hiện. Chưa xác minh trạng thái bằng solver độc lập."
+  }
+]
