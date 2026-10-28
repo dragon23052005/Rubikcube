@@ -1,0 +1,5 @@
+cubing.js 0.66.1, MPL-2.0 OR GPL-3.0-or-later
+Source: https://github.com/cubing/cubing.js/tree/v0.66.1
+License: https://github.com/cubing/cubing.js/blob/v0.66.1/LICENSE-MPL.md
+Three.js: MIT; see Three-LICENSE.txt
+Bundled unmodified library code; application adapters are in ui/.

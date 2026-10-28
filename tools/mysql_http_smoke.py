@@ -30,5 +30,17 @@ call('/api/auth/login','POST',{'email':email,'password':password},True)
 assert call('/api/auth/me')['user']['id']==account['id']
 rows=call('/api/progress');assert len(rows)==1 and rows[0]['learned'] and rows[0]['favorite']
 plan=call('/api/roadmap');assert plan['user']['focusPuzzle']=='5x5' and plan['stages'][0]['complete']
+study=call('/api/study/sessions','POST',{'puzzle':'5x5','method':'5×5 L2E','mode':'NEW','size':3})
+assert study['phase']=='LEARN' and len(study['caseIds'])==3
+call('/api/study/sessions/'+study['id']+'/begin','POST')
+first=None
+for index,(case,outcome) in enumerate(zip(study['caseIds'],['GOOD','AGAIN','HARD'])):
+ attempt={'eventId':str(uuid.uuid4()),'algorithmId':case,'outcome':outcome,'recognitionMs':2000,'sessionId':study['id'],'sessionIndex':index}
+ result=call('/api/study/attempts','POST',attempt)
+ if index==0:first=attempt
+assert result['session']['phase']=='COMPLETE'
+call('/api/study/attempts','POST',first)
+stats=call('/api/study/stats?puzzle=5x5')
+assert stats['attempts']==3 and stats['correct']==1 and stats['wrong']==1 and stats['hard']==1
 call('/api/auth/logout','POST')
-print('MySQL HTTP smoke PASS: 606 cases, register/login, profile, learned/favorite, roadmap and return login.')
+print('MySQL HTTP smoke PASS: catalog, auth, progress, roadmap, small study session, scheduling, statistics and idempotent retry.')

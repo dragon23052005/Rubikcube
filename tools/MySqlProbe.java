@@ -26,7 +26,11 @@ public class MySqlProbe {
     if(Arrays.asList(args).contains("--cleanup-qa")){
      connection.setAutoCommit(false);
      try{
-      for(String table:List.of("learning_progress","stage_completion","social_identities")){try(var statement=connection.prepareStatement("DELETE FROM "+table+" WHERE user_id=?".replace("user_id",table.equals("social_identities")?"account_id":"user_id"))){statement.setString(1,id);statement.executeUpdate();}}
+      for(String table:List.of("timer_solve","study_attempt","study_session","case_memory","learning_progress","stage_completion","social_identities")){
+       try(var tables=connection.getMetaData().getTables("demotesting",null,table,new String[]{"TABLE"})){if(!tables.next())continue;}
+       String owner=table.equals("social_identities")?"account_id":"user_id";
+       try(var statement=connection.prepareStatement("DELETE FROM "+table+" WHERE "+owner+"=?")){statement.setString(1,id);statement.executeUpdate();}
+      }
       try(var statement=connection.prepareStatement("DELETE FROM academy_accounts WHERE id=? AND email=?")){statement.setString(1,id);statement.setString(2,email);if(statement.executeUpdate()!=1)throw new IllegalStateException("QA owner mismatch");}
       connection.commit();System.out.println("Removed only disposable QA account and its own records.");
      }catch(Exception e){connection.rollback();throw e;}

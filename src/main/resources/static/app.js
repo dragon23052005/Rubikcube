@@ -403,7 +403,7 @@ function detail() {
       [c.method, "/algorithms?method=" + encodeURIComponent(c.method)],
       [c.name],
     ]) +
-    `<div class="detail-grid"><section class="detail-visual">${visual(c)}<div class="visual-caption">${c.puzzle === "sq1" ? (c.method === "CS" ? "Trên: tầng trên · Dưới: tầng dưới nhìn từ dưới" : "Trái: mặt trên · Phải: mặt dưới nhìn từ dưới") : (["4x4","5x5"].includes(c.puzzle) ? "Hình nhận diện theo nguồn của case; giữ đúng hướng cầm" : c.puzzle === "2x2" ? "Hình J Perm · giữ nguyên thứ tự và hướng nhìn của nguồn" : c.reference?.relation === "SAME_SEQUENCE" ? "Hình J Perm · cùng chuỗi công thức" : "Hình CubeZone · hướng cầm cho Cách 1")}<br>${c.puzzle === "5x5" ? "CubeSkills · VisualCube · 5×5" : c.puzzle === "4x4" ? "J Perm / CubeSkills · 4×4" : c.puzzle === "2x2" ? "Ortega 2×2" : c.method === "CS" ? "SVG mới · tham chiếu từ ảnh bạn cung cấp" : "Số thứ tự theo CubeZone"}</div></section><section class="detail-content"><span class="badge">${esc(puzzleName(c.puzzle))}</span><span class="badge">${c.method} #${c.number}</span><h1>${esc(c.name)}</h1><p>${esc(names[c.method])} · ${esc(c.category)}</p><div class="algorithm-block"><label>${c.reference ? "CÁCH 1 · CUBEZONE" : "CÔNG THỨC CHÍNH"}</label><code>${esc(c.algorithm) || "Ô công thức trống tại nguồn"}</code><button class="btn primary" data-action="copy" data-id="${id}" ${!c.algorithm ? "disabled" : ""}>${icon("copy")} Sao chép công thức</button></div>${jpermCredit(c)}${c.alternatives.map((alg, i) => alternativeBlock(c,alg,i)).join("")}<div class="actions"><button class="btn ${state(id).learned ? "green" : ""}" data-action="detail-learned" data-id="${id}" ${!c.algorithm ? "disabled" : ""} aria-pressed="${!!state(id).learned}">${icon("circle-check")} ${state(id).learned ? "Đã thuộc" : "Đánh dấu đã thuộc"}</button><button class="btn" data-action="detail-favorite" data-id="${id}" aria-pressed="${!!state(id).favorite}">${icon("bookmark")} ${state(id).favorite ? "Đã lưu" : "Lưu case"}</button><a class="btn" href="/practice?method=${encodeURIComponent(c.method)}">${icon("zap")} Luyện tập</a></div><div class="guide-box"><h3>Cách đọc & hướng cầm</h3>${c.puzzle === "sq1" ? "<p>Giữ hướng mặt trên và mặt dưới như hình. (a,b) là số bước 30° của tầng trên và dưới; số âm xoay ngược chiều kim đồng hồ khi nhìn trực diện từng tầng. Dấu / xoay lát cắt 180°.</p>" : "<p>Đặt Rubik theo đúng hướng trong hình nguồn trước khi thực hiện. U là mặt trên, F là mặt trước, R là mặt phải. Dấu ' là ngược chiều kim đồng hồ khi nhìn thẳng vào mặt xoay; 2 là xoay 180°.</p>"}${c.puzzle === "5x5" ? `<p><strong>Rw/Lw/Uw/Dw:</strong> hai lớp ngoài liền nhau. <strong>3Rw/3Lw/3Dw:</strong> ba lớp tương ứng. <strong>M:</strong> chỉ lớp chính giữa theo chiều L; M' theo chiều R. <strong>[z' y']:</strong> xoay toàn khối z' rồi y' trước chuỗi chính.</p><a href="/5x5#notation">Ký hiệu & lộ trình 5×5</a>` : ""}${c.puzzle === "4x4" ? `<p><strong>Rw / Uw:</strong> xoay hai lớp ngoài cùng tương ứng. <strong>3Rw:</strong> xoay ba lớp bên phải. <strong>2R:</strong> chỉ lớp thứ hai từ bên phải; 2R2 là lớp đó xoay 180°. <strong>M:</strong> cả hai lớp giữa theo chiều L, M' theo chiều R. <strong>x/y/z:</strong> xoay toàn khối. Công thức đã mở rộng [*], có thể sao chép trực tiếp.</p><a href="/4x4#notation">Ký hiệu & lộ trình 4×4</a>` : ""}<div class="notation-row">${(c.puzzle ===
+    `<div class="detail-grid"><section class="detail-visual">${visual(c)}<div class="visual-caption">${c.puzzle === "sq1" ? (c.method === "CS" ? "Trên: tầng trên · Dưới: tầng dưới nhìn từ dưới" : "Trái: mặt trên · Phải: mặt dưới nhìn từ dưới") : (["4x4","5x5"].includes(c.puzzle) ? "Hình nhận diện theo nguồn của case; giữ đúng hướng cầm" : c.puzzle === "2x2" ? "Hình J Perm · giữ nguyên thứ tự và hướng nhìn của nguồn" : c.reference?.relation === "SAME_SEQUENCE" ? "Hình J Perm · cùng chuỗi công thức" : "Hình CubeZone · hướng cầm cho Cách 1")}<br>${c.puzzle === "5x5" ? "CubeSkills · VisualCube · 5×5" : c.puzzle === "4x4" ? "J Perm / CubeSkills · 4×4" : c.puzzle === "2x2" ? "Ortega 2×2" : c.method === "CS" ? "SVG mới · tham chiếu từ ảnh bạn cung cấp" : "Số thứ tự theo CubeZone"}</div>${motionPanel(c)}</section><section class="detail-content"><span class="badge">${esc(puzzleName(c.puzzle))}</span><span class="badge">${c.method} #${c.number}</span><h1>${esc(c.name)}</h1><p>${esc(names[c.method])} · ${esc(c.category)}</p><div class="algorithm-block"><label>${c.reference ? "CÁCH 1 · CUBEZONE" : "CÔNG THỨC CHÍNH"}</label><code>${esc(c.algorithm) || "Ô công thức trống tại nguồn"}</code><button class="btn primary" data-action="copy" data-id="${id}" ${!c.algorithm ? "disabled" : ""}>${icon("copy")} Sao chép công thức</button><button class="btn" data-motion-index="0" ${!c.algorithm ? 'disabled' : ''}>${icon("play")} Xem xoay 3D</button></div>${jpermCredit(c)}${c.alternatives.map((alg, i) => alternativeBlock(c,alg,i)).join("")}<div class="actions"><button class="btn ${state(id).learned ? "green" : ""}" data-action="detail-learned" data-id="${id}" ${!c.algorithm ? "disabled" : ""} aria-pressed="${!!state(id).learned}">${icon("circle-check")} ${state(id).learned ? "Đã thuộc" : "Đánh dấu đã thuộc"}</button><button class="btn" data-action="detail-favorite" data-id="${id}" aria-pressed="${!!state(id).favorite}">${icon("bookmark")} ${state(id).favorite ? "Đã lưu" : "Lưu case"}</button><a class="btn" href="/practice?method=${encodeURIComponent(c.method)}">${icon("zap")} Luyện tập</a></div><div class="guide-box"><h3>Cách đọc & hướng cầm</h3>${c.puzzle === "sq1" ? "<p>Giữ hướng mặt trên và mặt dưới như hình. (a,b) là số bước 30° của tầng trên và dưới; số âm xoay ngược chiều kim đồng hồ khi nhìn trực diện từng tầng. Dấu / xoay lát cắt 180°.</p>" : "<p>Đặt Rubik theo đúng hướng trong hình nguồn trước khi thực hiện. U là mặt trên, F là mặt trước, R là mặt phải. Dấu ' là ngược chiều kim đồng hồ khi nhìn thẳng vào mặt xoay; 2 là xoay 180°.</p>"}${c.puzzle === "5x5" ? `<p><strong>Rw/Lw/Uw/Dw:</strong> hai lớp ngoài liền nhau. <strong>3Rw/3Lw/3Dw:</strong> ba lớp tương ứng. <strong>M:</strong> chỉ lớp chính giữa theo chiều L; M' theo chiều R. <strong>[z' y']:</strong> xoay toàn khối z' rồi y' trước chuỗi chính.</p><a href="/5x5#notation">Ký hiệu & lộ trình 5×5</a>` : ""}${c.puzzle === "4x4" ? `<p><strong>Rw / Uw:</strong> xoay hai lớp ngoài cùng tương ứng. <strong>3Rw:</strong> xoay ba lớp bên phải. <strong>2R:</strong> chỉ lớp thứ hai từ bên phải; 2R2 là lớp đó xoay 180°. <strong>M:</strong> cả hai lớp giữa theo chiều L, M' theo chiều R. <strong>x/y/z:</strong> xoay toàn khối. Công thức đã mở rộng [*], có thể sao chép trực tiếp.</p><a href="/4x4#notation">Ký hiệu & lộ trình 4×4</a>` : ""}<div class="notation-row">${(c.puzzle ===
     "sq1"
       ? [
           ["(a,b)", "Xoay tầng trên và dưới theo đơn vị 30°"],
@@ -427,6 +427,7 @@ function detail() {
         "",
       )}</div><p><a href="/guide">Xem giải thích ký hiệu đầy đủ</a></p></div><p class="source-note">${esc(c.description)}<br><a href="${c.sourceUrl}" target="_blank" rel="noopener">${c.puzzle === "5x5" ? "Mở PDF nguồn CubeSkills 5×5" : c.puzzle === "4x4" ? "Mở tài liệu nguồn 4×4" : c.puzzle === "2x2" ? "Mở trang nguồn J Perm" : c.method === "CS" ? "Xem ảnh tham chiếu" : "Mở trang nguồn CubeZone"} ${icon("external-link")}</a></p></section></div><div class="detail-nav">${index > 0 ? `<a class="btn" href="/algorithms/${siblings[index - 1].id}">${icon("arrow-left")} Case trước</a>` : "<span></span>"}${index < siblings.length - 1 ? `<a class="btn" href="/algorithms/${siblings[index + 1].id}">Case tiếp theo ${icon("arrow-right")}</a>` : ""}</div>`;
   hydrate();
+  mountMotion(c);
   if(location.hash === "#jperm") document.getElementById("jperm")?.scrollIntoView({block:"start"});
 }
 function methodPage() {
@@ -498,6 +499,7 @@ function practicePage() {
   };
   $("#p-method").onchange = nextCase;
   $("#p-scope").onchange = nextCase;
+  $(".practice-wrap").insertAdjacentHTML("afterbegin", `<section class="account-banner"><div><strong>Muốn học theo nhóm nhỏ và có lịch ôn?</strong><p>${currentUser?"Các lượt luyện ở đây cũng được lưu vào thống kê của bạn.":"Đăng nhập để lưu lịch ôn và kết quả theo tài khoản."}</p></div><a class="btn" href="/study">Buổi học 3–5 case</a></section>`);
   nextCase();
 }
 function nextCase() {
@@ -517,6 +519,7 @@ function nextCase() {
   revealed = false;
   practice = candidates[Math.floor(Math.random() * candidates.length)];
   round++;
+  practiceAttemptId=crypto.randomUUID();practicePendingGrade=null;practiceRecognitionMs=0;startRecallClock();
   practiceStage();
 }
 function practiceStage() {
@@ -528,7 +531,7 @@ function practiceStage() {
     return;
   }
   $("#practice-stage").innerHTML =
-    `<article class="practice-card"><div class="practice-card-head"><span class="badge">${c.method} · ${esc(puzzleName(c.puzzle))}</span><span>Lượt ${round} · ${sessionLearned} lần nhớ đúng</span></div>${visual(c)}<div class="practice-answer">${revealed ? `<h2>${esc(c.name)}</h2><code>${esc(c.algorithm) || "Ô công thức trống tại nguồn"}</code>${c.reference?.relation === "ALTERNATIVE_SEQUENCE" ? `<p><a class="text-link" href="/algorithms/${c.id}#jperm">Xem Cách 2 · J Perm và hướng cầm</a></p>` : ""}<div class="actions"><button class="btn" data-action="rate-review">${icon("repeat-2")} Cần luyện thêm</button><button class="btn green" data-action="rate-learned">${icon("check")} Đã thuộc</button><button class="btn" data-action="copy" data-id="${c.id}" aria-label="Sao chép đáp án">${icon("copy")}</button></div>` : `<h2>Bạn nhớ công thức này chứ?</h2><p style="font-size:11px;margin:0 0 20px">Quan sát hình và thử nhớ các bước xoay.</p><button class="btn primary" data-action="reveal">${icon("eye")} Hiện đáp án</button>`}<div style="margin-top:16px"><button class="btn" data-action="skip">Bỏ qua ${icon("arrow-right")}</button></div></div></article>`;
+    `<article class="practice-card"><div class="practice-card-head"><span class="badge">${c.method} · ${esc(puzzleName(c.puzzle))}</span><span>Lượt ${round} · ${sessionLearned} lần nhớ đúng</span></div>${visual(c)}<div class="practice-answer">${revealed ? `<h2>${esc(c.name)}</h2><code>${esc(c.algorithm) || "Ô công thức trống tại nguồn"}</code>${c.reference?.relation === "ALTERNATIVE_SEQUENCE" ? `<p><a class="text-link" href="/algorithms/${c.id}#jperm">Xem Cách 2 · J Perm và hướng cầm</a></p>` : ""}<div class="actions"><button class="btn" data-action="rate-review">${icon("repeat-2")} Chưa nhớ</button><button class="btn" data-action="rate-hard">Nhớ một phần</button><button class="btn green" data-action="rate-learned">${icon("check")} Đã thuộc</button><button class="btn" data-action="copy" data-id="${c.id}" aria-label="Sao chép đáp án">${icon("copy")}</button></div>` : `<h2>Bạn nhớ công thức này chứ?</h2><p style="font-size:11px;margin:0 0 20px">Quan sát hình và thử nhớ các bước xoay.</p><button class="btn primary" data-action="reveal">${icon("eye")} Hiện đáp án</button>`}<div style="margin-top:16px"><button class="btn" data-action="skip">Bỏ qua ${icon("arrow-right")}</button></div></div></article>`;
   hydrate();
 }
 function guide() {
@@ -647,6 +650,7 @@ document.addEventListener("click", async (e) => {
     $("#case-search").scrollIntoView({ block: "center" });
   }
   if (a === "reveal") {
+    if(!revealed)practiceRecognitionMs=stopRecallClock();
     revealed = true;
     track(practice.id);
     practiceStage();
@@ -656,10 +660,11 @@ document.addEventListener("click", async (e) => {
     $("#p-scope").value = "all";
     nextCase();
   }
-  if (a === "rate-review" || a === "rate-learned") {
+  if (a === "rate-review" || a === "rate-learned" || a === "rate-hard") {
     if (!revealed || !practice) return;
     let learned = a === "rate-learned";
-    await update(practice.id, { learned, review: !learned });
+    if(currentUser)await savePracticeRecall(a === "rate-learned"?"GOOD":a === "rate-hard"?"HARD":"AGAIN");
+    else await update(practice.id, { learned, review: !learned });
     if (learned) sessionLearned++;
     toast(
       learned ? "Đã ghi nhận: đã thuộc" : "Đã thêm vào danh sách cần luyện",
@@ -764,7 +769,7 @@ async function init() {
     $("#top-crumb strong").textContent = {
       home: "Tổng quan",
       algorithms: "Thư viện thuật toán",
-      practice: "Luyện tập",
+      practice: "Luyện tập",timer:"Bấm giờ & Scramble",
       progress: "Tiến độ học tập",
       favorites: "Đã lưu",
       guide: "Ký hiệu & hướng dẫn",
@@ -773,7 +778,7 @@ async function init() {
       cross: "Bài tập Cross",
       "4x4": "Học Rubik 4×4",
       "5x5": "Học Rubik 5×5",
-      login:"Đăng nhập",register:"Đăng ký",account:"Tài khoản",roadmap:"Lộ trình của tôi",admin:"Quản lý người học",
+      login:"Đăng nhập",register:"Đăng ký",account:"Tài khoản",roadmap:"Lộ trình của tôi",admin:"Quản lý người học",study:"Ôn tập thông minh","study-stats":"Thống kê luyện tập",
     }[current];
     if (path === "/") {home();personalHome();}
     else if (path === "/algorithms" || path === "/favorites") library();
@@ -789,6 +794,7 @@ async function init() {
         `<div class="puzzle-grid">${puzzleCodes().map(puzzleCard).join("")}</div>`;
     } else if (path === "/progress") progressPage();
     else if (path === "/practice") practicePage();
+    else if (path === "/timer") await timerPage();
     else if (path === "/guide") guide();
     else if (path === "/cross") crossPage();
     else if (path === "/4x4") fourGuide();
@@ -798,6 +804,8 @@ async function init() {
     else if (path === "/account") accountPage();
     else if (path === "/roadmap") await roadmapPage();
     else if (path === "/admin") await adminPage();
+    else if (path === "/study") await studyPage();
+    else if (path === "/study-stats") await studyStatsPage();
     hydrate();
   } catch (error) {
     $("#main").innerHTML =
@@ -1025,7 +1033,7 @@ function referenceCard(c) {
 }
 function alternativeBlock(c,alg,index) {
   const r=c.reference,jperm=r&&r.relation==='ALTERNATIVE_SEQUENCE'&&r.algorithm===alg;
-  return `<section class="algorithm-block ${jperm?'jperm-alternative':''}" ${jperm?'id="jperm"':''}><label>${jperm?'CÁCH 2 · J PERM':'BIẾN THỂ '+(index+1)}</label>${jperm?`<div class="reference-recognition">${jpermImage(c)}<p>Đặt Rubik theo đúng hình J Perm trước khi thực hiện cách này. Hướng cầm có thể khác Cách 1.<br><a href="${esc(r.sourceUrl)}" target="_blank" rel="noopener">J Perm · ${esc(r.caseName)} ${icon('external-link')}</a></p></div>`:''}<code>${esc(alg)}</code><button class="btn ${jperm?'primary':''}" data-action="copy-alt" data-index="${index}" data-id="${c.id}">${icon('copy')} ${jperm?'Sao chép Cách 2':'Sao chép'}</button></section>`;
+  return `<section class="algorithm-block ${jperm?'jperm-alternative':''}" ${jperm?'id="jperm"':''}><label>${jperm?'CÁCH 2 · J PERM':'BIẾN THỂ '+(index+1)}</label>${jperm?`<div class="reference-recognition">${jpermImage(c)}<p>Đặt Rubik theo đúng hình J Perm trước khi thực hiện cách này. Hướng cầm có thể khác Cách 1.<br><a href="${esc(r.sourceUrl)}" target="_blank" rel="noopener">J Perm · ${esc(r.caseName)} ${icon('external-link')}</a></p></div>`:''}<code>${esc(alg)}</code><button class="btn ${jperm?'primary':''}" data-action="copy-alt" data-index="${index}" data-id="${c.id}">${icon('copy')} ${jperm?'Sao chép Cách 2':'Sao chép'}</button><button class="btn" data-motion-index="${index+1}">${icon('play')} Xem xoay 3D</button></section>`;
 }
 
 function cube4Art() {

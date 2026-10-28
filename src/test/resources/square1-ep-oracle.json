@@ -1,0 +1,274 @@
+{
+  "generator" : "TNoodle 0.20.0",
+  "cases" : [ {
+    "id" : "ep-1",
+    "pieces" : [ 0, 0, 1, 2, 2, 3, 4, 4, 7, 6, 6, 5, 8, 9, 9, 10, 11, 11, 12, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "bcd9630431446c862161677806a00128676a886ccf16bb0c7862df13f2c4b742",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-2",
+    "pieces" : [ 0, 0, 5, 2, 2, 3, 4, 4, 1, 6, 6, 7, 8, 9, 9, 10, 11, 11, 12, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "6c8392266dbb55604915f896c3db617a491a200ea371371799187611fafeb7e3",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-3",
+    "pieces" : [ 0, 0, 7, 2, 2, 5, 4, 4, 3, 6, 6, 1, 8, 9, 9, 10, 11, 11, 12, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "0c3d8a3304a11c283fd80be6e73ea952905b75c121e8e7b8491579f7bc698be8",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-4",
+    "pieces" : [ 0, 0, 5, 2, 2, 7, 4, 4, 1, 6, 6, 3, 8, 9, 9, 10, 11, 11, 12, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "41e47892c4f9b244ca187d101a0c1b9fa8d97d71ed4e5c2bd310c8d8d14ddd13",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-5",
+    "pieces" : [ 0, 0, 3, 2, 2, 5, 4, 4, 1, 6, 6, 7, 8, 9, 9, 10, 11, 11, 12, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "16b9018a15da5ff4eda3a54f98883d14675fef5231ad891350aef411daca53e8",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-6",
+    "pieces" : [ 0, 0, 5, 2, 2, 1, 4, 4, 3, 6, 6, 7, 8, 9, 9, 10, 11, 11, 12, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "0a82e1b00fc5bc98894bf98881e39400ebfd6dbf0b69cfaefc5d497fb14aab0e",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-7",
+    "pieces" : [ 0, 0, 3, 2, 2, 5, 4, 4, 7, 6, 6, 1, 8, 9, 9, 10, 11, 11, 12, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "54aea0808e5b0369d4ef5a6a60fa8132a210e6a0a874b22653ab52cb8bc2eabc",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-8",
+    "pieces" : [ 0, 0, 7, 2, 2, 1, 4, 4, 3, 6, 6, 5, 8, 9, 9, 10, 11, 11, 12, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "f3bba2982ac3e00995e55b249d24f16f3d36f11f64ca1e19292b7a6ec3e66254",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-9",
+    "pieces" : [ 0, 0, 5, 2, 2, 7, 4, 4, 3, 6, 6, 1, 14, 15, 15, 8, 9, 9, 10, 11, 11, 12, 13, 13 ],
+    "algorithmSha256" : "ff91bbd1464675d3f43918befc6fbd3b72cdef214ce01c364f312091340f4882",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-10",
+    "pieces" : [ 0, 0, 1, 2, 2, 3, 4, 4, 7, 6, 6, 5, 14, 9, 9, 10, 11, 11, 12, 13, 13, 8, 15, 15 ],
+    "algorithmSha256" : "6d081cd9a5ee86830abce199f7b5e8025bf63102f7cd76243183f54d53ca2fd4",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-11",
+    "pieces" : [ 0, 0, 1, 2, 2, 7, 4, 4, 5, 6, 6, 3, 8, 9, 9, 12, 11, 11, 10, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "977573ea1888f98e2957371eae7b54064e209507aa13270878652eee6bbe9f30",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-12",
+    "pieces" : [ 0, 0, 1, 2, 2, 7, 4, 4, 5, 6, 6, 3, 12, 9, 9, 10, 11, 11, 8, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "a50d86cda4e668e2a4a10ec67958377d7c2db8b15112bc4a50b2cbd106b5c0f0",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-13",
+    "pieces" : [ 6, 6, 1, 0, 0, 7, 2, 2, 5, 4, 4, 3, 12, 11, 11, 10, 13, 13, 14, 15, 15, 8, 9, 9 ],
+    "algorithmSha256" : "e621f712ee40098d6506baf11ae617a94a3472ad01a4e5e69da978770019b844",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-14",
+    "pieces" : [ 0, 0, 5, 2, 2, 7, 4, 4, 1, 6, 6, 3, 8, 9, 9, 12, 11, 11, 10, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "60e575181e34eec340b077109664e5629f21eb2a57aaf7e21e7b4ec8dbaf6dd7",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-15",
+    "pieces" : [ 0, 0, 3, 2, 2, 5, 4, 4, 1, 6, 6, 7, 8, 9, 9, 12, 11, 11, 10, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "87763bd278c7794021ee8c70ecaf3b888e8fb74e5d2be1ae57da1b4b5c2f6c73",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-16",
+    "pieces" : [ 0, 0, 5, 2, 2, 1, 4, 4, 3, 6, 6, 7, 8, 9, 9, 10, 11, 11, 14, 13, 13, 12, 15, 15 ],
+    "algorithmSha256" : "d80527d5b12251353bea36ba360b931560b6540133d38af080c1caa6d4085a4e",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-17",
+    "pieces" : [ 0, 0, 3, 2, 2, 1, 4, 4, 7, 6, 6, 5, 8, 9, 9, 14, 11, 11, 12, 13, 13, 10, 15, 15 ],
+    "algorithmSha256" : "f336d5c553c81c8955e5ada098bea3b4b8b71a23c9576317f84f092aa9f7fa40",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-18",
+    "pieces" : [ 0, 0, 5, 2, 2, 7, 4, 4, 1, 6, 6, 3, 8, 9, 9, 14, 11, 11, 12, 13, 13, 10, 15, 15 ],
+    "algorithmSha256" : "4ec3d9f7825c1f357c46fc89caa9046c58dbf4453109f2f7a0e5fa218234a0b4",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-19",
+    "pieces" : [ 0, 0, 3, 2, 2, 5, 4, 4, 1, 6, 6, 7, 12, 9, 9, 10, 11, 11, 8, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "e825c3d818822b9f67d6f99264c0a24442827cee2d3c7f1a490713e41cd1592c",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-20",
+    "pieces" : [ 0, 0, 5, 2, 2, 1, 4, 4, 3, 6, 6, 7, 8, 9, 9, 14, 11, 11, 12, 13, 13, 10, 15, 15 ],
+    "algorithmSha256" : "5aea58c2a27aa79e7a4417b42197a17389bbf8b473a72c68b4c7a95dd1a35ae3",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-21",
+    "pieces" : [ 0, 0, 3, 2, 2, 5, 4, 4, 7, 6, 6, 1, 8, 9, 9, 12, 11, 11, 10, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "01a5b4b0e395f206d423bb5e3978ade2340784aeb1409cdde9f42c9458c1692d",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-22",
+    "pieces" : [ 0, 0, 7, 2, 2, 1, 4, 4, 3, 6, 6, 5, 8, 9, 9, 12, 11, 11, 10, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "3141bb298d634daa3b36bc594db3eb0c1207a8b7a1b91f1281785474c209537f",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-23",
+    "pieces" : [ 0, 0, 3, 2, 2, 7, 4, 4, 1, 6, 6, 5, 8, 9, 9, 10, 11, 11, 14, 13, 13, 12, 15, 15 ],
+    "algorithmSha256" : "5bccd14b57f4c3ac224e06a0b68bf00cf5d0002866d6da822558027716cf5cb0",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-24",
+    "pieces" : [ 0, 0, 3, 2, 2, 5, 4, 4, 7, 6, 6, 1, 12, 9, 9, 10, 11, 11, 8, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "87b50670ea0871fc03a5125c0b2353833b12162e5a737aaa5410ed14df120eb1",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-25",
+    "pieces" : [ 0, 0, 7, 2, 2, 1, 4, 4, 3, 6, 6, 5, 12, 9, 9, 10, 11, 11, 8, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "d27e867452b1232fc953971d302ec4f1d0421a80b63d9ebb828afd4ab7665309",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-26",
+    "pieces" : [ 0, 0, 3, 2, 2, 7, 4, 4, 1, 6, 6, 5, 8, 9, 9, 14, 11, 11, 12, 13, 13, 10, 15, 15 ],
+    "algorithmSha256" : "5c54777feb21b260934cb84a9908c342fd02d27937889a1a0e326e497962e868",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-27",
+    "pieces" : [ 0, 0, 3, 2, 2, 1, 4, 4, 7, 6, 6, 5, 14, 9, 9, 12, 11, 11, 10, 13, 13, 8, 15, 15 ],
+    "algorithmSha256" : "f276718bf073ea66a30bbd75a42c163bf32d13b7e7a80b0e8fd8ea9139f46332",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-28",
+    "pieces" : [ 0, 0, 5, 2, 2, 7, 4, 4, 1, 6, 6, 3, 10, 9, 9, 8, 11, 11, 14, 13, 13, 12, 15, 15 ],
+    "algorithmSha256" : "a786f099d5bdc1e912fbadac06925405eb31a3928891fed5db16404cca727be6",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-29",
+    "pieces" : [ 0, 0, 1, 2, 2, 5, 4, 4, 7, 6, 6, 3, 14, 9, 9, 12, 11, 11, 10, 13, 13, 8, 15, 15 ],
+    "algorithmSha256" : "6cbff12d278ebd5c01499f9803f834111418379ed21dc932f0e592e0df2352f2",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-30",
+    "pieces" : [ 0, 0, 7, 2, 2, 3, 4, 4, 1, 6, 6, 5, 14, 9, 9, 12, 11, 11, 10, 13, 13, 8, 15, 15 ],
+    "algorithmSha256" : "ab604e636ef54d0a9ebf7f0cb67eeb4830cc8bf302ec7d33101ec130a17e6140",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-31",
+    "pieces" : [ 0, 0, 5, 2, 2, 7, 4, 4, 1, 6, 6, 3, 12, 9, 9, 14, 11, 11, 8, 13, 13, 10, 15, 15 ],
+    "algorithmSha256" : "ac22349277632d73a6916e311c7de44b45f9ace448c9f0d1329c319e0054e347",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-32",
+    "pieces" : [ 0, 0, 3, 2, 2, 7, 4, 4, 5, 6, 6, 1, 12, 9, 9, 14, 11, 11, 8, 13, 13, 10, 15, 15 ],
+    "algorithmSha256" : "23a62b82fd62d3bf807b6a0ebc102f9bd6eb3fa87ce58927def2257feb67577f",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-33",
+    "pieces" : [ 0, 0, 1, 2, 2, 7, 4, 4, 3, 6, 6, 5, 12, 9, 9, 14, 11, 11, 8, 13, 13, 10, 15, 15 ],
+    "algorithmSha256" : "7d99cee08f03ca9123d79757626f3a24ce4f2747d164f72a5d4b6177758b4e65",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-34",
+    "pieces" : [ 0, 0, 1, 2, 2, 7, 4, 4, 3, 6, 6, 5, 12, 9, 9, 10, 11, 11, 14, 13, 13, 8, 15, 15 ],
+    "algorithmSha256" : "6b618d9533650928c377e49acd99e36e766011f3ed6e628e5a437145f907b59c",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-35",
+    "pieces" : [ 0, 0, 1, 2, 2, 5, 4, 4, 7, 6, 6, 3, 10, 9, 9, 12, 11, 11, 8, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "661cb32dce8b03ee35ae19868063ba11e992a1edae14ab5cec4ba09f5ed5ea14",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-36",
+    "pieces" : [ 0, 0, 7, 2, 2, 1, 4, 4, 5, 6, 6, 3, 12, 9, 9, 8, 11, 11, 10, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "ba142e6fbc5bbeeee78adc0f889095685026a528488191a1ee0c494b338299a1",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-37",
+    "pieces" : [ 0, 0, 3, 2, 2, 5, 4, 4, 7, 6, 6, 1, 10, 9, 9, 8, 11, 11, 14, 13, 13, 12, 15, 15 ],
+    "algorithmSha256" : "012324dda5b0af36745d1b244d5560e3dfe2fd55e6d7527b9d862b73e36c0ed0",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-38",
+    "pieces" : [ 0, 0, 7, 2, 2, 1, 4, 4, 3, 6, 6, 5, 14, 9, 9, 12, 11, 11, 10, 13, 13, 8, 15, 15 ],
+    "algorithmSha256" : "519fc72f5984b102f22323743202ee630b7dca8f9f9628d87fbb32b973409fde",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-39",
+    "pieces" : [ 0, 0, 3, 2, 2, 7, 4, 4, 1, 6, 6, 5, 10, 9, 9, 8, 11, 11, 14, 13, 13, 12, 15, 15 ],
+    "algorithmSha256" : "f09cc646fc0f5ee56966adea89307ff5e3094ebff93344a1cd816eab46a60a07",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-40",
+    "pieces" : [ 0, 0, 3, 2, 2, 5, 4, 4, 7, 6, 6, 1, 10, 9, 9, 12, 11, 11, 8, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "4103643b4d491e0951c7874b5646cafc9d0ab81df6eef451fe359eab0c232d73",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-41",
+    "pieces" : [ 0, 0, 7, 2, 2, 1, 4, 4, 3, 6, 6, 5, 10, 9, 9, 12, 11, 11, 8, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "f4da2252fa08736c7cb3da332b6c76f465d24da622961334bb97dbff1988c333",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-42",
+    "pieces" : [ 0, 0, 7, 2, 2, 5, 4, 4, 1, 6, 6, 3, 8, 9, 9, 12, 11, 11, 14, 13, 13, 10, 15, 15 ],
+    "algorithmSha256" : "81ec2c5522d41b5a36aa6d7464215d82dfd9f58d52f93552ebef73cab46764bf",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-43",
+    "pieces" : [ 0, 0, 3, 2, 2, 5, 4, 4, 7, 6, 6, 1, 14, 9, 9, 8, 11, 11, 12, 13, 13, 10, 15, 15 ],
+    "algorithmSha256" : "0763d656bd09d93a8c62c6cdd87b367dbbb5f227894ac1658f82c4767bcc220f",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-44",
+    "pieces" : [ 0, 0, 7, 2, 2, 1, 4, 4, 3, 6, 6, 5, 12, 9, 9, 8, 11, 11, 10, 13, 13, 14, 15, 15 ],
+    "algorithmSha256" : "ac8b6b487c87801d1ad72ee277952f9bcfefdd46be59d5c10c028cad0b20cdae",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-45",
+    "pieces" : [ 0, 0, 5, 2, 2, 7, 4, 4, 3, 6, 6, 1, 14, 9, 9, 10, 11, 11, 8, 13, 13, 12, 15, 15 ],
+    "algorithmSha256" : "25f72fa6ec5655bfbcb2fea1ebcfc8842bc8dc65ee204e92caca9b6cc05bb574",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-46",
+    "pieces" : [ 0, 0, 3, 2, 2, 5, 4, 4, 7, 6, 6, 1, 12, 9, 9, 14, 11, 11, 8, 13, 13, 10, 15, 15 ],
+    "algorithmSha256" : "3c3779835e54d2e6f46706dd664c54ec0bad331d3ec4e5de5646c7470d566e56",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-47",
+    "pieces" : [ 0, 0, 7, 2, 2, 1, 4, 4, 3, 6, 6, 5, 12, 9, 9, 14, 11, 11, 8, 13, 13, 10, 15, 15 ],
+    "algorithmSha256" : "205d995c598fad6bc3157495a71dce8ec644833085cfd54d3c702407796a9967",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-48",
+    "pieces" : [ 6, 6, 3, 0, 0, 5, 2, 2, 1, 4, 4, 7, 12, 9, 9, 14, 11, 11, 8, 13, 13, 10, 15, 15 ],
+    "algorithmSha256" : "7c4a327e61b9240fb1df7af2424b758a5dcacdf42e11faaa0ffed0792641c5a7",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-49",
+    "pieces" : [ 0, 0, 3, 2, 2, 5, 4, 4, 7, 6, 6, 1, 10, 9, 9, 12, 11, 11, 14, 13, 13, 8, 15, 15 ],
+    "algorithmSha256" : "1522a9c13fb0b6e0dda4b9114b48b8fec81134cb08630eec4ea5b537c56ad4b6",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-50",
+    "pieces" : [ 0, 0, 7, 2, 2, 1, 4, 4, 3, 6, 6, 5, 14, 9, 9, 8, 11, 11, 10, 13, 13, 12, 15, 15 ],
+    "algorithmSha256" : "1f8807441d0aed753200604801c90bf757aedb98d1d91c3e639ac5fa787c96cb",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-51",
+    "pieces" : [ 9, 9, 12, 11, 11, 14, 13, 13, 8, 15, 15, 10, 5, 0, 0, 7, 2, 2, 1, 4, 4, 3, 6, 6 ],
+    "algorithmSha256" : "a5a00f6bbdcf919d61a29f01726358f60ba7289303b8ed00a65e5dc42919dd2a",
+    "middleFlipped" : false
+  }, {
+    "id" : "ep-52",
+    "pieces" : [ 0, 0, 5, 2, 2, 1, 4, 4, 7, 6, 6, 3, 10, 9, 9, 12, 11, 11, 14, 13, 13, 8, 15, 15 ],
+    "algorithmSha256" : "e88748914a1b8ca1e2a7169001d5dd3bce2661178cdd90346758eb583f69785b",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-53",
+    "pieces" : [ 0, 0, 5, 2, 2, 1, 4, 4, 7, 6, 6, 3, 14, 9, 9, 8, 11, 11, 10, 13, 13, 12, 15, 15 ],
+    "algorithmSha256" : "54fe11f8d9b6ecdfdf60b1e0fe362c1148fd6d8c2383d93112ddd5614cb974d3",
+    "middleFlipped" : true
+  }, {
+    "id" : "ep-54",
+    "pieces" : [ 0, 0, 5, 2, 2, 1, 4, 4, 7, 6, 6, 3, 12, 9, 9, 14, 11, 11, 10, 13, 13, 8, 15, 15 ],
+    "algorithmSha256" : "7efdedd19bfe2c38b5dfff6acda2d05065d36adcb503535ffec8ba578e572ebf",
+    "middleFlipped" : true
+  } ]
+}

@@ -92,3 +92,52 @@ Các dấu “đã học” và “yêu thích” được tạo trong lúc th�
 - HTTP trên ứng dụng dùng MySQL: register/login, profile, learned/favorite, roadmap completion, return login PASS. JDBC kết nối riêng xác nhận dữ liệu đã commit.
 - Dọn duy nhất tài khoản QA và các bản ghi của UUID đó; giữ dữ liệu Rubik. File cấu hình mật khẩu được Git bỏ qua.
 - Không migrate tự động H2 cũ; xem MYSQL.md.
+
+## Chia package và ôn tập thông minh — 28/10/2026
+
+- Java chia theo chức năng; test chuyển theo package tương ứng. Chi tiết: ARCHITECTURE.md.
+- Maven package: PASS, 48 tests, 0 failures (36 trước đó + 4 lịch ôn + 8 dịch vụ/API ôn tập).
+- JavaScript syntax và git diff check: PASS.
+- MySQL thật khởi động với 13 bảng; HTTP smoke hoàn tất buổi 3 case, kiểm tra thống kê và gửi lại sự kiện không đếm trùng.
+- UI trên 8081: đăng nhập tài khoản QA, tạo buổi 3 case theo lộ trình, xem nhóm, hiện đáp án, lưu GOOD/AGAIN/HARD, tổng kết 1/3 nhớ đúng; trang thống kê có đúng 3 lượt, 33% nhớ đúng, 1 chưa nhớ và 1 nhớ một phần. Ảnh: study-stats-qa.png.
+- Dữ liệu thử thuộc tài khoản QA đã được dọn riêng. Chưa kiểm thử giao diện trên thiết bị di động thật.
+
+## Mô phỏng công thức 3D — 28/10/2026
+
+- 48 test Java: PASS. 6 test Node cho mô phỏng: PASS, đủ 666 công thức chính/biến thể không trống trên 606 case.
+- Cú pháp JavaScript và đóng gói engine esbuild: PASS.
+- UI QA: khối 2×2, 3×3, 4×4, 5×5 và Square-1 hiện đúng số lớp/hình dạng; PLL chuyển sang Cách 2 và phát đến 10/10, hiển thị khối đã giải; bước trước/sau và phát/tạm dừng Square-1 hoạt động.
+- Đã xử lý khung trắng của canvas thư viện trong trình duyệt nhúng bằng canvas riêng dùng chính đối tượng 3D cubing.js.
+- Square-1 được kiểm tra bảo toàn mảnh, lát cắt hợp lệ và 5 silhouette Cube Shape theo ảnh. Không tuyên bố tất cả sticker khớp nguồn hoặc công thức nguồn được solver độc lập xác nhận. Chi tiết: SIMULATOR.md.
+
+### Quy ước vàng trên / trắng dưới
+
+- Đổi bảng màu hiển thị chung cho 2×2–5×5 và màu gốc mảnh Square-1; không lật trục hoặc đổi công thức.
+- 6 test mô phỏng và kiểm tra cú pháp JS: PASS.
+- UI QA: PLL mặt trên vàng, kéo nhìn mặt dưới xác nhận trắng; khối 5×5 dùng màu mới; Square-1 tại bước cuối có mặt trên vàng. Ảnh: simulator-yellow-up-qa.png.
+
+## Bấm giờ và scramble TNoodle — 28/10/2026
+
+- 55 test Java PASS (48 cũ + 5 lưu lịch sử/bảo mật + 2 scramble thật). 8 test Node đồng hồ PASS.
+- Kiểm tra đúng mốc 15.000/17.000 ms, thời gian giữ, mất focus khi giữ, elapsed không phụ thuộc frame, cộng dồn phạt, ao5 có một/hai DNF, ao12, làm tròn và bỏ lượt ẩn.
+- Thư viện TNoodle 0.20.0 sinh được đủ 5 loại Rubik và SVG hợp lệ. 2×2 không giải được trong 3 bước; Square-1 cho phép slice ngay tại trạng thái đã xáo. 4×4 dùng bộ FOUR, không phải FOUR_FAST.
+- MySQL thật: tạo/lưu/gửi lại không trùng; đổi +2/DNF; soft delete và undo. Thêm 2 bảng timer, không xóa dữ liệu cũ.
+- UI QA khách: Space bắt đầu inspection, giữ/thả để giải, dừng lưu; sửa 7.63 thành 9.63 với +2; ẩn và hoàn tác.
+- UI QA tài khoản: ghi các lượt giải bằng Space và giữ/chạm vùng đồng hồ; quá inspection tự lưu một DNF ở 17.01 giây; đủ 5 lượt có ao5 9.57, khớp phép tính bỏ tốt nhất 4.68 và DNF. Tải lại giữ đủ lịch sử và thống kê. Ảnh: timer-qa.png.
+- Đổi Square-1 rồi quay lại 3×3: lịch sử tách đúng, 5 lượt 3×3 còn nguyên. Xuất CSV thực tế tải được; đọc lại xác nhận 1 dòng tiêu đề + 5 lượt, 8 cột và kết quả DNF được giữ.
+- Maven package cuối: BUILD SUCCESS, 55 test không lỗi. Dọn đúng tài khoản QA và các bản ghi timer của tài khoản đó; giữ tài khoản thật và thư viện Rubik. MySQL có 15 bảng sau bổ sung.
+- Thử nghiệm trên máy tính; chưa thử điện thoại hoặc Stackmat thật. Không tuyên bố website là chương trình thi đấu WCA được chứng nhận. Xem TIMER.md.
+
+## Sửa lệch hướng cầm mô phỏng — 28/10/2026
+
+- Nguyên nhân: đảo màu chưa xử lý hướng của trạng thái khởi đầu khi dựng ngược công thức có wide/slice turn hoặc xoay toàn khối.
+- Căn trạng thái đích qua 24 hướng để tâm ở bước đầu về chuẩn; giữ nguyên chuỗi công thức và trục động tác.
+- 9 test mô phỏng PASS, gồm hướng tâm khởi đầu cho các công thức/biến thể 2×2, 3×3, 4×4, 5×5 và hồi quy Aa Perm.
+- UI Aa Perm Cách 1/Cách 2: vàng trên; kéo nhìn xuống xác nhận trắng dưới; nút về đầu khôi phục camera. Ảnh: simulator-grip-fixed.png. Đổi phiên bản URL tài nguyên để tránh tái dùng engine cũ.
+
+## Toàn màn hình mô phỏng 3D — 28/10/2026
+
+- JavaScript syntax và build engine: PASS. Không đổi thuật toán hoặc mô hình dữ liệu.
+- UI native fullscreen 1920×1080: PLL phóng lớn, giữ bộ điều khiển và bước tiếp theo chuyển đúng 0→1; Esc thoát và trả focus về nút phóng to.
+- Square-1 cũng phóng lớn theo khung, nút thu nhỏ đưa về trang chi tiết. ResizeObserver cập nhật cả chiều cao canvas và tỷ lệ camera; không kéo giãn ảnh 340px cũ.
+- Ảnh kiểm chứng: simulator-fullscreen-qa.png. Nhánh phủ toàn trang dự phòng đã triển khai; chưa thử trên điện thoại thật.

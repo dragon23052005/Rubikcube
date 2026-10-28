@@ -28,13 +28,13 @@ async function loadIdentity(){
 }
 function renderIdentity(){
   const initial=currentUser?.displayName?.trim().slice(0,1).toUpperCase()||'K';
-  $('#account-nav').innerHTML=currentUser?`<a href="/roadmap" data-nav="roadmap">${icon('route')}Lộ trình của tôi</a>${currentUser.role==='ADMIN'?`<a href="/admin" data-nav="admin">${icon('shield-check')}Quản lý người học</a>`:''}`:'';
+  $('#account-nav').innerHTML=currentUser?`<a href="/roadmap" data-nav="roadmap">${icon('route')}Lộ trình của tôi</a><a href="/study" data-nav="study">${icon('brain')}Ôn tập thông minh</a><a href="/study-stats","/timer" data-nav="study-stats">${icon('chart-no-axes-combined')}Thống kê luyện tập</a>${currentUser.role==='ADMIN'?`<a href="/admin" data-nav="admin">${icon('shield-check')}Quản lý người học</a>`:''}`:'';
   $('#profile-slot').innerHTML=`<a class="profile" href="${currentUser?'/account':'/login'}"><span class="avatar">${esc(initial)}</span><span><strong>${esc(currentUser?.displayName||'Học với tài khoản')}</strong><small>${currentUser?'Tiến độ lưu theo tài khoản':'Đăng nhập để lưu tiến độ'}</small></span>${icon(currentUser?'cloud-upload':'log-in')}</a>`;
   $('#account-slot').innerHTML=`<a class="account-link" href="${currentUser?'/account':'/login'}" aria-label="${currentUser?'Tài khoản của tôi':'Đăng nhập'}">${currentUser?`<span class="avatar small">${esc(initial)}</span>`:`${icon('log-in')}<span>Đăng nhập</span>`}</a>`;
 }
 function safeNext(fallback='/roadmap'){
   const value=params.get('next');if(!value)return fallback;
-  try{const url=new URL(value,location.origin);if(url.origin!==location.origin)return fallback;if(!['/','/account','/roadmap','/progress','/practice','/favorites','/admin','/algorithms'].includes(url.pathname)&&!/^\/algorithms\/[a-z0-9-]+$/.test(url.pathname))return fallback;return url.pathname+url.search+url.hash;}catch{return fallback;}
+  try{const url=new URL(value,location.origin);if(url.origin!==location.origin)return fallback;if(!['/','/account','/roadmap','/progress','/practice','/favorites','/admin','/study','/study-stats','/timer','/algorithms'].includes(url.pathname)&&!/^\/algorithms\/[a-z0-9-]+$/.test(url.pathname))return fallback;return url.pathname+url.search+url.hash;}catch{return fallback;}
 }
 function authPage(register=false){
   if(currentUser){location.replace('/account');return;}

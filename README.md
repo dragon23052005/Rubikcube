@@ -4,6 +4,28 @@
 
 ## Chạy nhanh
 
+### IntelliJ IDEA trên máy mới (Windows / macOS / Linux)
+
+1. Clone repository, mở thư mục chứa `pom.xml` bằng IntelliJ, chọn **Load Maven Project** nếu được hỏi.
+2. Đặt **Project SDK = JDK 21**, **Language level = 21** và Maven Runner JRE = Project SDK. Cần Internet lần đầu để Maven tải thư viện.
+3. Chờ Maven đồng bộ, chọn cấu hình có sẵn **Academy - Quick Start**, nhấn Run và mở <http://localhost:8080>.
+
+Quick Start dùng H2 lưu bền trong `var/academy-standalone`, tự tạo bảng và nạp thư viện công thức. Không cần MySQL, Node.js, Python, mật khẩu riêng hoặc chạy importer. Có thể đăng ký tài khoản để lưu tiến độ và lịch sử bấm giờ. Mỗi máy có dữ liệu người học riêng; dữ liệu này không đi kèm Git. Nếu IntelliJ chưa hiện cấu hình, chạy lớp `vn.speedcube.academy.AcademyApplication` với Program arguments `--spring.profiles.active=standalone`.
+
+**MySQL vẫn là cấu hình chạy mặc định:** để dùng MySQL như máy hiện tại, làm theo mục MySQL bên dưới rồi chọn **Academy - MySQL** (hoặc chạy lớp main không truyền profile). Hai chế độ dùng hai cơ sở dữ liệu riêng, không tự chuyển tài khoản/tiến độ giữa chúng. Google/Facebook chỉ bật khi cung cấp thông tin ứng dụng riêng theo mục cấu hình OAuth; đăng nhập bằng email hoạt động ngay.
+
+Chạy nhanh từ terminal, không cần cấu hình MySQL:
+
+```powershell
+.\mvnw.cmd spring-boot:run "-Dspring-boot.run.profiles=standalone"
+```
+
+```bash
+sh mvnw spring-boot:run -Dspring-boot.run.profiles=standalone
+```
+
+Nếu cổng 8080 đang bận, thêm `--server.port=8081` vào Program arguments. Tài nguyên giao diện, ảnh và mô phỏng 3D đã được build và lưu trong repository; Node.js chỉ cần khi phát triển lại frontend.
+
 Cần **JDK 21**, đặt `JAVA_HOME` trỏ đúng JDK. Maven Wrapper tự tải Maven 3.9.9 khi chạy lần đầu.
 
 Windows PowerShell:
@@ -60,7 +82,7 @@ Hoặc trên Linux/macOS:
 ./mvnw clean package
 ```
 
-JAR: `target/academy-1.0.0.jar`. Có 36 kiểm thử JUnit/Spring Boot cho số lượng nguồn, ảnh, ký hiệu Square-1, API/phân trang, cách ly tiến độ theo tài khoản, CSRF, session đăng nhập và phân quyền, các trang và bộ bài tập nghiên cứu. 36 kiểm thử tự động dùng H2 tương thích SQL; ngoài ra đã kiểm tra ứng dụng với MySQL thật trên máy này. Xem reports/MYSQL.md.
+JAR: `target/academy-1.0.0.jar`. Có 55 kiểm thử JUnit/Spring Boot cho số lượng nguồn, ảnh, ký hiệu Square-1, API/phân trang, cách ly tiến độ theo tài khoản, CSRF, session đăng nhập và phân quyền, các trang và bộ bài tập nghiên cứu. 55 kiểm thử tự động dùng H2 tương thích SQL; ngoài ra đã kiểm tra ứng dụng với MySQL thật trên máy này. Xem reports/MYSQL.md.
 
 ## Chức năng
 
@@ -94,7 +116,7 @@ Xem [kiểm kê chi tiết](reports/INVENTORY.md) và [báo cáo kiểm tra tự
 | Có công thức chính | **605** |
 | Biến thể bổ sung | **61** (25 gốc + 17 PLL + 3 cho 2×2 + 13 cho 4×4 + 3 cho 5×5) |
 
-**Một ô nguồn trống:** ConF2L_1, vị trí 6 (`zb-f2l-6`). Ứng dụng giữ hình, hiển thị rõ nguồn trống, tắt copy và loại khỏi luyện tập. Không tự bịa công thức. Chưa xác minh các chuỗi bằng solver độc lập, do đó không triển khai mô phỏng xoay. Không tuyên bố đã hoàn chỉnh/xác minh toàn bộ dữ liệu.
+**Một ô nguồn trống:** ConF2L_1, vị trí 6 (`zb-f2l-6`). Ứng dụng giữ hình, hiển thị rõ nguồn trống, tắt copy và loại khỏi luyện tập. Không tự bịa công thức. Đã có mô phỏng 3D; 54 case Square-1 EP được đối chiếu TNoodle và kiểm tra đủ sáu mặt khi kết thúc. Không tuyên bố đã xác minh toàn bộ dữ liệu bằng solver độc lập. Xem [mô phỏng và kiểm chứng](reports/SIMULATOR.md).
 
 Square-1 CO là ví dụ bước trực giác; CP có 8 mục minh họa cho 5 công thức cơ bản được nguồn giới thiệu. CS là hướng dẫn hình dạng, parity nằm trong các nhóm EP; không đếm trùng thành các bộ chuẩn giả định.
 
@@ -135,7 +157,7 @@ API phân trang tối đa 100 mục. Khách dùng localStorage; khi đăng nhậ
 
 ## Cấu trúc
 
-- `src/main/java/vn/speedcube/academy`: ứng dụng, controller/service/repository, DTO, entity Rubik, tài khoản, tiến độ và chặng học.
+- `src/main/java/vn/speedcube/academy`: chia theo chức năng `account`, `admin`, `catalog`, `progress`, `roadmap`, `study`, `timer`, `security`, `config`, `shared`, `web`. Chi tiết và quy ước: [ARCHITECTURE.md](reports/ARCHITECTURE.md).
 - `src/main/resources/templates`: Thymeleaf shell và lỗi.
 - `src/main/resources/static`: CSS, JavaScript, JSON seed, ảnh nguồn và tài nguyên font/icon cục bộ.
 - `ui`: nguồn Tailwind và tài liệu giao diện phụ trợ.
@@ -143,6 +165,10 @@ API phân trang tối đa 100 mục. Khách dùng localStorage; khi đăng nhậ
 - `reports`: kiểm kê, audit, kết quả kiểm thử.
 
 ## Chỉnh giao diện
+
+Phòng bấm giờ `/timer`: scramble TNoodle cho 5 loại Rubik, inspection 15 giây, giữ/thả Space, +2/DNF, ao5/ao12 và lịch sử cá nhân trên MySQL. Xem [TIMER.md](reports/TIMER.md).
+
+Mô phỏng xoay 3D từng công thức và biến thể nằm tại trang chi tiết. Build engine bằng `npm run build:simulator`; kiểm tra bằng `node --test tools/test-simulator.mjs`. Xem [SIMULATOR.md](reports/SIMULATOR.md).
 
 CSS thiết kế ở `src/main/resources/static/app.css`; logic ở `app.js`. Tailwind utilities được biên dịch sẵn, Java build không cần Node. Khi đổi utility classes:
 
@@ -156,7 +182,7 @@ npm run check
 
 ```bash
 docker build -t speedcube-academy .
-docker run --rm -p 8080:8080 -e DB_URL=jdbc:postgresql://host.docker.internal:5432/academy -e DB_USER=academy -e DB_PASSWORD=your-password speedcube-academy
+docker run --rm -p 8080:8080 -e DB_URL=jdbc:mysql://host.docker.internal:3306/demotesting -e DB_USER=academy -e DB_PASSWORD=your-password speedcube-academy
 ```
 
 Khi chạy trong container, đặt `DB_URL` trỏ tới host/service MySQL phù hợp thay vì localhost của container. Đã kiểm tra MySQL cài sẵn trên máy; chưa chạy kiểm tra Docker MySQL. Chi tiết: `reports/MYSQL.md` và `reports/TESTING.md`.
@@ -183,6 +209,8 @@ Mở `/5x5` để học ghép tâm, ghép cạnh, Reduction, Free Slice và edge
 
 ## Đăng nhập, phân quyền và lộ trình
 
+Dữ liệu mẫu local gồm 1 ADMIN và 3 USER: xem [DEMO-ACCOUNTS.md](reports/DEMO-ACCOUNTS.md). Thông tin đăng nhập đã tạo được lưu riêng tại `config/demo-accounts.local.txt` (Git bỏ qua).
+
 Mở `/register` để tạo tài khoản. `/account` chọn trình độ (mới bắt đầu / đã biết giải / nâng cao), loại Rubik và mục tiêu phút/ngày. `/roadmap` hiển thị chặng học và luyện đúng tập case của chặng. Các dấu đã thuộc, cần luyện, yêu thích và chặng đã hoàn thành được lưu trong DB theo tài khoản. Khách vẫn học được; có nút nhập tiến độ khách vào tài khoản khi người dùng chủ động chọn.
 
 Vai trò `USER` chỉ đọc/ghi dữ liệu của mình; `ADMIN` có trang `/admin` xem tiến độ người học. Không có tài khoản hoặc mật khẩu admin mặc định. Đặt `ACADEMY_ADMIN_EMAIL` và `ACADEMY_ADMIN_PASSWORD` cho **email mới** để bootstrap một lần. Chi tiết cấu hình, lưu trữ, giới hạn và kiểm thử: [AUTHENTICATION.md](reports/AUTHENTICATION.md).
@@ -193,4 +221,8 @@ Mật khẩu băm BCrypt, session HttpOnly/SameSite, CSRF trên các thao tác g
 
 Đã tích hợp OAuth2/OIDC và liên kết vào tài khoản hiện có để giữ tiến độ. Nút chỉ bật khi có cấu hình dịch vụ. Google cần `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`; Facebook cần `FACEBOOK_CLIENT_ID`, `FACEBOOK_CLIENT_SECRET`, `FACEBOOK_GRAPH_VERSION`. Đặt `APP_BASE_URL` đúng origin đã đăng ký và restart. Hướng dẫn callback, cấu hình console và liên kết an toàn: [SOCIAL-LOGIN.md](reports/SOCIAL-LOGIN.md). Không gửi khóa bí mật qua chat hoặc commit vào Git.
 
-36 kiểm thử đã đạt, gồm luồng OAuth dùng nhà cung cấp cục bộ. Chưa thử Google/Facebook thật vì chưa có app credentials của chủ dự án.
+55 kiểm thử đã đạt, gồm luồng OAuth dùng nhà cung cấp cục bộ. Chưa thử Google/Facebook thật vì chưa có app credentials của chủ dự án.
+
+## Ôn tập thông minh
+
+Mở `/study` để học theo buổi 3–5 case, kiểm tra trí nhớ và lên lịch ôn theo kết quả. `/study-stats` hiển thị case hay sai, mức ghi nhớ và lịch sử 14 ngày. Dữ liệu lưu riêng theo tài khoản trên MySQL. Xem [SMART-REVIEW.md](reports/SMART-REVIEW.md).
