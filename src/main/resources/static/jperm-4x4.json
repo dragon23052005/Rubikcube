@@ -1,0 +1,991 @@
+[
+  {
+    "id": "4x4-oll-solved",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 1,
+    "name": "OLL parity · Solved",
+    "category": "4 Corners",
+    "algorithm": "R U2 R' U' Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' F R' F' R",
+    "alternatives": [
+      "y' Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' U' F U R U' R' F'",
+      "y2 R U R' F' Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' F R U' R'"
+    ],
+    "images": [
+      "/images/jperm/4x4-oll-solved.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-u-f",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 2,
+    "name": "OLL parity · U (F)",
+    "category": "2 Corners",
+    "algorithm": "Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-u-f.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-u-r",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 3,
+    "name": "OLL parity · U (R)",
+    "category": "2 Corners",
+    "algorithm": "Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' U' R U R' U R U2 R'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-u-r.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-u-l",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 4,
+    "name": "OLL parity · U (L)",
+    "category": "2 Corners",
+    "algorithm": "Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' R U2 R' U' R U' R'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-u-l.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-u-b",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 5,
+    "name": "OLL parity · U (B)",
+    "category": "2 Corners",
+    "algorithm": "M Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' M'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-u-b.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-t-f",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 6,
+    "name": "OLL parity · T (F)",
+    "category": "2 Corners",
+    "algorithm": "R U R' U' R Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' R' U R U' R'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-t-f.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-t-r",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 7,
+    "name": "OLL parity · T (R)",
+    "category": "2 Corners",
+    "algorithm": "Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' R U R' U' R' F R F'",
+    "alternatives": [
+      "y2 F' L' U L U L' U' L F Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw'",
+      "y2 L2 B2 L2 Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' L2 B2 L2"
+    ],
+    "images": [
+      "/images/jperm/4x4-oll-t-r.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-t-l",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 8,
+    "name": "OLL parity · T (L)",
+    "category": "2 Corners",
+    "algorithm": "F R U' R' U' R U R' F' Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw'",
+    "alternatives": [
+      "R2 B2 R2 Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' R2 B2 R2",
+      "y2 Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' U2 R U R' U' R' F R F'"
+    ],
+    "images": [
+      "/images/jperm/4x4-oll-t-l.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-t-b",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 9,
+    "name": "OLL parity · T (B)",
+    "category": "2 Corners",
+    "algorithm": "Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' U R U2 (R2 U' R2 U' R2) U2 R",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-t-b.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-l-fr",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 10,
+    "name": "OLL parity · L (FR)",
+    "category": "2 Corners",
+    "algorithm": "R' U' R Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' R' U R",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-l-fr.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-l-fl",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 11,
+    "name": "OLL parity · L (FL)",
+    "category": "2 Corners",
+    "algorithm": "L U L' Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' L U' L'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-l-fl.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-l-br",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 12,
+    "name": "OLL parity · L (BR)",
+    "category": "2 Corners",
+    "algorithm": "Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' U R' U2 R U R' U R",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-l-br.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-l-bl",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 13,
+    "name": "OLL parity · L (BL)",
+    "category": "2 Corners",
+    "algorithm": "Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' R' U' R U' R' U2 R",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-l-bl.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-sune-fr",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 14,
+    "name": "OLL parity · Sune (FR)",
+    "category": "1 Corner",
+    "algorithm": "M' U R U' 3Rw' Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' U R U2 R'",
+    "alternatives": [
+      "y2 Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' U2 F R U R' U' F'",
+      "Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' U2 R U2 (R2 U' R2 U' R2) U2 R"
+    ],
+    "images": [
+      "/images/jperm/4x4-oll-sune-fr.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-sune-fl",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 15,
+    "name": "OLL parity · Sune (FL)",
+    "category": "1 Corner",
+    "algorithm": "Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' R U R' U R U2 R'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-sune-fl.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-sune-br",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 16,
+    "name": "OLL parity · Sune (BR)",
+    "category": "1 Corner",
+    "algorithm": "L F' L' F Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' L' U L",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-sune-br.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-sune-bl",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 17,
+    "name": "OLL parity · Sune (BL)",
+    "category": "1 Corner",
+    "algorithm": "F' L' U' L U F Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-sune-bl.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-antisune-fr",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 18,
+    "name": "OLL parity · Antisune (FR)",
+    "category": "1 Corner",
+    "algorithm": "Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' U' R U2 R' U' R U' R'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-antisune-fr.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-antisune-fl",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 19,
+    "name": "OLL parity · Antisune (FL)",
+    "category": "1 Corner",
+    "algorithm": "Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' R U2 (R2 U' R2 U' R2) U2 R",
+    "alternatives": [
+      "y2 Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' F R U R' U' F'",
+      "M' U' L' U 3Lw Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' U' L' U2 L"
+    ],
+    "images": [
+      "/images/jperm/4x4-oll-antisune-fl.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-antisune-br",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 20,
+    "name": "OLL parity · Antisune (BR)",
+    "category": "1 Corner",
+    "algorithm": "F R U R' U' F' Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-antisune-br.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-antisune-bl",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 21,
+    "name": "OLL parity · Antisune (BL)",
+    "category": "1 Corner",
+    "algorithm": "R' F R F' Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' R U' R'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-antisune-bl.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-h-fb",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 22,
+    "name": "OLL parity · H (FB)",
+    "category": "0 Corners",
+    "algorithm": "Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' R2 D' R U2 R' D R U2 R",
+    "alternatives": [
+      "y2 Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' U R' U' R' F R F' U R"
+    ],
+    "images": [
+      "/images/jperm/4x4-oll-h-fb.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-h-lr",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 23,
+    "name": "OLL parity · H (LR)",
+    "category": "0 Corners",
+    "algorithm": "Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' R U R' U R U' R' U R U2 R'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-h-lr.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-pi-f",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 24,
+    "name": "OLL parity · Pi (F)",
+    "category": "0 Corners",
+    "algorithm": "Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' U' R U2 (R2 U' R2 U' R2) U2 R",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-pi-f.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-pi-r",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 25,
+    "name": "OLL parity · Pi (R)",
+    "category": "0 Corners",
+    "algorithm": "Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' U R' U' R U' R' U2 R",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-pi-r.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-pi-l",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 26,
+    "name": "OLL parity · Pi (L)",
+    "category": "0 Corners",
+    "algorithm": "Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' R' U2 R U R' U R",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-pi-l.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-oll-pi-b",
+    "puzzle": "4x4",
+    "method": "4×4 OLL",
+    "number": 27,
+    "name": "OLL parity · Pi (B)",
+    "category": "0 Corners",
+    "algorithm": "Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw' U' 3Rw U R' U' 3Rw' F R F'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-oll-pi-b.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/oll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-pure-minus-e",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 1,
+    "name": "PLL parity · Pure-E",
+    "category": "Edges Only",
+    "algorithm": "2R2 U2 2R2 Uw2 2R2 Uw2",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-pure-minus-e.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-adj-minus-e",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 2,
+    "name": "PLL parity · Adj-E",
+    "category": "Edges Only",
+    "algorithm": "R U R' U' 2R2 U2 2R2 Uw2 2R2 Uw2 U' R U' R'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-adj-minus-e.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-o-minus-plus",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 3,
+    "name": "PLL parity · O+",
+    "category": "Edges Only",
+    "algorithm": "M' U' M2 U' M2 U' M' U2 M2 2R2 U2 2R2 Uw2 2R2 Uw2",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-o-minus-plus.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-o-minus",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 4,
+    "name": "PLL parity · O-",
+    "category": "Edges Only",
+    "algorithm": "M' U' M2 U' M2 U' M' U2 M2 U' 2R2 U2 2R2 Uw2 2R2 Uw2",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-o-minus.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-w",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 5,
+    "name": "PLL parity · W",
+    "category": "Edges Only",
+    "algorithm": "R U' R U R U R U' R' U' R2 2R2 U2 2R2 Uw2 2R2 Uw2",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-w.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-ba",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 6,
+    "name": "PLL parity · Ba",
+    "category": "Adjacent Corner Swap",
+    "algorithm": "2R2 U2 2R2 Uw2 2R2 Uw2 U R U R' F' R U R' U' R' F R2 U' R'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-ba.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-bb",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 7,
+    "name": "PLL parity · Bb",
+    "category": "Adjacent Corner Swap",
+    "algorithm": "R U R' U' R' F R2 U' R' 2R2 U2 2R2 Uw2 2R2 Uw2 U R U R' F'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-bb.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-ca",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 8,
+    "name": "PLL parity · Ca",
+    "category": "Adjacent Corner Swap",
+    "algorithm": "2R2 U2 2R2 Uw2 2R2 Uw2 U R' U2 R U2 R' F R U R' U' R' F' R2",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-ca.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-cb",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 9,
+    "name": "PLL parity · Cb",
+    "category": "Adjacent Corner Swap",
+    "algorithm": "2R2 U2 2R2 Uw2 2R2 Uw2 R U R' F' R U2 R' U2 R' F R U R U2 R'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-cb.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-da",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 10,
+    "name": "PLL parity · Da",
+    "category": "Adjacent Corner Swap",
+    "algorithm": "R' U L' U2 R U' R' U2 R L U' 2R2 U2 2R2 Uw2 2R2 Uw2",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-da.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-db",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 11,
+    "name": "PLL parity · Db",
+    "category": "Adjacent Corner Swap",
+    "algorithm": "R U R' F' R U R' U' R' F R2 U' R' 2R2 U2 2R2 Uw2 2R2 Uw2",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-db.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-pa",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 12,
+    "name": "PLL parity · Pa",
+    "category": "Adjacent Corner Swap",
+    "algorithm": "R U R' F' R U R' U' R' F R2 U' R' U' 2R2 U2 2R2 Uw2 2R2 Uw2",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-pa.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-pb",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 13,
+    "name": "PLL parity · Pb",
+    "category": "Adjacent Corner Swap",
+    "algorithm": "2R2 U2 2R2 Uw2 2R2 Uw2 R U R' F' R U R' U' R' F R2 U' R'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-pb.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-ka",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 14,
+    "name": "PLL parity · Ka",
+    "category": "Adjacent Corner Swap",
+    "algorithm": "2R2 U2 2R2 Uw2 2R2 Uw2 x R2 D2 R U R' D2 R U' R",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-ka.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-kb",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 15,
+    "name": "PLL parity · Kb",
+    "category": "Adjacent Corner Swap",
+    "algorithm": "2R2 U2 2R2 Uw2 2R2 Uw2 U x R' U R' D2 R U' R' D2 R2",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-kb.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-q",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 16,
+    "name": "PLL parity · Q",
+    "category": "Diagonal Corner Swap",
+    "algorithm": "x' R U' R' D R U R' D' R U R' D R U' R' D' x U 2R2 U2 2R2 Uw2 2R2 Uw2",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-q.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-sa",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 17,
+    "name": "PLL parity · Sa",
+    "category": "Diagonal Corner Swap",
+    "algorithm": "F R U' R' U' R U R' F' R U R' U' R' F R F' U' 2R2 U2 2R2 Uw2 2R2 Uw2",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-sa.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-sb",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 18,
+    "name": "PLL parity · Sb",
+    "category": "Diagonal Corner Swap",
+    "algorithm": "F R U' R' U' R U R' F' R U R' U' R' F R F' 2R2 U2 2R2 Uw2 2R2 Uw2",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-sb.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-x",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 19,
+    "name": "PLL parity · X",
+    "category": "Diagonal Corner Swap",
+    "algorithm": "x' R U' R' D R U R' D' R U R' D R U' R' D' x 2R2 U2 2R2 Uw2 2R2 Uw2",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-x.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-m",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 20,
+    "name": "PLL parity · M",
+    "category": "Adjacent Corner Swap",
+    "algorithm": "R U R' U' R' F R2 U' R' U' R U R' F' 2R2 U2 2R2 Uw2 2R2 Uw2",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-m.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-adj-minus-c",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 21,
+    "name": "PLL parity · Adj-C",
+    "category": "Adjacent Corner Swap",
+    "algorithm": "R U R' U' R' F R2 U' R' U' R U R' F' U' 2R2 U2 2R2 Uw2 2R2 Uw2",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-adj-minus-c.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-pll-diag-minus-c",
+    "puzzle": "4x4",
+    "method": "4×4 PLL",
+    "number": 22,
+    "name": "PLL parity · Diag-C",
+    "category": "Diagonal Corner Swap",
+    "algorithm": "F R U' R' U' R U R' F' U' 2R2 U2 2R2 Uw2 2R2 Uw2 U' R U R' U' R' F R F'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-pll-diag-minus-c.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/algs/4x4/pll",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Bộ parity nâng cao J Perm. Đã thay [*] bằng toàn bộ công thức parity tương ứng để sao chép và luyện tập trực tiếp. Ảnh và hướng cầm theo công thức mặc định của nguồn; biến thể có thể đổi hướng cầm. M trên 4×4 xoay cả hai lớp giữa theo chiều L. Đây là bộ parity bổ sung, dùng cùng OLL/PLL thường sau khi ghép cạnh."
+  },
+  {
+    "id": "4x4-basic-edge-flip",
+    "puzzle": "4x4",
+    "method": "4×4 Basic",
+    "number": 1,
+    "name": "Lật cặp cạnh ở trước/phải",
+    "category": "Ghép cạnh",
+    "algorithm": "R U R' F R' F' R",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-basic-edge-flip.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/4x4",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Giữ cặp cạnh cần lật ở trước/phải (FR). Đây là thao tác lật dùng giữa slice và slice ngược; cần hoàn tác slice để khôi phục tâm."
+  },
+  {
+    "id": "4x4-basic-oll-parity",
+    "puzzle": "4x4",
+    "method": "4×4 Basic",
+    "number": 2,
+    "name": "OLL parity cơ bản",
+    "category": "Parity cơ bản",
+    "algorithm": "Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-basic-oll-parity.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/4x4",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Đưa cặp cạnh bị lật lên trước/trên (UF). Sau parity tiếp tục OLL thông thường nếu cần."
+  },
+  {
+    "id": "4x4-basic-pll-parity",
+    "puzzle": "4x4",
+    "method": "4×4 Basic",
+    "number": 3,
+    "name": "PLL parity cơ bản",
+    "category": "Parity cơ bản",
+    "algorithm": "2R2 U2 2R2 Uw2 2R2 Uw2",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-basic-pll-parity.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://jperm.net/4x4",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Ảnh minh họa ví dụ parity từ nguồn. Công thức đổi trạng thái parity; có thể vẫn cần PLL 3×3 và AUF, không bảo đảm giải ngay mọi ảnh hoán vị."
+  },
+  {
+    "id": "4x4-l2e-1",
+    "puzzle": "4x4",
+    "method": "4×4 L2E",
+    "number": 1,
+    "name": "L2E · CubeSkills 1",
+    "category": "Hai cạnh cuối",
+    "algorithm": "Lw' U2 Rw' D2 Rw U2 Rw' D2 Rw2 x'",
+    "alternatives": [
+      "U x' Uw' (R U R' F R' F' R) Uw U' x",
+      "Lw U' R' U x R' U R U' Rw' R"
+    ],
+    "images": [
+      "/images/jperm/4x4-l2e-1.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/useful-last-2-edges-algorithms-4x4.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Hình và công thức đối chiếu theo từng cột trong PDF CubeSkills; ảnh VisualCube của Conrad Rider. Giữ đúng hướng màu như hình, các sticker tối là phần không cần nhận diện. Bộ 5 ví dụ hữu ích của nguồn, không phải toàn bộ trạng thái L2E. Thứ tự đánh số trái sang phải, trên xuống dưới."
+  },
+  {
+    "id": "4x4-l2e-2",
+    "puzzle": "4x4",
+    "method": "4×4 L2E",
+    "number": 2,
+    "name": "L2E · CubeSkills 2",
+    "category": "Hai cạnh cuối",
+    "algorithm": "x' Rw2 D2 Rw' U2 Rw D2 Rw' U2 Lw'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-l2e-2.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/useful-last-2-edges-algorithms-4x4.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Hình và công thức đối chiếu theo từng cột trong PDF CubeSkills; ảnh VisualCube của Conrad Rider. Giữ đúng hướng màu như hình, các sticker tối là phần không cần nhận diện. Bộ 5 ví dụ hữu ích của nguồn, không phải toàn bộ trạng thái L2E. Thứ tự đánh số trái sang phải, trên xuống dưới."
+  },
+  {
+    "id": "4x4-l2e-3",
+    "puzzle": "4x4",
+    "method": "4×4 L2E",
+    "number": 3,
+    "name": "L2E · CubeSkills 3",
+    "category": "Hai cạnh cuối",
+    "algorithm": "Rw U2 Rw D Rw' U2 Rw D' Rw2'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-l2e-3.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/useful-last-2-edges-algorithms-4x4.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Hình và công thức đối chiếu theo từng cột trong PDF CubeSkills; ảnh VisualCube của Conrad Rider. Giữ đúng hướng màu như hình, các sticker tối là phần không cần nhận diện. Bộ 5 ví dụ hữu ích của nguồn, không phải toàn bộ trạng thái L2E. Thứ tự đánh số trái sang phải, trên xuống dưới."
+  },
+  {
+    "id": "4x4-l2e-4",
+    "puzzle": "4x4",
+    "method": "4×4 L2E",
+    "number": 4,
+    "name": "L2E · CubeSkills 4",
+    "category": "Hai cạnh cuối",
+    "algorithm": "Rw2 D Rw' U2 Rw D' Rw' U2 Rw'",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-l2e-4.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/useful-last-2-edges-algorithms-4x4.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Hình và công thức đối chiếu theo từng cột trong PDF CubeSkills; ảnh VisualCube của Conrad Rider. Giữ đúng hướng màu như hình, các sticker tối là phần không cần nhận diện. Bộ 5 ví dụ hữu ích của nguồn, không phải toàn bộ trạng thái L2E. Thứ tự đánh số trái sang phải, trên xuống dưới."
+  },
+  {
+    "id": "4x4-l2e-5",
+    "puzzle": "4x4",
+    "method": "4×4 L2E",
+    "number": 5,
+    "name": "L2E · CubeSkills 5",
+    "category": "Hai cạnh cuối",
+    "algorithm": "R' (Uw' R U R' F R' F' R Uw) R",
+    "alternatives": [],
+    "images": [
+      "/images/jperm/4x4-l2e-5.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/useful-last-2-edges-algorithms-4x4.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Hình và công thức đối chiếu theo từng cột trong PDF CubeSkills; ảnh VisualCube của Conrad Rider. Giữ đúng hướng màu như hình, các sticker tối là phần không cần nhận diện. Bộ 5 ví dụ hữu ích của nguồn, không phải toàn bộ trạng thái L2E. Thứ tự đánh số trái sang phải, trên xuống dưới."
+  }
+]

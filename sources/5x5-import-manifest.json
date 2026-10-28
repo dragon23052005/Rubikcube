@@ -1,0 +1,541 @@
+[
+  {
+    "id": "5x5-l2e-1",
+    "kind": "l2e",
+    "page": 1,
+    "position": 1,
+    "bbox": [
+      65.575,
+      381.62,
+      200.575,
+      516.62
+    ],
+    "text": "Rw' U' R' U (R' F R F') Rw\n[z' y'] Uw' (R U R' F R' F' R) Uw",
+    "algorithm": "Rw' U' R' U (R' F R F') Rw",
+    "alternatives": [
+      "[z' y'] Uw' (R U R' F R' F' R) Uw"
+    ],
+    "image": "/images/cubeskills/5x5-l2e-1.png",
+    "sha256": "943b11d7fd6e8c6780a77f814feb1f86727b09e2f31a43c5c3d9c3ab4c4308ed"
+  },
+  {
+    "id": "5x5-l2e-2",
+    "kind": "l2e",
+    "page": 1,
+    "position": 2,
+    "bbox": [
+      237.05,
+      381.62,
+      371.95000000000005,
+      516.52
+    ],
+    "text": "3Lw U' R' U (R' F R F') Rw'\n[z' y'] 3Dw (R U R' F R' F' R) Uw'",
+    "algorithm": "3Lw U' R' U (R' F R F') Rw'",
+    "alternatives": [
+      "[z' y'] 3Dw (R U R' F R' F' R) Uw'"
+    ],
+    "image": "/images/cubeskills/5x5-l2e-2.png",
+    "sha256": "d4b4bc10b7685ef5aba7badcaac2290c2be422c3e184f5fbb053c7643d70b2cd"
+  },
+  {
+    "id": "5x5-l2e-3",
+    "kind": "l2e",
+    "page": 1,
+    "position": 3,
+    "bbox": [
+      409.6,
+      381.62,
+      544.6,
+      516.62
+    ],
+    "text": "Rw2' F2 U2' Rw2' U2' F2 Rw2",
+    "algorithm": "Rw2' F2 U2' Rw2' U2' F2 Rw2",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2e-3.png",
+    "sha256": "87f05ab3fc004176e032d49713eb752325b01a6f73041dfa5147b0219bb6bc73"
+  },
+  {
+    "id": "5x5-l2e-4",
+    "kind": "l2e",
+    "page": 1,
+    "position": 4,
+    "bbox": [
+      237.05,
+      557.5699999999999,
+      372.05,
+      692.5699999999999
+    ],
+    "text": "Rw' Lw U' R' U (R' F R F') Rw Lw '\n[z' y'] Uw' Dw (R U R' F R' F' R) Uw Dw'",
+    "algorithm": "Rw' Lw U' R' U (R' F R F') Rw Lw'",
+    "alternatives": [
+      "[z' y'] Uw' Dw (R U R' F R' F' R) Uw Dw'"
+    ],
+    "image": "/images/cubeskills/5x5-l2e-4.png",
+    "sha256": "43d44927abf4c217d165ece29793f37cc94f831e85a8e1a7bb4f5c9da43399e1"
+  },
+  {
+    "id": "5x5-l2e-5",
+    "kind": "l2e",
+    "page": 2,
+    "position": 1,
+    "bbox": [
+      65.575,
+      70.94000000000005,
+      200.575,
+      205.94000000000005
+    ],
+    "text": "Rw U2 x Rw U2 Rw U2' Rw' U2 Lw U2\n3Rw' U2' Rw U2 Rw' U2' Rw'",
+    "algorithm": "Rw U2 x Rw U2 Rw U2' Rw' U2 Lw U2 3Rw' U2' Rw U2 Rw' U2' Rw'",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2e-5.png",
+    "sha256": "402889b5d649c047d167529d17d5a2a132b87c1e00eceda43c8466e0da03997e"
+  },
+  {
+    "id": "5x5-l2e-6",
+    "kind": "l2e",
+    "page": 2,
+    "position": 2,
+    "bbox": [
+      237.05,
+      70.94000000000005,
+      371.95000000000005,
+      205.84000000000003
+    ],
+    "text": "Rw U2 Rw U2' x U2 Rw U2' 3Rw' U2\nLw U2' Rw2",
+    "algorithm": "Rw U2 Rw U2' x U2 Rw U2' 3Rw' U2 Lw U2' Rw2",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2e-6.png",
+    "sha256": "69b87df4f3e5ca05bd17a537398b360f293f8a98c81954ca5356ffa7a3c97461"
+  },
+  {
+    "id": "5x5-l2e-7",
+    "kind": "l2e",
+    "page": 2,
+    "position": 3,
+    "bbox": [
+      409.6,
+      70.94000000000005,
+      544.5,
+      205.84000000000003
+    ],
+    "text": "F2 Rw U2 Rw U2' Rw' F2 Rw' U2 Rw'\nU2' Rw U2 Rw' U2' Rw2",
+    "algorithm": "F2 Rw U2 Rw U2' Rw' F2 Rw' U2 Rw' U2' Rw U2 Rw' U2' Rw2",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2e-7.png",
+    "sha256": "f8100c02d3a0f41b31acd77442a8bfb3f86e8258a780c7d72f5608e08ae2e313"
+  },
+  {
+    "id": "5x5-l2e-8",
+    "kind": "l2e",
+    "page": 2,
+    "position": 4,
+    "bbox": [
+      65.575,
+      246.99,
+      200.47500000000002,
+      381.89
+    ],
+    "text": "B2 Rw' U2 Rw' U2' Rw B2 Rw U2 Rw\nU2' Rw' U2 Rw U2' Rw2",
+    "algorithm": "B2 Rw' U2 Rw' U2' Rw B2 Rw U2 Rw U2' Rw' U2 Rw U2' Rw2",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2e-8.png",
+    "sha256": "ff16efaf5b7eae2c9b09525985ef5724d024b9b2befb02b85a4a59cb8461af3a"
+  },
+  {
+    "id": "5x5-l2e-9",
+    "kind": "l2e",
+    "page": 2,
+    "position": 5,
+    "bbox": [
+      237.05,
+      246.99,
+      372.05,
+      381.99
+    ],
+    "text": "Rw U2 Rw2 U2' Rw' U2 Rw U2' Rw' U2\nRw2 U2' Rw",
+    "algorithm": "Rw U2 Rw2 U2' Rw' U2 Rw U2' Rw' U2 Rw2 U2' Rw",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2e-9.png",
+    "sha256": "e4d27db5046cbc77c89f043c20322a77fc0ad0b0c389e4c6f4173bacb8f00906"
+  },
+  {
+    "id": "5x5-l2e-10",
+    "kind": "l2e",
+    "page": 2,
+    "position": 6,
+    "bbox": [
+      409.6,
+      246.99,
+      544.6,
+      381.99
+    ],
+    "text": "Rw' U2' Rw2 U2' Rw U2' Rw' U2 Rw\nU2' Rw2 U2' Rw'",
+    "algorithm": "Rw' U2' Rw2 U2' Rw U2' Rw' U2 Rw U2' Rw2 U2' Rw'",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2e-10.png",
+    "sha256": "955f31f78877aacb3fda1cce1f84c0821d1db273b28d0dac46311501415353f5"
+  },
+  {
+    "id": "5x5-l2e-11",
+    "kind": "l2e",
+    "page": 2,
+    "position": 7,
+    "bbox": [
+      65.575,
+      423.03999999999996,
+      200.47500000000002,
+      557.94
+    ],
+    "text": "Rw' U2 Rw U2' 3Lw' U2 Rw U2 Rw\nU2' Rw' U2 Rw U2' Rw2",
+    "algorithm": "Rw' U2 Rw U2' 3Lw' U2 Rw U2 Rw U2' Rw' U2 Rw U2' Rw2",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2e-11.png",
+    "sha256": "c135c7a165fe401d1124fdf28f3897500cba616a0f038203e08cb36fcca82286"
+  },
+  {
+    "id": "5x5-l2e-12",
+    "kind": "l2e",
+    "page": 2,
+    "position": 8,
+    "bbox": [
+      237.05,
+      423.03999999999996,
+      372.05,
+      558.04
+    ],
+    "text": "Rw2 B2 Rw' U2 Rw' U2' x'\nU2 Rw' U2' Rw U2 Rw' U2' Rw2",
+    "algorithm": "Rw2 B2 Rw' U2 Rw' U2' x' U2 Rw' U2' Rw U2 Rw' U2' Rw2",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2e-12.png",
+    "sha256": "05dac300784674d7b48c7760810880a7aef1dc62bb8a10c0d7b7b1a693e47425"
+  },
+  {
+    "kind": "l2c",
+    "page": 1,
+    "position": 1,
+    "excluded": "Solved reference; no algorithm required"
+  },
+  {
+    "id": "5x5-l2c-1",
+    "kind": "l2c",
+    "page": 1,
+    "position": 2,
+    "bbox": [
+      181.95,
+      351.18,
+      292.5,
+      461.73
+    ],
+    "text": "(Rw U Rw') U (Rw U2' Rw')",
+    "algorithm": "(Rw U Rw') U (Rw U2' Rw')",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2c-1.png",
+    "sha256": "7bdfab7c39b1c741093cf3f9361f51401c2c48578dc862ba4ede3d22627b6c2a"
+  },
+  {
+    "id": "5x5-l2c-2",
+    "kind": "l2c",
+    "page": 1,
+    "position": 3,
+    "bbox": [
+      316.6,
+      351.18,
+      427.15000000000003,
+      461.73
+    ],
+    "text": "(Rw U' Rw') U' (Rw U2' Rw')",
+    "algorithm": "(Rw U' Rw') U' (Rw U2' Rw')",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2c-2.png",
+    "sha256": "057e6bcca8e1a941592d537f2e54798bd96c90289389dbc56fa10e27227f47fd"
+  },
+  {
+    "id": "5x5-l2c-3",
+    "kind": "l2c",
+    "page": 1,
+    "position": 4,
+    "bbox": [
+      451.27,
+      351.18,
+      561.8199999999999,
+      461.73
+    ],
+    "text": "Rw U' M' U Rw' U' M",
+    "algorithm": "Rw U' M' U Rw' U' M",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2c-3.png",
+    "sha256": "3b876fc93e847e7610d174aeec536777b329f59510342ea8cc495f3ff1478294"
+  },
+  {
+    "id": "5x5-l2c-4",
+    "kind": "l2c",
+    "page": 1,
+    "position": 5,
+    "bbox": [
+      48.125,
+      493.38,
+      158.675,
+      603.9300000000001
+    ],
+    "text": "(Rw U Rw')",
+    "algorithm": "(Rw U Rw')",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2c-4.png",
+    "sha256": "8ad102a6843acabe303f76aa43cc0f340ca24d4d2fb567dc6260f6ffff1f702f"
+  },
+  {
+    "id": "5x5-l2c-5",
+    "kind": "l2c",
+    "page": 1,
+    "position": 6,
+    "bbox": [
+      181.95,
+      493.38,
+      292.5,
+      603.9300000000001
+    ],
+    "text": "(Rw U Rw') U' (Rw U' Rw')",
+    "algorithm": "(Rw U Rw') U' (Rw U' Rw')",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2c-5.png",
+    "sha256": "d720a9a98cce390953290e6fdcf3b4d26f49eb9dba91098db34d91681d4085e9"
+  },
+  {
+    "id": "5x5-l2c-6",
+    "kind": "l2c",
+    "page": 1,
+    "position": 7,
+    "bbox": [
+      316.6,
+      493.38,
+      427.15000000000003,
+      603.9300000000001
+    ],
+    "text": "(Rw U' Rw')",
+    "algorithm": "(Rw U' Rw')",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2c-6.png",
+    "sha256": "851a8bb8e02bf4772d88e353489d156425acf13fae44dc9e670413e707abf5bb"
+  },
+  {
+    "id": "5x5-l2c-7",
+    "kind": "l2c",
+    "page": 1,
+    "position": 8,
+    "bbox": [
+      451.27,
+      493.38,
+      561.8199999999999,
+      603.9300000000001
+    ],
+    "text": "(Rw U' Rw') U (Rw U Rw')",
+    "algorithm": "(Rw U' Rw') U (Rw U Rw')",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2c-7.png",
+    "sha256": "5fc7c6f600ac3eb78912543a646795b8e9a134a946b44405465ee2e1b782f954"
+  },
+  {
+    "id": "5x5-l2c-8",
+    "kind": "l2c",
+    "page": 1,
+    "position": 9,
+    "bbox": [
+      48.125,
+      617.0,
+      158.675,
+      727.55
+    ],
+    "text": "(Rw U' Rw') U' (Rw U' Rw')",
+    "algorithm": "(Rw U' Rw') U' (Rw U' Rw')",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2c-8.png",
+    "sha256": "8bbf2011fe1cfa90a909596b869437728021e832920bb0f83c37c6f604eb5320"
+  },
+  {
+    "id": "5x5-l2c-9",
+    "kind": "l2c",
+    "page": 1,
+    "position": 10,
+    "bbox": [
+      181.95,
+      617.0,
+      292.5,
+      727.55
+    ],
+    "text": "(Rw U2' Rw') U (Rw U2' Rw' )",
+    "algorithm": "(Rw U2' Rw') U (Rw U2' Rw')",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2c-9.png",
+    "sha256": "a11b270d487b5b6eb120aaa4c5684ac12dad3734e592684b1b2344835e7b60fd"
+  },
+  {
+    "id": "5x5-l2c-10",
+    "kind": "l2c",
+    "page": 1,
+    "position": 11,
+    "bbox": [
+      316.6,
+      617.0,
+      427.15000000000003,
+      727.55
+    ],
+    "text": "(Rw U Rw') U (Rw U Rw')",
+    "algorithm": "(Rw U Rw') U (Rw U Rw')",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2c-10.png",
+    "sha256": "63d701d1adbfd322b608b33c6b14a3500ad75371830559b75eb2d9dcb7145317"
+  },
+  {
+    "id": "5x5-l2c-11",
+    "kind": "l2c",
+    "page": 1,
+    "position": 12,
+    "bbox": [
+      451.27,
+      617.0,
+      561.8199999999999,
+      727.55
+    ],
+    "text": "(Rw U2 Rw') U' (Rw U2 Rw' )",
+    "algorithm": "(Rw U2 Rw') U' (Rw U2 Rw')",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2c-11.png",
+    "sha256": "83439bd61e3b26779d6e3092432bfd6d73c4def997779956e0aa1c3b21792301"
+  },
+  {
+    "id": "5x5-l2c-12",
+    "kind": "l2c",
+    "page": 2,
+    "position": 1,
+    "bbox": [
+      48.125,
+      36.0,
+      158.675,
+      146.54999999999995
+    ],
+    "text": "(Rw U' Rw' U) (Rw U' Rw' U )\n(Rw U' Rw')",
+    "algorithm": "(Rw U' Rw' U) (Rw U' Rw' U) (Rw U' Rw')",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2c-12.png",
+    "sha256": "3c5ddd2b1b30777115538eaea8ff8b239e8e5a3fb07a947784347adbd8fbf983"
+  },
+  {
+    "id": "5x5-l2c-13",
+    "kind": "l2c",
+    "page": 2,
+    "position": 2,
+    "bbox": [
+      181.95,
+      36.0,
+      292.5,
+      146.54999999999995
+    ],
+    "text": "(Rw U' Rw') U2 (Rw U' Rw')",
+    "algorithm": "(Rw U' Rw') U2 (Rw U' Rw')",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2c-13.png",
+    "sha256": "f73b4188d6d849a8421b522653e4d352099e225f854c57ab236df55dce01f5b1"
+  },
+  {
+    "id": "5x5-l2c-14",
+    "kind": "l2c",
+    "page": 2,
+    "position": 3,
+    "bbox": [
+      316.6,
+      36.0,
+      427.15000000000003,
+      146.54999999999995
+    ],
+    "text": "(Rw U2 Rw')",
+    "algorithm": "(Rw U2 Rw')",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2c-14.png",
+    "sha256": "f03c69021474834a1e3925c98cf9a361eaedecbc5c3646c3ac635d82a73a44e8"
+  },
+  {
+    "id": "5x5-l2c-15",
+    "kind": "l2c",
+    "page": 2,
+    "position": 4,
+    "bbox": [
+      451.27,
+      36.0,
+      561.8199999999999,
+      146.54999999999995
+    ],
+    "text": "(Rw U2' Rw') U2 (Rw U' Rw')",
+    "algorithm": "(Rw U2' Rw') U2 (Rw U' Rw')",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2c-15.png",
+    "sha256": "e20aff339a0535abe92600b815732d79a56084cf930c948842efe9dd79ad1f06"
+  },
+  {
+    "id": "5x5-l2c-16",
+    "kind": "l2c",
+    "page": 2,
+    "position": 5,
+    "bbox": [
+      48.125,
+      172.24,
+      158.675,
+      282.79
+    ],
+    "text": "(Rw U Rw') U' (Rw U2 Rw')",
+    "algorithm": "(Rw U Rw') U' (Rw U2 Rw')",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2c-16.png",
+    "sha256": "30b633332826571254c974317e60006c7f60c37ba9156495aebed2c87cc3a491"
+  },
+  {
+    "id": "5x5-l2c-17",
+    "kind": "l2c",
+    "page": 2,
+    "position": 6,
+    "bbox": [
+      181.95,
+      172.24,
+      292.5,
+      282.79
+    ],
+    "text": "(Rw U' Rw') U (Rw U2' Rw')",
+    "algorithm": "(Rw U' Rw') U (Rw U2' Rw')",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2c-17.png",
+    "sha256": "b71e12440c8732eb8ced45ccf617b6eb14f0f3392ce1f7f2e8689d9a28d15cc8"
+  },
+  {
+    "id": "5x5-l2c-18",
+    "kind": "l2c",
+    "page": 2,
+    "position": 7,
+    "bbox": [
+      316.6,
+      172.24,
+      427.15000000000003,
+      282.79
+    ],
+    "text": "(Rw U' Rw') U (Rw U' Rw')",
+    "algorithm": "(Rw U' Rw') U (Rw U' Rw')",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2c-18.png",
+    "sha256": "9bef8b6db1a0a88539a3eced0dca089201964f1cecf4c88ad6c09c6d4654f824"
+  },
+  {
+    "id": "5x5-l2c-19",
+    "kind": "l2c",
+    "page": 2,
+    "position": 8,
+    "bbox": [
+      451.27,
+      172.24,
+      561.8199999999999,
+      282.79
+    ],
+    "text": "(Rw U Rw') U' (Rw U Rw')",
+    "algorithm": "(Rw U Rw') U' (Rw U Rw')",
+    "alternatives": [],
+    "image": "/images/cubeskills/5x5-l2c-19.png",
+    "sha256": "f4bb81729bd1bfb4fc3303d117c292ea2feb32d9e4f55afafea0e43e8d7d70a5"
+  }
+]

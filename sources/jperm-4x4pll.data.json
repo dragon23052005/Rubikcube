@@ -1,0 +1,178 @@
+[
+  {
+    "name": "Pure-E",
+    "alg": [
+      "[*]"
+    ],
+    "group": "Edges Only",
+    "prob": 2
+  },
+  {
+    "name": "Adj-E",
+    "alg": [
+      "R U R' U' [*] U' R U' R'"
+    ],
+    "group": "Edges Only",
+    "prob": 4
+  },
+  {
+    "name": "O+",
+    "alg": [
+      "M' U' M2 U' M2 U' M' U2 M2 [*]"
+    ],
+    "group": "Edges Only",
+    "prob": 1
+  },
+  {
+    "name": "O-",
+    "alg": [
+      "M' U' M2 U' M2 U' M' U2 M2 U' [*]"
+    ],
+    "group": "Edges Only",
+    "prob": 1
+  },
+  {
+    "name": "W",
+    "alg": [
+      "R U' R U R U R U' R' U' R2 [*]"
+    ],
+    "group": "Edges Only",
+    "prob": 4
+  },
+  {
+    "name": "Ba",
+    "alg": [
+      "[*] U R U R' F' R U R' U' R' F R2 U' R'"
+    ],
+    "group": "Adjacent Corner Swap",
+    "prob": 4
+  },
+  {
+    "name": "Bb",
+    "alg": [
+      "R U R' U' R' F R2 U' R' [*] U R U R' F'"
+    ],
+    "group": "Adjacent Corner Swap",
+    "prob": 4
+  },
+  {
+    "name": "Ca",
+    "alg": [
+      "[*] U R' U2 R U2 R' F R U R' U' R' F' R2"
+    ],
+    "group": "Adjacent Corner Swap",
+    "prob": 4
+  },
+  {
+    "name": "Cb",
+    "alg": [
+      "[*] R U R' F' R U2 R' U2 R' F R U R U2 R'"
+    ],
+    "group": "Adjacent Corner Swap",
+    "prob": 4
+  },
+  {
+    "name": "Da",
+    "alg": [
+      "R' U L' U2 R U' R' U2 R L U' [*]"
+    ],
+    "group": "Adjacent Corner Swap",
+    "prob": 4
+  },
+  {
+    "name": "Db",
+    "alg": [
+      "R U R' F' R U R' U' R' F R2 U' R' [*]"
+    ],
+    "group": "Adjacent Corner Swap",
+    "prob": 4
+  },
+  {
+    "name": "Pa",
+    "alg": [
+      "R U R' F' R U R' U' R' F R2 U' R' U' [*]"
+    ],
+    "group": "Adjacent Corner Swap",
+    "prob": 4
+  },
+  {
+    "name": "Pb",
+    "alg": [
+      "[*] R U R' F' R U R' U' R' F R2 U' R'"
+    ],
+    "group": "Adjacent Corner Swap",
+    "prob": 4
+  },
+  {
+    "name": "Ka",
+    "alg": [
+      "[*] x R2 D2 R U R' D2 R U' R"
+    ],
+    "group": "Adjacent Corner Swap",
+    "prob": 4
+  },
+  {
+    "name": "Kb",
+    "alg": [
+      "[*] U x R' U R' D2 R U' R' D2 R2"
+    ],
+    "group": "Adjacent Corner Swap",
+    "prob": 4
+  },
+  {
+    "name": "Q",
+    "alg": [
+      "x' R U' R' D R U R' D' R U R' D R U' R' D' x U [*]"
+    ],
+    "group": "Diagonal Corner Swap",
+    "prob": 1
+  },
+  {
+    "name": "Sa",
+    "alg": [
+      "F R U' R' U' R U R' F' R U R' U' R' F R F' U' [*]"
+    ],
+    "group": "Diagonal Corner Swap",
+    "prob": 1
+  },
+  {
+    "name": "Sb",
+    "alg": [
+      "F R U' R' U' R U R' F' R U R' U' R' F R F' [*]"
+    ],
+    "group": "Diagonal Corner Swap",
+    "prob": 4
+  },
+  {
+    "name": "X",
+    "alg": [
+      "x' R U' R' D R U R' D' R U R' D R U' R' D' x [*]"
+    ],
+    "group": "Diagonal Corner Swap",
+    "prob": 1
+  },
+  {
+    "name": "M",
+    "alg": [
+      "R U R' U' R' F R2 U' R' U' R U R' F' [*]"
+    ],
+    "group": "Adjacent Corner Swap",
+    "prob": 4
+  },
+  {
+    "name": "Adj-C",
+    "alg": [
+      "R U R' U' R' F R2 U' R' U' R U R' F' U' [*]"
+    ],
+    "group": "Adjacent Corner Swap",
+    "prob": 4
+  },
+  {
+    "name": "Diag-C",
+    "alg": [
+      "F R U' R' U' R U R' F' U' [*] U' R U R' U' R' F R F'"
+    ],
+    "group": "Diagonal Corner Swap",
+    "prob": 2
+  }
+]

@@ -1,0 +1,535 @@
+[
+  {
+    "id": "5x5-l2e-1",
+    "puzzle": "5x5",
+    "method": "5×5 L2E",
+    "number": 1,
+    "name": "L2E · 01",
+    "category": "Không parity",
+    "algorithm": "Rw' U' R' U (R' F R F') Rw",
+    "alternatives": [
+      "[z' y'] Uw' (R U R' F R' F' R) Uw"
+    ],
+    "images": [
+      "/images/cubeskills/5x5-l2e-1.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-edges-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Hai cạnh cuối, giữ hướng nhận diện như hình. Một số biến thể bắt đầu [z' y'] để chuyển sang góc nhìn khác; thực hiện cả hai phép xoay này trước chuỗi còn lại. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2e-2",
+    "puzzle": "5x5",
+    "method": "5×5 L2E",
+    "number": 2,
+    "name": "L2E · 02",
+    "category": "Không parity",
+    "algorithm": "3Lw U' R' U (R' F R F') Rw'",
+    "alternatives": [
+      "[z' y'] 3Dw (R U R' F R' F' R) Uw'"
+    ],
+    "images": [
+      "/images/cubeskills/5x5-l2e-2.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-edges-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Hai cạnh cuối, giữ hướng nhận diện như hình. Một số biến thể bắt đầu [z' y'] để chuyển sang góc nhìn khác; thực hiện cả hai phép xoay này trước chuỗi còn lại. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2e-3",
+    "puzzle": "5x5",
+    "method": "5×5 L2E",
+    "number": 3,
+    "name": "L2E · 03",
+    "category": "Không parity",
+    "algorithm": "Rw2' F2 U2' Rw2' U2' F2 Rw2",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2e-3.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-edges-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Hai cạnh cuối, giữ hướng nhận diện như hình. Một số biến thể bắt đầu [z' y'] để chuyển sang góc nhìn khác; thực hiện cả hai phép xoay này trước chuỗi còn lại. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2e-4",
+    "puzzle": "5x5",
+    "method": "5×5 L2E",
+    "number": 4,
+    "name": "L2E · 04",
+    "category": "Không parity",
+    "algorithm": "Rw' Lw U' R' U (R' F R F') Rw Lw'",
+    "alternatives": [
+      "[z' y'] Uw' Dw (R U R' F R' F' R) Uw Dw'"
+    ],
+    "images": [
+      "/images/cubeskills/5x5-l2e-4.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-edges-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Hai cạnh cuối, giữ hướng nhận diện như hình. Một số biến thể bắt đầu [z' y'] để chuyển sang góc nhìn khác; thực hiện cả hai phép xoay này trước chuỗi còn lại. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2e-5",
+    "puzzle": "5x5",
+    "method": "5×5 L2E",
+    "number": 5,
+    "name": "L2E · 05",
+    "category": "Parity cạnh",
+    "algorithm": "Rw U2 x Rw U2 Rw U2' Rw' U2 Lw U2 3Rw' U2' Rw U2 Rw' U2' Rw'",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2e-5.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-edges-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Hai cạnh cuối, giữ hướng nhận diện như hình. Một số biến thể bắt đầu [z' y'] để chuyển sang góc nhìn khác; thực hiện cả hai phép xoay này trước chuỗi còn lại. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2e-6",
+    "puzzle": "5x5",
+    "method": "5×5 L2E",
+    "number": 6,
+    "name": "L2E · 06",
+    "category": "Parity cạnh",
+    "algorithm": "Rw U2 Rw U2' x U2 Rw U2' 3Rw' U2 Lw U2' Rw2",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2e-6.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-edges-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Hai cạnh cuối, giữ hướng nhận diện như hình. Một số biến thể bắt đầu [z' y'] để chuyển sang góc nhìn khác; thực hiện cả hai phép xoay này trước chuỗi còn lại. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2e-7",
+    "puzzle": "5x5",
+    "method": "5×5 L2E",
+    "number": 7,
+    "name": "L2E · 07",
+    "category": "Parity cạnh",
+    "algorithm": "F2 Rw U2 Rw U2' Rw' F2 Rw' U2 Rw' U2' Rw U2 Rw' U2' Rw2",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2e-7.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-edges-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Hai cạnh cuối, giữ hướng nhận diện như hình. Một số biến thể bắt đầu [z' y'] để chuyển sang góc nhìn khác; thực hiện cả hai phép xoay này trước chuỗi còn lại. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2e-8",
+    "puzzle": "5x5",
+    "method": "5×5 L2E",
+    "number": 8,
+    "name": "L2E · 08",
+    "category": "Parity cạnh",
+    "algorithm": "B2 Rw' U2 Rw' U2' Rw B2 Rw U2 Rw U2' Rw' U2 Rw U2' Rw2",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2e-8.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-edges-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Hai cạnh cuối, giữ hướng nhận diện như hình. Một số biến thể bắt đầu [z' y'] để chuyển sang góc nhìn khác; thực hiện cả hai phép xoay này trước chuỗi còn lại. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2e-9",
+    "puzzle": "5x5",
+    "method": "5×5 L2E",
+    "number": 9,
+    "name": "L2E · 09",
+    "category": "Parity cạnh",
+    "algorithm": "Rw U2 Rw2 U2' Rw' U2 Rw U2' Rw' U2 Rw2 U2' Rw",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2e-9.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-edges-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Hai cạnh cuối, giữ hướng nhận diện như hình. Một số biến thể bắt đầu [z' y'] để chuyển sang góc nhìn khác; thực hiện cả hai phép xoay này trước chuỗi còn lại. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2e-10",
+    "puzzle": "5x5",
+    "method": "5×5 L2E",
+    "number": 10,
+    "name": "L2E · 10",
+    "category": "Parity cạnh",
+    "algorithm": "Rw' U2' Rw2 U2' Rw U2' Rw' U2 Rw U2' Rw2 U2' Rw'",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2e-10.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-edges-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Hai cạnh cuối, giữ hướng nhận diện như hình. Một số biến thể bắt đầu [z' y'] để chuyển sang góc nhìn khác; thực hiện cả hai phép xoay này trước chuỗi còn lại. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2e-11",
+    "puzzle": "5x5",
+    "method": "5×5 L2E",
+    "number": 11,
+    "name": "L2E · 11",
+    "category": "Parity cạnh",
+    "algorithm": "Rw' U2 Rw U2' 3Lw' U2 Rw U2 Rw U2' Rw' U2 Rw U2' Rw2",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2e-11.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-edges-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Hai cạnh cuối, giữ hướng nhận diện như hình. Một số biến thể bắt đầu [z' y'] để chuyển sang góc nhìn khác; thực hiện cả hai phép xoay này trước chuỗi còn lại. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2e-12",
+    "puzzle": "5x5",
+    "method": "5×5 L2E",
+    "number": 12,
+    "name": "L2E · 12",
+    "category": "Parity cạnh",
+    "algorithm": "Rw2 B2 Rw' U2 Rw' U2' x' U2 Rw' U2' Rw U2 Rw' U2' Rw2",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2e-12.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-edges-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Hai cạnh cuối, giữ hướng nhận diện như hình. Một số biến thể bắt đầu [z' y'] để chuyển sang góc nhìn khác; thực hiện cả hai phép xoay này trước chuỗi còn lại. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2c-1",
+    "puzzle": "5x5",
+    "method": "5×5 L2C",
+    "number": 1,
+    "name": "L2C · 01",
+    "category": "Hai tâm cuối · nhóm 1",
+    "algorithm": "(Rw U Rw') U (Rw U2' Rw')",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2c-1.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-centers-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Áp dụng khi đã có khối tâm 2×3 hoàn chỉnh ở mặt trước, theo đúng hình PDF. M là lớp chính giữa theo chiều L; không xoay cả ba lớp trong. Hình Solved của nguồn chỉ dùng tham chiếu và không được tính vào bộ luyện. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2c-2",
+    "puzzle": "5x5",
+    "method": "5×5 L2C",
+    "number": 2,
+    "name": "L2C · 02",
+    "category": "Hai tâm cuối · nhóm 1",
+    "algorithm": "(Rw U' Rw') U' (Rw U2' Rw')",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2c-2.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-centers-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Áp dụng khi đã có khối tâm 2×3 hoàn chỉnh ở mặt trước, theo đúng hình PDF. M là lớp chính giữa theo chiều L; không xoay cả ba lớp trong. Hình Solved của nguồn chỉ dùng tham chiếu và không được tính vào bộ luyện. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2c-3",
+    "puzzle": "5x5",
+    "method": "5×5 L2C",
+    "number": 3,
+    "name": "L2C · 03",
+    "category": "Hai tâm cuối · nhóm 1",
+    "algorithm": "Rw U' M' U Rw' U' M",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2c-3.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-centers-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Áp dụng khi đã có khối tâm 2×3 hoàn chỉnh ở mặt trước, theo đúng hình PDF. M là lớp chính giữa theo chiều L; không xoay cả ba lớp trong. Hình Solved của nguồn chỉ dùng tham chiếu và không được tính vào bộ luyện. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2c-4",
+    "puzzle": "5x5",
+    "method": "5×5 L2C",
+    "number": 4,
+    "name": "L2C · 04",
+    "category": "Hai tâm cuối · nhóm 1",
+    "algorithm": "(Rw U Rw')",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2c-4.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-centers-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Áp dụng khi đã có khối tâm 2×3 hoàn chỉnh ở mặt trước, theo đúng hình PDF. M là lớp chính giữa theo chiều L; không xoay cả ba lớp trong. Hình Solved của nguồn chỉ dùng tham chiếu và không được tính vào bộ luyện. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2c-5",
+    "puzzle": "5x5",
+    "method": "5×5 L2C",
+    "number": 5,
+    "name": "L2C · 05",
+    "category": "Hai tâm cuối · nhóm 1",
+    "algorithm": "(Rw U Rw') U' (Rw U' Rw')",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2c-5.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-centers-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Áp dụng khi đã có khối tâm 2×3 hoàn chỉnh ở mặt trước, theo đúng hình PDF. M là lớp chính giữa theo chiều L; không xoay cả ba lớp trong. Hình Solved của nguồn chỉ dùng tham chiếu và không được tính vào bộ luyện. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2c-6",
+    "puzzle": "5x5",
+    "method": "5×5 L2C",
+    "number": 6,
+    "name": "L2C · 06",
+    "category": "Hai tâm cuối · nhóm 1",
+    "algorithm": "(Rw U' Rw')",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2c-6.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-centers-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Áp dụng khi đã có khối tâm 2×3 hoàn chỉnh ở mặt trước, theo đúng hình PDF. M là lớp chính giữa theo chiều L; không xoay cả ba lớp trong. Hình Solved của nguồn chỉ dùng tham chiếu và không được tính vào bộ luyện. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2c-7",
+    "puzzle": "5x5",
+    "method": "5×5 L2C",
+    "number": 7,
+    "name": "L2C · 07",
+    "category": "Hai tâm cuối · nhóm 1",
+    "algorithm": "(Rw U' Rw') U (Rw U Rw')",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2c-7.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-centers-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Áp dụng khi đã có khối tâm 2×3 hoàn chỉnh ở mặt trước, theo đúng hình PDF. M là lớp chính giữa theo chiều L; không xoay cả ba lớp trong. Hình Solved của nguồn chỉ dùng tham chiếu và không được tính vào bộ luyện. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2c-8",
+    "puzzle": "5x5",
+    "method": "5×5 L2C",
+    "number": 8,
+    "name": "L2C · 08",
+    "category": "Hai tâm cuối · nhóm 1",
+    "algorithm": "(Rw U' Rw') U' (Rw U' Rw')",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2c-8.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-centers-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Áp dụng khi đã có khối tâm 2×3 hoàn chỉnh ở mặt trước, theo đúng hình PDF. M là lớp chính giữa theo chiều L; không xoay cả ba lớp trong. Hình Solved của nguồn chỉ dùng tham chiếu và không được tính vào bộ luyện. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2c-9",
+    "puzzle": "5x5",
+    "method": "5×5 L2C",
+    "number": 9,
+    "name": "L2C · 09",
+    "category": "Hai tâm cuối · nhóm 1",
+    "algorithm": "(Rw U2' Rw') U (Rw U2' Rw')",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2c-9.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-centers-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Áp dụng khi đã có khối tâm 2×3 hoàn chỉnh ở mặt trước, theo đúng hình PDF. M là lớp chính giữa theo chiều L; không xoay cả ba lớp trong. Hình Solved của nguồn chỉ dùng tham chiếu và không được tính vào bộ luyện. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2c-10",
+    "puzzle": "5x5",
+    "method": "5×5 L2C",
+    "number": 10,
+    "name": "L2C · 10",
+    "category": "Hai tâm cuối · nhóm 1",
+    "algorithm": "(Rw U Rw') U (Rw U Rw')",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2c-10.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-centers-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Áp dụng khi đã có khối tâm 2×3 hoàn chỉnh ở mặt trước, theo đúng hình PDF. M là lớp chính giữa theo chiều L; không xoay cả ba lớp trong. Hình Solved của nguồn chỉ dùng tham chiếu và không được tính vào bộ luyện. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2c-11",
+    "puzzle": "5x5",
+    "method": "5×5 L2C",
+    "number": 11,
+    "name": "L2C · 11",
+    "category": "Hai tâm cuối · nhóm 1",
+    "algorithm": "(Rw U2 Rw') U' (Rw U2 Rw')",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2c-11.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-centers-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Áp dụng khi đã có khối tâm 2×3 hoàn chỉnh ở mặt trước, theo đúng hình PDF. M là lớp chính giữa theo chiều L; không xoay cả ba lớp trong. Hình Solved của nguồn chỉ dùng tham chiếu và không được tính vào bộ luyện. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2c-12",
+    "puzzle": "5x5",
+    "method": "5×5 L2C",
+    "number": 12,
+    "name": "L2C · 12",
+    "category": "Hai tâm cuối · nhóm 2",
+    "algorithm": "(Rw U' Rw' U) (Rw U' Rw' U) (Rw U' Rw')",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2c-12.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-centers-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Áp dụng khi đã có khối tâm 2×3 hoàn chỉnh ở mặt trước, theo đúng hình PDF. M là lớp chính giữa theo chiều L; không xoay cả ba lớp trong. Hình Solved của nguồn chỉ dùng tham chiếu và không được tính vào bộ luyện. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2c-13",
+    "puzzle": "5x5",
+    "method": "5×5 L2C",
+    "number": 13,
+    "name": "L2C · 13",
+    "category": "Hai tâm cuối · nhóm 2",
+    "algorithm": "(Rw U' Rw') U2 (Rw U' Rw')",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2c-13.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-centers-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Áp dụng khi đã có khối tâm 2×3 hoàn chỉnh ở mặt trước, theo đúng hình PDF. M là lớp chính giữa theo chiều L; không xoay cả ba lớp trong. Hình Solved của nguồn chỉ dùng tham chiếu và không được tính vào bộ luyện. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2c-14",
+    "puzzle": "5x5",
+    "method": "5×5 L2C",
+    "number": 14,
+    "name": "L2C · 14",
+    "category": "Hai tâm cuối · nhóm 2",
+    "algorithm": "(Rw U2 Rw')",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2c-14.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-centers-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Áp dụng khi đã có khối tâm 2×3 hoàn chỉnh ở mặt trước, theo đúng hình PDF. M là lớp chính giữa theo chiều L; không xoay cả ba lớp trong. Hình Solved của nguồn chỉ dùng tham chiếu và không được tính vào bộ luyện. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2c-15",
+    "puzzle": "5x5",
+    "method": "5×5 L2C",
+    "number": 15,
+    "name": "L2C · 15",
+    "category": "Hai tâm cuối · nhóm 2",
+    "algorithm": "(Rw U2' Rw') U2 (Rw U' Rw')",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2c-15.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-centers-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Áp dụng khi đã có khối tâm 2×3 hoàn chỉnh ở mặt trước, theo đúng hình PDF. M là lớp chính giữa theo chiều L; không xoay cả ba lớp trong. Hình Solved của nguồn chỉ dùng tham chiếu và không được tính vào bộ luyện. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2c-16",
+    "puzzle": "5x5",
+    "method": "5×5 L2C",
+    "number": 16,
+    "name": "L2C · 16",
+    "category": "Hai tâm cuối · nhóm 2",
+    "algorithm": "(Rw U Rw') U' (Rw U2 Rw')",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2c-16.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-centers-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Áp dụng khi đã có khối tâm 2×3 hoàn chỉnh ở mặt trước, theo đúng hình PDF. M là lớp chính giữa theo chiều L; không xoay cả ba lớp trong. Hình Solved của nguồn chỉ dùng tham chiếu và không được tính vào bộ luyện. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2c-17",
+    "puzzle": "5x5",
+    "method": "5×5 L2C",
+    "number": 17,
+    "name": "L2C · 17",
+    "category": "Hai tâm cuối · nhóm 2",
+    "algorithm": "(Rw U' Rw') U (Rw U2' Rw')",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2c-17.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-centers-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Áp dụng khi đã có khối tâm 2×3 hoàn chỉnh ở mặt trước, theo đúng hình PDF. M là lớp chính giữa theo chiều L; không xoay cả ba lớp trong. Hình Solved của nguồn chỉ dùng tham chiếu và không được tính vào bộ luyện. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2c-18",
+    "puzzle": "5x5",
+    "method": "5×5 L2C",
+    "number": 18,
+    "name": "L2C · 18",
+    "category": "Hai tâm cuối · nhóm 2",
+    "algorithm": "(Rw U' Rw') U (Rw U' Rw')",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2c-18.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-centers-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Áp dụng khi đã có khối tâm 2×3 hoàn chỉnh ở mặt trước, theo đúng hình PDF. M là lớp chính giữa theo chiều L; không xoay cả ba lớp trong. Hình Solved của nguồn chỉ dùng tham chiếu và không được tính vào bộ luyện. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  },
+  {
+    "id": "5x5-l2c-19",
+    "puzzle": "5x5",
+    "method": "5×5 L2C",
+    "number": 19,
+    "name": "L2C · 19",
+    "category": "Hai tâm cuối · nhóm 2",
+    "algorithm": "(Rw U Rw') U' (Rw U Rw')",
+    "alternatives": [],
+    "images": [
+      "/images/cubeskills/5x5-l2c-19.png"
+    ],
+    "recognition": "",
+    "sourceUrl": "https://www.cubeskills.com/uploads/pdf/tutorials/last-2-centers-algorithms-5x5.pdf",
+    "verificationStatus": "SOURCE_MATCHED",
+    "description": "Áp dụng khi đã có khối tâm 2×3 hoàn chỉnh ở mặt trước, theo đúng hình PDF. M là lớp chính giữa theo chiều L; không xoay cả ba lớp trong. Hình Solved của nguồn chỉ dùng tham chiếu và không được tính vào bộ luyện. Nguồn CubeSkills; hình VisualCube của Conrad Rider. Thứ tự theo từng hàng từ trái sang phải trong PDF. Đã đối chiếu hình/công thức theo cùng cột; chưa xác minh toàn bộ bằng solver độc lập."
+  }
+]

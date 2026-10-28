@@ -1,0 +1,229 @@
+[
+  {
+    "name": "Solved",
+    "alg": [
+      "R U2 R' U' [*] F R' F' R",
+      "y' [*] U' F U R U' R' F'",
+      "y2 R U R' F' [*] F R U' R'"
+    ],
+    "group": "4 Corners",
+    "prob": 4
+  },
+  {
+    "name": "U (F)",
+    "alg": [
+      "[*]"
+    ],
+    "group": "2 Corners",
+    "prob": 4
+  },
+  {
+    "name": "U (R)",
+    "alg": [
+      "[*] U' R U R' U R U2 R'"
+    ],
+    "group": "2 Corners",
+    "prob": 4
+  },
+  {
+    "name": "U (L)",
+    "alg": [
+      "[*] R U2 R' U' R U' R'"
+    ],
+    "group": "2 Corners",
+    "prob": 4
+  },
+  {
+    "name": "U (B)",
+    "alg": [
+      "M [*] M'"
+    ],
+    "group": "2 Corners",
+    "prob": 4
+  },
+  {
+    "name": "T (F)",
+    "alg": [
+      "R U R' U' R [*] R' U R U' R'"
+    ],
+    "group": "2 Corners",
+    "prob": 4
+  },
+  {
+    "name": "T (R)",
+    "alg": [
+      "[*] R U R' U' R' F R F'",
+      "y2 F' L' U L U L' U' L F [*]",
+      "y2 L2 B2 L2 [*] L2 B2 L2"
+    ],
+    "group": "2 Corners",
+    "prob": 4
+  },
+  {
+    "name": "T (L)",
+    "alg": [
+      "F R U' R' U' R U R' F' [*]",
+      "R2 B2 R2 [*] R2 B2 R2",
+      "y2 [*] U2 R U R' U' R' F R F'"
+    ],
+    "group": "2 Corners",
+    "prob": 4
+  },
+  {
+    "name": "T (B)",
+    "alg": [
+      "[*] U R U2 (R2 U' R2 U' R2) U2 R"
+    ],
+    "group": "2 Corners",
+    "prob": 4
+  },
+  {
+    "name": "L (FR)",
+    "alg": [
+      "R' U' R [*] R' U R"
+    ],
+    "group": "2 Corners",
+    "prob": 4
+  },
+  {
+    "name": "L (FL)",
+    "alg": [
+      "L U L' [*] L U' L'"
+    ],
+    "group": "2 Corners",
+    "prob": 4
+  },
+  {
+    "name": "L (BR)",
+    "alg": [
+      "[*] U R' U2 R U R' U R"
+    ],
+    "group": "2 Corners",
+    "prob": 4
+  },
+  {
+    "name": "L (BL)",
+    "alg": [
+      "[*] R' U' R U' R' U2 R"
+    ],
+    "group": "2 Corners",
+    "prob": 4
+  },
+  {
+    "name": "Sune (FR)",
+    "alg": [
+      "M' U R U' 3Rw' [*] U R U2 R'",
+      "y2 [*] U2 F R U R' U' F'",
+      "[*] U2 R U2 (R2 U' R2 U' R2) U2 R"
+    ],
+    "group": "1 Corner",
+    "prob": 4
+  },
+  {
+    "name": "Sune (FL)",
+    "alg": [
+      "[*] R U R' U R U2 R'"
+    ],
+    "group": "1 Corner",
+    "prob": 4
+  },
+  {
+    "name": "Sune (BR)",
+    "alg": [
+      "L F' L' F [*] L' U L"
+    ],
+    "group": "1 Corner",
+    "prob": 4
+  },
+  {
+    "name": "Sune (BL)",
+    "alg": [
+      "F' L' U' L U F [*]"
+    ],
+    "group": "1 Corner",
+    "prob": 4
+  },
+  {
+    "name": "Antisune (FR)",
+    "alg": [
+      "[*] U' R U2 R' U' R U' R'"
+    ],
+    "group": "1 Corner",
+    "prob": 4
+  },
+  {
+    "name": "Antisune (FL)",
+    "alg": [
+      "[*] R U2 (R2 U' R2 U' R2) U2 R",
+      "y2 [*] F R U R' U' F'",
+      "M' U' L' U 3Lw [*] U' L' U2 L"
+    ],
+    "group": "1 Corner",
+    "prob": 4
+  },
+  {
+    "name": "Antisune (BR)",
+    "alg": [
+      "F R U R' U' F' [*]"
+    ],
+    "group": "1 Corner",
+    "prob": 4
+  },
+  {
+    "name": "Antisune (BL)",
+    "alg": [
+      "R' F R F' [*] R U' R'"
+    ],
+    "group": "1 Corner",
+    "prob": 4
+  },
+  {
+    "name": "H (FB)",
+    "alg": [
+      "[*] R2 D' R U2 R' D R U2 R",
+      "y2 [*] U R' U' R' F R F' U R"
+    ],
+    "group": "0 Corners",
+    "prob": 4
+  },
+  {
+    "name": "H (LR)",
+    "alg": [
+      "[*] R U R' U R U' R' U R U2 R'"
+    ],
+    "group": "0 Corners",
+    "prob": 4
+  },
+  {
+    "name": "Pi (F)",
+    "alg": [
+      "[*] U' R U2 (R2 U' R2 U' R2) U2 R"
+    ],
+    "group": "0 Corners",
+    "prob": 4
+  },
+  {
+    "name": "Pi (R)",
+    "alg": [
+      "[*] U R' U' R U' R' U2 R"
+    ],
+    "group": "0 Corners",
+    "prob": 4
+  },
+  {
+    "name": "Pi (L)",
+    "alg": [
+      "[*] R' U2 R U R' U R"
+    ],
+    "group": "0 Corners",
+    "prob": 4
+  },
+  {
+    "name": "Pi (B)",
+    "alg": [
+      "[*] U' 3Rw U R' U' 3Rw' F R F'"
+    ],
+    "group": "0 Corners",
+    "prob": 4
+  }
+]

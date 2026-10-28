@@ -22,12 +22,12 @@ public class CatalogService {
     repository.saveAll(data);
    }
   }
-  for(String supplement:List.of("user-cases.json","jperm-2x2.json")){
+  for(String supplement:List.of("user-cases.json","jperm-2x2.json","jperm-4x4.json","cubeskills-5x5.json")){
   try(var input=new ClassPathResource("static/"+supplement).getInputStream()){
    List<AlgorithmCase> additions=mapper.readValue(input,new TypeReference<List<AlgorithmCase>>(){});
    for(var c:additions){
     if(repository.existsById(c.id))continue;
-    var puzzle=puzzles.findById(c.puzzle).orElseGet(()->puzzles.save(new PuzzleType(c.puzzle,c.puzzle.equals("2x2")?"Rubik 2×2":c.puzzle)));
+    var puzzle=puzzles.findById(c.puzzle).orElseGet(()->puzzles.save(new PuzzleType(c.puzzle,c.puzzle.equals("2x2")?"Rubik 2×2":c.puzzle.equals("4x4")?"Rubik 4×4":c.puzzle.equals("5x5")?"Rubik 5×5":c.puzzle)));
     var set=sets.findById(c.method).orElseGet(()->sets.save(new AlgorithmSet(c.method,puzzle)));
     c.algorithmSet=set;repository.save(c);
    }

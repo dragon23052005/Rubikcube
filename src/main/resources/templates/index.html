@@ -11,6 +11,7 @@
     <title>Speedcube Academy — Học từng bước, nhanh từng ngày</title>
     <link rel="stylesheet" href="/tailwind.css" />
     <link rel="stylesheet" href="/app.css" />
+    <link rel="stylesheet" href="/account.css" />
     <script>
       try {
         document.documentElement.dataset.theme =
@@ -18,6 +19,7 @@
       } catch (e) {}
     </script>
     <script src="/vendor/lucide.js" defer></script>
+    <script src="/account.js" defer></script>
     <script src="/app.js" defer></script>
   </head>
   <body>
@@ -46,11 +48,12 @@
             ><i data-lucide="chart-no-axes-combined"></i>Tiến độ của tôi</a
           >
         </nav>
+        <nav id="account-nav" aria-label="Tài khoản và lộ trình"></nav>
         <div class="workspace-label">KHÁM PHÁ</div>
         <nav aria-label="Loại Rubik">
           <a href="/methods?puzzle=3x3"><i data-lucide="box"></i>Rubik 3×3</a
           ><a href="/methods?puzzle=2x2"><i data-lucide="grid-2x2"></i>Rubik 2×2</a>
-<a href="/methods?puzzle=sq1"><i data-lucide="shapes"></i>Square-1</a
+<a href="/methods?puzzle=4x4"><i data-lucide="grid-3x3"></i>Rubik 4×4</a><a href="/methods?puzzle=5x5"><i data-lucide="grid-3x3"></i>Rubik 5×5</a><a href="/methods?puzzle=sq1"><i data-lucide="shapes"></i>Square-1</a
           ><a href="/guide"
             ><i data-lucide="book-open"></i>Ký hiệu & hướng dẫn</a
           >
@@ -64,14 +67,7 @@
               >Bắt đầu ngay <i data-lucide="arrow-up-right"></i
             ></a>
           </div>
-          <div class="profile">
-            <span class="avatar">B</span>
-            <div>
-              <strong>Không gian của bạn</strong
-              ><small>Tiến độ lưu trên thiết bị</small>
-            </div>
-            <i data-lucide="hard-drive"></i>
-          </div>
+          <div id="profile-slot"></div>
         </div>
       </aside>
       <div class="page">
@@ -103,7 +99,7 @@
             <i data-lucide="moon"></i></button
           ><a href="/guide" class="icon-btn help" aria-label="Hướng dẫn"
             ><i data-lucide="circle-help"></i></a
-          ><span class="avatar small">B</span>
+          ><span id="account-slot"><a href="/login">Đăng nhập</a></span>
         </header>
         <main class="relative" id="main" tabindex="-1">
           <div class="loading">

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0;"><!---->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!---->
+  <!--<script src="/lib/jquery.min.js"></script><!---->
+  <script src="/lib/jquery-ui.min.js"></script>
+  <script src="/lib/svg.js"></script>
+  <script src="/lib/visualcube.js?v=20190924-1156"></script>
+  <script>const visualcube = window['sr-visualizer']</script>
+
+  <script src="/lib/displaycube.js?v=20190924-1156"></script>
+  <script src="/lib/navbar.js?v=20190924-1156"></script>
+
+  <!-- used to use Noto Sans TC -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:regular,600" rel="stylesheet">
+  <link href="/lib/css/main.css?v=20190924-1156" rel="stylesheet" />
+  <link href="/lib/css/tutorial.css?v=20190924-1156" rel="stylesheet" />
+  <link href="/lib/css/trainer.css?v=20190924-1156" rel="stylesheet" />
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5852587144173033"
+     crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5461007997743997"
+     crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <div id="gray" class="invisible"></div>
+
+  <div id="m-nav" class="overlay invisible-900-up invisible">
+    <ul class="navchild navchild0">
+  <li>
+    <a>3x3 Tutorials</a>
+    <ul class="navchild navchild1">
+      <li>
+        <a href="/3x3">How To Solve a 3x3</a>
+      </li>
+      <li>
+        <a href="/3x3/cfop">CFOP Method</a>
+      </li>
+      <li>
+        <a href="/3x3/moves">Move Notation</a>
+      </li>
+      <li>
+        <a href="/3x3/fingertricks">Finger Tricks</a>
+      </li>
+      <li>
+        <a>Advanced CFOP</a>
+        <ul class="navchild navchild2">
+          <li><a href="/3x3/cfop/cross">Advanced Cross</a></li>
+          <li><a href="/3x3/cfop/f2l">Advanced F2L</a></li>
+          <li><a href="/3x3/cfop/ll">Advanced Last Layer</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a>Other Tutorials</a>
+    <ul class="navchild navchild1">
+      <li>
+        <a href="/oh">3x3 One Handed</a>
+      </li>
+      <li>
+        <a>3x3 Blindfolded</a>
+        <ul class="navchild navchild2">
+          <li><a href="/bld">How To Solve Blindfolded</a></li>
+          <li><a href="/bld/faster">How To Get Faster</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>2x2</a>
+        <ul class="navchild navchild2">
+          <li><a href="/2x2">How To Solve a 2x2</a></li>
+          <li><a href="/2x2/faster">Getting Faster at 2x2</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>4x4</a>
+        <ul class="navchild navchild2">
+          <li><a href="/4x4">How To Solve a 4x4</a></li>
+          <li><a href="/4x4/faster">Getting Faster at 4x4</a></li>
+        </ul>
+      </li>
+      <!--<li>
+        <a>5x5</a>
+        <ul class="navchild navchild2">
+          <li><a href="/5x5">How To Solve a 5x5</a></li>
+          <li><a href="/5x5/faster">Getting Faster at 5x5</a></li>
+        </ul>
+      </li>-->
+    </ul>
+  </li>
+  <li>
+    <a>Algorithms</a>
+    <ul class="navchild navchild1">
+      <li>
+        <a>CFOP</a>
+        <ul class="navchild navchild2">
+          <li><a href="/algs/2look/oll">Beginner OLL</a></li>
+          <li><a href="/algs/2look/pll">Beginner PLL</a></li>
+          <li><a href="/algs/oll">OLL</a></li>
+          <li><a href="/algs/pll">PLL</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>Beyond CFOP</a>
+        <ul class="navchild navchild2">
+          <li><a href="/algs/coll">COLL</a></li>
+          <li><a href="/algs/wv">Winter Variation</a></li>
+          <!--<li><a href="/algs/vls">*VLS</a></li>
+          <li><a href="/algs/zbll">*ZBLL</a></li>-->
+        </ul>
+      </li>
+      <li>
+        <a>3x3 OH</a>
+        <ul class="navchild navchild2">
+          <li><a href="/algs/oh/oll">OH OLL</a></li>
+          <li><a href="/algs/oh/pll">OH PLL</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>2x2</a>
+        <ul class="navchild navchild2">
+          <li><a href="/algs/2x2/oll">OLL</a></li>
+          <li><a href="/algs/2x2/pbl">PBL</a></li>
+          <li><a href="/algs/2x2/cll">CLL</a></li>
+          <li><a href="/algs/2x2/eg-1">EG-1</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>4x4</a>
+        <ul class="navchild navchild2">
+          <li><a href="/algs/4x4/oll">4x4 OLL</a></li>
+          <li><a href="/algs/4x4/pll">4x4 PLL</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+  </div>
+
+  <div id="menu-top">
+    <a href="/"><div class="logo-size" id="logo-top"></div></a>
+    <div id="t-nav" class="invisible-900-down">
+      <ul class="navchild navchild0">
+  <li>
+    <a>3x3 Tutorials</a>
+    <ul class="navchild navchild1">
+      <li>
+        <a href="/3x3">How To Solve a 3x3</a>
+      </li>
+      <li>
+        <a href="/3x3/cfop">CFOP Method</a>
+      </li>
+      <li>
+        <a href="/3x3/moves">Move Notation</a>
+      </li>
+      <li>
+        <a href="/3x3/fingertricks">Finger Tricks</a>
+      </li>
+      <li>
+        <a>Advanced CFOP</a>
+        <ul class="navchild navchild2">
+          <li><a href="/3x3/cfop/cross">Advanced Cross</a></li>
+          <li><a href="/3x3/cfop/f2l">Advanced F2L</a></li>
+          <li><a href="/3x3/cfop/ll">Advanced Last Layer</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a>Other Tutorials</a>
+    <ul class="navchild navchild1">
+      <li>
+        <a href="/oh">3x3 One Handed</a>
+      </li>
+      <li>
+        <a>3x3 Blindfolded</a>
+        <ul class="navchild navchild2">
+          <li><a href="/bld">How To Solve Blindfolded</a></li>
+          <li><a href="/bld/faster">How To Get Faster</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>2x2</a>
+        <ul class="navchild navchild2">
+          <li><a href="/2x2">How To Solve a 2x2</a></li>
+          <li><a href="/2x2/faster">Getting Faster at 2x2</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>4x4</a>
+        <ul class="navchild navchild2">
+          <li><a href="/4x4">How To Solve a 4x4</a></li>
+          <li><a href="/4x4/faster">Getting Faster at 4x4</a></li>
+        </ul>
+      </li>
+      <!--<li>
+        <a>5x5</a>
+        <ul class="navchild navchild2">
+          <li><a href="/5x5">How To Solve a 5x5</a></li>
+          <li><a href="/5x5/faster">Getting Faster at 5x5</a></li>
+        </ul>
+      </li>-->
+    </ul>
+  </li>
+  <li>
+    <a>Algorithms</a>
+    <ul class="navchild navchild1">
+      <li>
+        <a>CFOP</a>
+        <ul class="navchild navchild2">
+          <li><a href="/algs/2look/oll">Beginner OLL</a></li>
+          <li><a href="/algs/2look/pll">Beginner PLL</a></li>
+          <li><a href="/algs/oll">OLL</a></li>
+          <li><a href="/algs/pll">PLL</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>Beyond CFOP</a>
+        <ul class="navchild navchild2">
+          <li><a href="/algs/coll">COLL</a></li>
+          <li><a href="/algs/wv">Winter Variation</a></li>
+          <!--<li><a href="/algs/vls">*VLS</a></li>
+          <li><a href="/algs/zbll">*ZBLL</a></li>-->
+        </ul>
+      </li>
+      <li>
+        <a>3x3 OH</a>
+        <ul class="navchild navchild2">
+          <li><a href="/algs/oh/oll">OH OLL</a></li>
+          <li><a href="/algs/oh/pll">OH PLL</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>2x2</a>
+        <ul class="navchild navchild2">
+          <li><a href="/algs/2x2/oll">OLL</a></li>
+          <li><a href="/algs/2x2/pbl">PBL</a></li>
+          <li><a href="/algs/2x2/cll">CLL</a></li>
+          <li><a href="/algs/2x2/eg-1">EG-1</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>4x4</a>
+        <ul class="navchild navchild2">
+          <li><a href="/algs/4x4/oll">4x4 OLL</a></li>
+          <li><a href="/algs/4x4/pll">4x4 PLL</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+    </div>
+
+    <div id="menu-top-space">J PERM</div>
+
+    <div class="logo-size link" id="burger-top"></div>
+  </div>
+
+
+  <script>
+    $gray = $("#gray");
+    $gray.click(hideGray);
+    function showGray () {
+      $gray.removeClass("invisible");
+      $("body").add("html").addClass("no-scroll");
+    }
+    function hideGray () {
+      $(".overlay").addClass("invisible");
+      $gray.addClass("invisible");
+      $("body").add("html").removeClass("no-scroll");
+    }
+  </script>
+
+  <div id="container">
+    <div id="content">
+      <h2>4x4: How To Get Faster</h2>
+
+      <h3><a href="https://www.youtube.com/watch?v=KWOZHbDdOeo&list=PLI24ciRbl8BXS--dBZmQJv1aYOGFzOXkP" target="_blank">Full Advanced 4x4 Playlist</a></h3>
+      <!--embed video here with css float-->
+      <h3>4x4 advanced techniques are mostly intuitive, with very few algorithms.</h3>
+      <h3>Once you're quite good at 4x4, it should take about four times as long as 3x3. For example, if you average 15 seconds on 3x3, you can average 1 minute on 4x4.</h3>
+      <h3>If you want to be good at 4x4, you should learn all of these. They are listed below in order of importance.</h3>
+
+
+      <h2>Yau Method</h2>
+
+      <div class="youtube-video-wrapper"><div class="youtube-video"><iframe src="https://www.youtube.com/embed/KWOZHbDdOeo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+      <p>The Reduction Method (or beginner method) is commonly used on 5x5+ and solves the centers, edges, then 3x3 stage.</p>
+      <p>The <a href="/4x4">Yau Method</a> does some parts differently:</p>
+      <ul>
+        <li>Solve 2 opposite centers</li>
+        <li>Solve 3 cross edges</li>
+        <li>Solve the last 4 centers</li>
+        <li>Finish the cross</li>
+        <li>Solve the remaining 8 edges</li>
+        <li>3x3 stage (with cross already completed)</li>
+      </ul>
+
+      <p>The <a href="/4x4">Yau Method</a> is faster because no pieces are in the D layer during edge pairing, meaning you can use 3-2-3 edge pairing, avoid many cube rotations, and make look ahead significantly easier.</p>
+
+
+      <h2>General 4x4 Speedsolving Tips</h2>
+
+      <div class="youtube-video-wrapper"><div class="youtube-video"><iframe src="https://www.youtube.com/embed/YYHpac-4JL4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+      <p>This is an overview of what you should know as well as other general tips.</p>
+      <p>The important advanced techniques will be further explored in the videos below.</p>
+
+
+      <h2>3-2-3 Edge Pairing</h2>
+
+      <div class="youtube-video-wrapper"><div class="youtube-video"><iframe src="https://www.youtube.com/embed/XfNVsSl30LQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+      <p>Multiple edges can be paired at once on 4x4, but you have to learn how to deal with a few special cases as well.</p>
+      <ul>
+        <li>Do a slice move and line up 3 edges, then undo the slice move to pair them</li>
+        <li>Pair up the rest of the edges using cycles</li>
+      </ul>
+      <p>L2E (last 2 edges) algorithms exist to some extent for all big cubes. They are not super important, but they do make you faster. On 4x4 there are only 4 algorithms, shown at the end of the video (and in the video description).</p>
+
+
+      <h2>First 3 Cross Edges</h2>
+
+      <div class="youtube-video-wrapper"><div class="youtube-video"><iframe src="https://www.youtube.com/embed/l6ZI7fp4bMo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+      <p>Cross edges are difficult to find and pair efficiently without a lot of practice.</p>
+      <p>In this video I go over examples to help you with efficiency.</p>
+
+      <h2>Half Centers</h2>
+
+      <div class="youtube-video-wrapper"><div class="youtube-video"><iframe src="https://www.youtube.com/embed/JSf8RsgZwvg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+      <p>Half Centers is an <i>optional</i> technique for centers that should not be used <i>every solve.</i></p>
+      <p>Why use half centers:</p>
+      <ul>
+        <li>Often multiple half centers will already exist, so the initial step is very fast</li>
+        <li>The cube is reduced to &lt;Rw, R, U&gt; which avoids dealing with the partial cross</li>
+        <li>Look ahead is very easy (explained in the video)</li>
+      </ul>
+      <p>When not to use half centers:</p>
+      <ul>
+        <li>The initial setup can take too long if no half centers are made already</li>
+        <li>Often you can spot all 4 pieces of 1 color, making 1 center faster to start with</li>
+      </ul>
+      <p>Half centers are not absolutely necessary to learn, but many people prefer to use it in many cases because it can often be faster. Some people exclusively use half centers on 4x4, but there is little evidence to suggest that half centers is always better. Think of it as another option compared to solving centers 1 by 1. If you really like half centers, you can even use it most of the time.</p>
+
+
+      <h2>OLL Parity Tricks</h2>
+
+      <div class="youtube-video-wrapper"><div class="youtube-video"><iframe src="https://www.youtube.com/embed/NlVCP2ld9mQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+      <p>Sometimes when you get OLL parity, you can set up into an OLL skip. Other times, you can just predict what the OLL will be to reduce a pause.</p>
+      <p>As a general guideline, it's better to do OLL parity + OLL algorithm rather than an OLL skip trick, if they take about the same amount of time. This is because recognizing OLL parity can be done during the last F2L slot, leading straight into OLL parity. However, recognizing an OLL skip case is more difficult. So OLL skip cases should only be used when they are truly much faster.</p>
+      <p><a href="/algs/4x4oll">4x4 OLL Skip Trainer</a></p>
+
+
+      <h2>PLL Parity Tricks</h2>
+
+      <div class="youtube-video-wrapper"><div class="youtube-video"><iframe src="https://www.youtube.com/embed/N7VQs8gEh54" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+      <p>PLL Parity can be done in a few ways, and one of those ways tends to result in a better PLL + parity combination. For example, avoiding G perms and forcing good PLLs will make your last layer faster.</p>
+      <p>In general:
+        <ul>
+          <li>For solved corners, force U Perm if possible</li>
+          <li>For adjacent corners, avoid F/G perms</li>
+          <li>For diagonal corners, force Y Perm if possible</li>
+        </ul>
+      </p>
+      <p><a href="/algs/4x4pll">4x4 OLL Parity Cases Trainer</a></p>
+
+
+      <h2>Next Steps</h2>
+
+      <div class="youtube-video-wrapper"><div class="youtube-video"><iframe src="https://www.youtube.com/embed/sNVCshCH81k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+      <p>There some things you can do to further help with your efficiency:</p>
+      <ul>
+        <li>Influence the 2nd center during first center</li>
+        <li>Preserve cross edges during F2C if convenient</li>
+        <li>Influence other centers during L4C</li>
+        <li>Remember F2L edge locations during edge pairing</li>
+      </ul>
+      <p>Each of these will only help you improve by a little bit, but doing them all will help a lot. Big cubes (4x4+) are rather simple for efficiency compared to 3x3. The most important thing is turning slow enough to keep looking ahead, but also at a decently fast rate to have fast solves. Especially during steps that are heavy on look ahead (all the edge pairing steps), you should turn slightly slower to reduce pausing.</p>
+
+    </div>
+  </div>
+
+
+  <div id="footer">
+
+    <div class="footer-flex">
+      <div class="footer-flex-item">
+        <div class="footer-heading">
+          ABOUT
+        </div>
+        <ul class="footer-list">
+          <li><a href="/about">About Me</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ZTS3n7pV_5E&list=PLI24ciRbl8BWnUVxe6aBtjjjfLxK0bHkC" target="_blank">Animated Stories</a></li>
+          <li><a href="/credits">Credits</a></li>
+          <li><a href="mailto:dylanqwang@gmail.com" target="_blank">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-flex-item">
+        <div class="footer-heading">
+          LEARN MORE
+        </div>
+        <ul class="footer-list">
+          <li><a href="https://www.youtube.com/watch?v=_PHcUl6Jluc&list=PLI24ciRbl8BVCXWhBQ0rXCM2KK7e6O5XP" target="_blank">Cube Reviews</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ow6fc4RTJBc&list=PLI24ciRbl8BW8ybKSDsDzrSbSOx6pt1Pm" target="_blank">Solve Critiques</a></li>
+          <li><a href="https://www.youtube.com/watch?v=F4ju-U9OhdA&list=PLI24ciRbl8BUPQRy_HyfdxLeD7kzlyj6R" target="_blank">Example Solves</a></li>
+          <li><a href="https://www.youtube.com/watch?v=3B_oB2YrLvk&list=PLI24ciRbl8BUTnnzmJIIn3Ts_6-mKMBP7" target="_blank">Advanced F2L</a></li>
+          <li><a href="https://bit.ly/bestf2l" target="_blank">Best F2L Algorithms</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-flex-item">
+        <div class="footer-heading">
+          SUPPORT ME
+        </div>
+        <ul class="footer-list">
+          <li><a href="https://speedcubeshop.com/?rfsn=517424.b7e72" onclick="alert('Remember to use the discount code: JPERM')" target="_blank">Buy Cubes</a></li>
+          <li><a href="https://teespring.com/stores/jperm" target="_blank">Apparel</a></li>
+          <li><a href="https://patreon.com/jperm" target="_blank">Donate</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-flex-item">
+        <div class="footer-heading">
+          SOCIAL
+        </div>
+        <ul class="footer-social">
+          <li><a href="https://facebook.com/jpermcubing"><img src="/images/logos/facebook.png" class="social" /></a></li>
+          <li><a href="https://twitter.com/jpermofficial"><img src="/images/logos/twitter.png" class="social" /></a></li>
+          <li><a href="https://instagram.com/jpermofficial"><img src="/images/logos/instagram.png" class="social" /></a></li>
+          <li><a href="https://youtube.com/jperm"><img src="/images/logos/youtube.png" class="social" /></a></li>
+        </ul>
+      </div>
+
+    </div>
+
+
+    <div class="footer-flex">
+      <div class="footer-flex-item small-text center">
+        &copy; 2026 J Perm
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    $(function() {
+      // Default page title
+      if (document.title === "") {
+        let h2 = $("h2")[0];
+        if (h2) {
+          document.title = h2.innerHTML;
+        }
+      }
+    });
+  </script>
+
+
+</body>
+</html>

@@ -51,3 +51,44 @@ Các dấu “đã học” và “yêu thích” được tạo trong lúc th�
 - Kiểm thử database thực hiện trên H2 chế độ PostgreSQL. Docker Engine trên máy trả lỗi API 500, nên **chưa chạy kiểm thử với PostgreSQL thật và chưa xác nhận Docker image runtime**.
 - Chưa có kiểm thử tự động trình duyệt toàn bộ tổ hợp bộ lọc, nhập/xuất tiến độ hoặc từng case. Các chức năng này được triển khai; không tuyên bố đã kiểm thử hết mọi nút trên mọi thiết bị.
 - Chưa thực hiện load test, kiểm tra WCAG chuyên dụng hoặc audit hiệu năng bằng Lighthouse.
+
+## 4×4 — 28/10/2026
+
+- Maven package: PASS, 13 tests, 0 failures.
+- `python tools/test_4x4.py`: PASS, 2 tests (nguồn/bộ case, ký hiệu, ảnh PNG).
+- JavaScript syntax và git diff check: PASS.
+- UI trên H2 memory/8081: lộ trình 10 bước, 4 bộ, OLL 27 mục phân trang 12, 0 ảnh hỏng, không tràn ngang desktop; chi tiết L2E và biến thể đúng; nút Copy hiện toast thành công; Practice Basic hiện đúng đáp án. Không xác nhận nội dung clipboard bằng công cụ do API clipboard trả chuỗi rỗng trong browser này.
+- Không chạy solver 4×4 độc lập hoặc PostgreSQL thật.
+- Dừng server thử sau kiểm tra để tránh xung đột với ứng dụng người dùng.
+
+## 5×5 — 28/10/2026
+
+- Maven package: PASS, 14 tests, 0 failures.
+- `python tools/test_5x5.py`: PASS, 5 tests, gồm mô hình 150 sticker và bất biến L2C/L2E.
+- JavaScript syntax, HTTP smoke trên 8081 và git diff check: PASS.
+- UI: 31 case, L2C phân trang 12+7, hình/công thức/biến thể, guide có Copy edge parity và toast, Practice hiện đáp án đúng bộ 5×5. Không có ảnh hỏng hoặc tràn ngang desktop trong các trang đã xem.
+- Chưa kiểm tra đầy đủ tương đương màu pixel hình với trạng thái mô hình hoặc solver 5×5 hoàn chỉnh. Xem FIVE-BY-FIVE.md.
+
+## Authentication, authorization & lộ trình — 28/10/2026
+
+- Maven package: PASS, 27 tests (14 catalog + 13 tài khoản/bảo mật), 0 failures.
+- BCrypt, CSRF login/logout/API ghi, thay session ID khi login, tách người dùng, cập nhật từng trường, import nguyên khối, chặng thực hành, giới hạn thử login, admin-only và chặn tab tài khoản cũ được kiểm tra.
+- UI QA trên DB riêng/8081: đăng ký tự đăng nhập; lưu chặng; luyện đúng 5 PLL beginner; ghi nhận đã thuộc; chuyển hồ sơ sang 5×5 nâng cao, mục tiêu 25 phút; logout/login; admin xem danh sách và chặng người học; người chơi nhận trang 403.
+- Đã restart server với cùng DB QA và đăng nhập lại: hồ sơ 5×5/Advanced/25 phút, case đã thuộc và tài khoản còn nguyên.
+- UI nhập guest favorite vào tài khoản: PASS, xuất hiện đúng trong Favorites và không mất case đã thuộc cũ.
+- Cú pháp JS và git diff check: PASS. Kiểm tra thực tế dùng H2 file; chưa kiểm tra PostgreSQL thật, email verification/recovery không triển khai.
+
+## Google / Facebook — 28/10/2026
+
+- Maven package: PASS, 36 tests, 0 failures (14 catalog, 13 auth, 9 OAuth).
+- OAuth được kiểm tra bằng HTTP provider cục bộ: authorization code, token, user-info, Google RS256/JWKS và nonce/state; Facebook code flow; giữ tiến độ, không tự gộp email, liên kết chủ động và chặn identity đã có chủ.
+- JavaScript syntax: PASS.
+- Chưa thử Google/Meta trực tiếp vì chưa có app credentials. Lượt kiểm tra UI bị người dùng dừng; không ghi nhận xác nhận UI hoặc screenshot mới. Đã dừng server QA 8081 sau khi dọn dẹp.
+
+## MySQL — 28/10/2026
+
+- Maven package: PASS, 36 tests, 0 failures trên H2.
+- MySQL thật 8.0.36, localhost:3306/demotesting: kết nối thành công; DB từ 0 lên 10 bảng, seed 606 case.
+- HTTP trên ứng dụng dùng MySQL: register/login, profile, learned/favorite, roadmap completion, return login PASS. JDBC kết nối riêng xác nhận dữ liệu đã commit.
+- Dọn duy nhất tài khoản QA và các bản ghi của UUID đó; giữ dữ liệu Rubik. File cấu hình mật khẩu được Git bỏ qua.
+- Không migrate tự động H2 cũ; xem MYSQL.md.

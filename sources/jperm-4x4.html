@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0;"><!---->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!---->
+  <!--<script src="/lib/jquery.min.js"></script><!---->
+  <script src="/lib/jquery-ui.min.js"></script>
+  <script src="/lib/svg.js"></script>
+  <script src="/lib/visualcube.js?v=20190924-1156"></script>
+  <script>const visualcube = window['sr-visualizer']</script>
+
+  <script src="/lib/displaycube.js?v=20190924-1156"></script>
+  <script src="/lib/navbar.js?v=20190924-1156"></script>
+
+  <!-- used to use Noto Sans TC -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:regular,600" rel="stylesheet">
+  <link href="/lib/css/main.css?v=20190924-1156" rel="stylesheet" />
+  <link href="/lib/css/tutorial.css?v=20190924-1156" rel="stylesheet" />
+  <link href="/lib/css/trainer.css?v=20190924-1156" rel="stylesheet" />
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5852587144173033"
+     crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5461007997743997"
+     crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <div id="gray" class="invisible"></div>
+
+  <div id="m-nav" class="overlay invisible-900-up invisible">
+    <ul class="navchild navchild0">
+  <li>
+    <a>3x3 Tutorials</a>
+    <ul class="navchild navchild1">
+      <li>
+        <a href="/3x3">How To Solve a 3x3</a>
+      </li>
+      <li>
+        <a href="/3x3/cfop">CFOP Method</a>
+      </li>
+      <li>
+        <a href="/3x3/moves">Move Notation</a>
+      </li>
+      <li>
+        <a href="/3x3/fingertricks">Finger Tricks</a>
+      </li>
+      <li>
+        <a>Advanced CFOP</a>
+        <ul class="navchild navchild2">
+          <li><a href="/3x3/cfop/cross">Advanced Cross</a></li>
+          <li><a href="/3x3/cfop/f2l">Advanced F2L</a></li>
+          <li><a href="/3x3/cfop/ll">Advanced Last Layer</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a>Other Tutorials</a>
+    <ul class="navchild navchild1">
+      <li>
+        <a href="/oh">3x3 One Handed</a>
+      </li>
+      <li>
+        <a>3x3 Blindfolded</a>
+        <ul class="navchild navchild2">
+          <li><a href="/bld">How To Solve Blindfolded</a></li>
+          <li><a href="/bld/faster">How To Get Faster</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>2x2</a>
+        <ul class="navchild navchild2">
+          <li><a href="/2x2">How To Solve a 2x2</a></li>
+          <li><a href="/2x2/faster">Getting Faster at 2x2</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>4x4</a>
+        <ul class="navchild navchild2">
+          <li><a href="/4x4">How To Solve a 4x4</a></li>
+          <li><a href="/4x4/faster">Getting Faster at 4x4</a></li>
+        </ul>
+      </li>
+      <!--<li>
+        <a>5x5</a>
+        <ul class="navchild navchild2">
+          <li><a href="/5x5">How To Solve a 5x5</a></li>
+          <li><a href="/5x5/faster">Getting Faster at 5x5</a></li>
+        </ul>
+      </li>-->
+    </ul>
+  </li>
+  <li>
+    <a>Algorithms</a>
+    <ul class="navchild navchild1">
+      <li>
+        <a>CFOP</a>
+        <ul class="navchild navchild2">
+          <li><a href="/algs/2look/oll">Beginner OLL</a></li>
+          <li><a href="/algs/2look/pll">Beginner PLL</a></li>
+          <li><a href="/algs/oll">OLL</a></li>
+          <li><a href="/algs/pll">PLL</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>Beyond CFOP</a>
+        <ul class="navchild navchild2">
+          <li><a href="/algs/coll">COLL</a></li>
+          <li><a href="/algs/wv">Winter Variation</a></li>
+          <!--<li><a href="/algs/vls">*VLS</a></li>
+          <li><a href="/algs/zbll">*ZBLL</a></li>-->
+        </ul>
+      </li>
+      <li>
+        <a>3x3 OH</a>
+        <ul class="navchild navchild2">
+          <li><a href="/algs/oh/oll">OH OLL</a></li>
+          <li><a href="/algs/oh/pll">OH PLL</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>2x2</a>
+        <ul class="navchild navchild2">
+          <li><a href="/algs/2x2/oll">OLL</a></li>
+          <li><a href="/algs/2x2/pbl">PBL</a></li>
+          <li><a href="/algs/2x2/cll">CLL</a></li>
+          <li><a href="/algs/2x2/eg-1">EG-1</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>4x4</a>
+        <ul class="navchild navchild2">
+          <li><a href="/algs/4x4/oll">4x4 OLL</a></li>
+          <li><a href="/algs/4x4/pll">4x4 PLL</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+  </div>
+
+  <div id="menu-top">
+    <a href="/"><div class="logo-size" id="logo-top"></div></a>
+    <div id="t-nav" class="invisible-900-down">
+      <ul class="navchild navchild0">
+  <li>
+    <a>3x3 Tutorials</a>
+    <ul class="navchild navchild1">
+      <li>
+        <a href="/3x3">How To Solve a 3x3</a>
+      </li>
+      <li>
+        <a href="/3x3/cfop">CFOP Method</a>
+      </li>
+      <li>
+        <a href="/3x3/moves">Move Notation</a>
+      </li>
+      <li>
+        <a href="/3x3/fingertricks">Finger Tricks</a>
+      </li>
+      <li>
+        <a>Advanced CFOP</a>
+        <ul class="navchild navchild2">
+          <li><a href="/3x3/cfop/cross">Advanced Cross</a></li>
+          <li><a href="/3x3/cfop/f2l">Advanced F2L</a></li>
+          <li><a href="/3x3/cfop/ll">Advanced Last Layer</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a>Other Tutorials</a>
+    <ul class="navchild navchild1">
+      <li>
+        <a href="/oh">3x3 One Handed</a>
+      </li>
+      <li>
+        <a>3x3 Blindfolded</a>
+        <ul class="navchild navchild2">
+          <li><a href="/bld">How To Solve Blindfolded</a></li>
+          <li><a href="/bld/faster">How To Get Faster</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>2x2</a>
+        <ul class="navchild navchild2">
+          <li><a href="/2x2">How To Solve a 2x2</a></li>
+          <li><a href="/2x2/faster">Getting Faster at 2x2</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>4x4</a>
+        <ul class="navchild navchild2">
+          <li><a href="/4x4">How To Solve a 4x4</a></li>
+          <li><a href="/4x4/faster">Getting Faster at 4x4</a></li>
+        </ul>
+      </li>
+      <!--<li>
+        <a>5x5</a>
+        <ul class="navchild navchild2">
+          <li><a href="/5x5">How To Solve a 5x5</a></li>
+          <li><a href="/5x5/faster">Getting Faster at 5x5</a></li>
+        </ul>
+      </li>-->
+    </ul>
+  </li>
+  <li>
+    <a>Algorithms</a>
+    <ul class="navchild navchild1">
+      <li>
+        <a>CFOP</a>
+        <ul class="navchild navchild2">
+          <li><a href="/algs/2look/oll">Beginner OLL</a></li>
+          <li><a href="/algs/2look/pll">Beginner PLL</a></li>
+          <li><a href="/algs/oll">OLL</a></li>
+          <li><a href="/algs/pll">PLL</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>Beyond CFOP</a>
+        <ul class="navchild navchild2">
+          <li><a href="/algs/coll">COLL</a></li>
+          <li><a href="/algs/wv">Winter Variation</a></li>
+          <!--<li><a href="/algs/vls">*VLS</a></li>
+          <li><a href="/algs/zbll">*ZBLL</a></li>-->
+        </ul>
+      </li>
+      <li>
+        <a>3x3 OH</a>
+        <ul class="navchild navchild2">
+          <li><a href="/algs/oh/oll">OH OLL</a></li>
+          <li><a href="/algs/oh/pll">OH PLL</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>2x2</a>
+        <ul class="navchild navchild2">
+          <li><a href="/algs/2x2/oll">OLL</a></li>
+          <li><a href="/algs/2x2/pbl">PBL</a></li>
+          <li><a href="/algs/2x2/cll">CLL</a></li>
+          <li><a href="/algs/2x2/eg-1">EG-1</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>4x4</a>
+        <ul class="navchild navchild2">
+          <li><a href="/algs/4x4/oll">4x4 OLL</a></li>
+          <li><a href="/algs/4x4/pll">4x4 PLL</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+    </div>
+
+    <div id="menu-top-space">J PERM</div>
+
+    <div class="logo-size link" id="burger-top"></div>
+  </div>
+
+
+  <script>
+    $gray = $("#gray");
+    $gray.click(hideGray);
+    function showGray () {
+      $gray.removeClass("invisible");
+      $("body").add("html").addClass("no-scroll");
+    }
+    function hideGray () {
+      $(".overlay").addClass("invisible");
+      $gray.addClass("invisible");
+      $("body").add("html").removeClass("no-scroll");
+    }
+  </script>
+
+  <div id="container">
+    <div id="content">
+      <h2>How To Solve the 4x4 Rubik's Cube</h2>
+
+      <!--embed video here with css float
+
+      https://www.youtube.com/watch?v=KWOZHbDdOeo-->
+      <div class="youtube-video-wrapper"><div class="youtube-video"><iframe src="https://www.youtube.com/embed/KWOZHbDdOeo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+      <p>Solving the 4x4 Rubik's Cube is not too much harder than solving a 3x3. The concepts of the steps are as follows:</p>
+      <ul>
+        <li>Solve the center pieces</li>
+        <li>Pair similar edge pieces</li>
+        <li>Turn only the outer layers, and solve it like a 3x3!</li>
+      </ul>
+      <p>In this video I teach the Yau Method, which roughly follows this outline. The Yau method is the most popular 4x4 method and was used to set the <a href="https://www.worldcubeassociation.org/results/regions.php" target="_blank">current world record.</a></p>
+
+
+
+      <h2>Example Solve</h2>
+
+      <div class="youtube-video-wrapper"><div class="youtube-video"><iframe src="https://www.youtube.com/embed/1M9DE1WyzO4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+      <p>Here is a full solve where I go through some more possibilities of what can happen.</p>
+
+
+      <h2>Step 1. White Center</h2>
+
+      <div class="cube-step">
+        <script>
+        displayCube({
+          algorithm: "",
+          cubeSize: 4, // NxN
+          mask: "blank",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCubeStepArrow();
+        displayCube({
+          algorithm: "x2",
+          cubeSize: 4, // NxN
+          mask: "f1c",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        </script>
+      </div>
+
+
+      <h3>Pair up 2 white center pieces to form a bar.</h3>
+
+      <div class="cube-substep">
+        <script>
+        displayCube({
+          algorithm: "x' Rw2 Uw' R2",
+          cubeSize: 4, // NxN
+          mask: "f1c",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCubeStepArrow();
+        displayCube({
+          algorithm: "x' Rw2",
+          cubeSize: 4, // NxN
+          mask: "f1c",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        </script>
+      </div>
+
+      <h3>Make another white center bar somewhere else on the cube, and then join the 2 bars together.</h3>
+
+      <div class="cube-substep">
+        <script>
+        displayCube({
+          algorithm: "x Rw F2 U",
+          cubeSize: 4, // NxN
+          mask: "f1c",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCubeStepArrow();
+        displayCube({
+          algorithm: "x2",
+          cubeSize: 4, // NxN
+          mask: "f1c",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        </script>
+      </div>
+
+      <h3>This step should be completely intuitive, although you may need to experiment a bit to get used to how pieces move.</h3>
+
+      <h2>Step 2. Yellow Center</h2>
+
+      <div class="cube-step">
+        <script>
+        displayCube({
+          algorithm: "x2",
+          cubeSize: 4, // NxN
+          mask: "f1c",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        }).style="transform:rotate(180deg)";
+        displayCubeStepArrow();
+        displayCube({
+          algorithm: "",
+          cubeSize: 4, // NxN
+          mask: "f2c",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        </script>
+      </div>
+
+      <h3>Hold the white center on the bottom, and make a yellow center bar anywhere on the cube.</h3>
+      <h3>Make sure to fix the white center if you ever destroy it. Examples:</h3>
+
+      <div class="cube-substep">
+        <script>
+        displayCube({
+          algorithm: "x2 Rw F2 Rw' Uw' R2",
+          cubeSize: 4, // NxN
+          mask: "f2c",
+          arrows: [{move: "R2"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        }).style="transform:rotate(180deg)";
+        displayCube({
+          algorithm: "x2 Rw F2 Rw' Uw'",
+          cubeSize: 4, // NxN
+          mask: "f2c",
+          arrows: [{move: "y"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        }).style="transform:rotate(180deg)";
+        displayCube({
+          algorithm: "x2 Rw F2 Rw'",
+          cubeSize: 4, // NxN
+          mask: "f2c",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        }).style="transform:rotate(180deg)";
+        </script>
+      </div>
+      <br />
+      <div class="cube-substep">
+        <script>
+        displayCube({
+          algorithm: "Rw B2 Rw' Lw F' Lw' F' U",
+          cubeSize: 4, // NxN
+          mask: "f2c",
+          arrows: [{move: "x"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCube({
+          algorithm: "Rw B2 Rw' Lw F' Lw' F' U Rw",
+          cubeSize: 4, // NxN
+          mask: "f2c",
+          arrows: [{move: "U'"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCubeStepArrow("Move bar away");
+        displayCube({
+          algorithm: "Rw B2 Rw' Lw F' Lw' F' U Rw U'",
+          cubeSize: 4, // NxN
+          mask: "f2c",
+          arrows: [{move: "R'"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCubeStepArrow("Fix white center");
+        displayCube({
+          algorithm: "Rw B2 Rw' Lw F' Lw' F' U Rw U' Rw'",
+          cubeSize: 4, // NxN
+          mask: "f2c",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        </script>
+      </div>
+
+      <h3>If the yellow bar is not on the top face, move it onto the top by doing this:</h3>
+
+
+      <div class="cube-substep">
+        <script>
+        displayCube({
+          algorithm: "Rw B2 Rw' Lw F2 Lw'",
+          cubeSize: 4, // NxN
+          mask: "f2c",
+          arrows: [{move: "x"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCubeStepArrow("Move bar up");
+        displayCube({
+          algorithm: "Rw B2 Rw' Lw F2 Lw' Rw",
+          cubeSize: 4, // NxN
+          mask: "f2c",
+          arrows: [{move: "U2"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCubeStepArrow("Move bar away");
+        displayCube({
+          algorithm: "Rw B2 Rw' Lw F2 Lw' Rw U2",
+          cubeSize: 4, // NxN
+          mask: "f2c",
+          arrows: [{move: "x'"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCubeStepArrow("Fix white center");
+        displayCube({
+          algorithm: "Rw B2 Rw' Lw F2 Lw' Rw U2 Rw'",
+          cubeSize: 4, // NxN
+          mask: "f2c",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        </script>
+      </div>
+
+      <h3>Make another yellow bar, and then place it under the first bar to move it to the top:</h3>
+
+
+
+      <div class="cube-substep">
+        <script>
+        displayCube({
+          algorithm: "Lw F2 Lw'",
+          cubeSize: 4, // NxN
+          mask: "f2c",
+          arrows: [{move: "x"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCubeStepArrow("Move bar up");
+        displayCube({
+          algorithm: "Lw F2 Lw' Rw",
+          cubeSize: 4, // NxN
+          mask: "f2c",
+          arrows: [{move: "U2"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCubeStepArrow("Move bar away");
+        displayCube({
+          algorithm: "Lw F2 Lw' Rw U2",
+          cubeSize: 4, // NxN
+          mask: "f2c",
+          arrows: [{move: "x'"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCubeStepArrow("Fix white center");
+        displayCube({
+          algorithm: "Lw F2 Lw' Rw U2 Rw'",
+          cubeSize: 4, // NxN
+          mask: "f2c",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        </script>
+      </div>
+
+      <h3>The tutorial video and example solve videos above show some trickier cases for this step.</h3>
+
+      <h2>Step 3. Partial White Cross</h2>
+
+      <div class="cube-step">
+        <script>
+        displayCube({
+          algorithm: "x y'",
+          cubeSize: 4, // NxN
+          mask: "f2c",
+        }).style="transform:scaleX(-1)";
+        displayCubeStepArrow();
+        displayCube({
+          algorithm: "x z' y'",
+          cubeSize: 4, // NxN
+          mask: "yau3e",
+        }).style="transform:scaleX(-1)";
+        </script>
+      </div>
+
+      <h3>This step completes 3 out of the 4 cross pieces in the <u>correct color order</u>.</h3>
+      <h3>Hold the white center on the left.</h3>
+      <h3>The correct color order going <u>upwards</u> is <span style="color:blue">Blue</span>, <span style="color:orange">Orange</span>, <span style="color:green">Green</span>, <span style="color:red">Red</span> (<span style="color:blue">B</span><span style="color:orange">O</span><span style="color:green">G</span><span style="color:red">R</span>)</h3>
+      <h3>Example of a finished cross and centers:</h3>
+
+      <div class="cube-substep">
+        <script>
+        displayCube({
+          algorithm: "z' x2 Rw2 F2 B2 Rw2 F2 B2",
+          cubeSize: 4, // NxN
+          mask: "yau4e",
+        }, '<span style="color:blue">B</span>').style="transform:scaleX(-1)";
+        displayCube({
+          algorithm: "z' x2 Rw2 F2 B2 Rw2 F2 B2 x'",
+          cubeSize: 4, // NxN
+          mask: "yau4e",
+        }, '<span style="color:orange">O</span>').style="transform:scaleX(-1)";
+        displayCube({
+          algorithm: "z' x2 Rw2 F2 B2 Rw2 F2 B2 x2",
+          cubeSize: 4, // NxN
+          mask: "yau4e",
+        }, '<span style="color:green">G</span>').style="transform:scaleX(-1)";
+        displayCube({
+          algorithm: "z' x2 Rw2 F2 B2 Rw2 F2 B2 x",
+          cubeSize: 4, // NxN
+          mask: "yau4e",
+        }, '<span style="color:red">R</span>').style="transform:scaleX(-1)";
+        </script>
+      </div>
+
+
+
+      <h3>Find 2 white edge pieces that have the same colors on them.</h3>
+      <h3>Put one in the left slice layer, and one in the right slice layer (the slice layers are the middle 2 layers).</h3>
+      <h3>Join them, and add it to the cross.</h3>
+
+      <div class="cube-substep">
+        <script>
+        displayCube({
+          algorithm: "x z' y' F Rw",
+          cubeSize: 4, // NxN
+          mask: "yau1e",
+          arrows: [{move: "L'"}],
+        }).style="transform:scaleX(-1)";
+        displayCube({
+          algorithm: "x z' y' F Rw Lw'",
+          cubeSize: 4, // NxN
+          mask: "yau1e",
+          arrows: [{move: "U'"}],
+        }).style="transform:scaleX(-1)";
+        displayCube({
+          algorithm: "x z' y' F Rw Lw' U'",
+          cubeSize: 4, // NxN
+          mask: "yau1e",
+        }).style="transform:scaleX(-1)";
+        </script>
+      </div>
+
+      <h3>Repeat this step for a total of 3 (not 4) cross pieces solved, and follow the <u>color scheme</u> shown above.</h3>
+      <h3>Be careful not to destroy other cross pieces or the 2 solved centers.</h3>
+
+
+
+
+
+
+      <h2>Step 4. Centers</h2>
+
+      <div class="cube-step">
+        <script>
+        displayCube({
+          algorithm: "x z'",
+          cubeSize: 4, // NxN
+          mask: "yau3e",
+          viewportRotations: [[1, 55], [0, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCubeStepArrow();
+        displayCube({
+          algorithm: "x z'",
+          cubeSize: 4, // NxN
+          mask: "yaul4c",
+          viewportRotations: [[1, 55], [0, -30]], // 0=x, 1=y, 2=z
+        });
+        </script>
+      </div>
+
+      <h3>Make 1 center bar of any color, and turn it to be vertical.</h3>
+      <h3>Be careful not to destroy the partial cross (tips explained in the video tutorial).</h3>
+      <h3>If you have completed any other centers already, make sure you also fix them any time you break them (just like fixing the white center when making the yellow center).</h3>
+
+
+
+      <div class="cube-substep">
+        <script>
+          displayCube({
+            algorithm: "x z' y' Lw' Rw' F Rw U2",
+            cubeSize: 4, // NxN
+            mask: "yau3e1c",
+            arrows: [{move: "U2"}],
+          }).style="transform:scaleX(-1)";
+          displayCube({
+            algorithm: "x z' y' Lw' Rw' F Rw U2 U2",
+            cubeSize: 4, // NxN
+            mask: "yau3e1c",
+            arrows: [{move: "L'"}],
+          }).style="transform:scaleX(-1)";
+          displayCube({
+            algorithm: "x z' y' Lw' Rw' F Rw U2 U2 Lw'",
+            cubeSize: 4, // NxN
+            mask: "yau3e1c",
+            arrows: [{move: "U'"}],
+          }).style="transform:scaleX(-1)";
+          displayCube({
+            algorithm: "x z' y' Lw' Rw' F Rw U2 U2 Lw' U'",
+            cubeSize: 4, // NxN
+            mask: "yau3e1c",
+          }).style="transform:scaleX(-1)";
+        </script>
+      </div>
+
+
+      <h3>Make another center bar of the same color.</h3>
+      <h3>If this is the first center you've made, you can just join them together.</h3>
+
+
+
+
+
+      <div class="cube-substep">
+        <script>
+          displayCube({
+            algorithm: "x z' y' Lw",
+            cubeSize: 4, // NxN
+            mask: "yau3e1c",
+            arrows: [{move: "L'"}],
+          }).style="transform:scaleX(-1)";
+          displayCube({
+            algorithm: "x z' y'",
+            cubeSize: 4, // NxN
+            mask: "yau3e1c",
+          }).style="transform:scaleX(-1)";
+        </script>
+      </div>
+
+
+      <h3>If other centers have already been made, put the 2 bars on the same side to join them:</h3>
+
+
+      <div class="cube-substep">
+        <script>
+          displayCube({
+            algorithm: "x z' y' 3Lw Lw' U2 Lw",
+            cubeSize: 4, // NxN
+            mask: "yau3e2c",
+            arrows: [{move: "x'"}],
+          }).style="transform:scaleX(-1)";
+          displayCube({
+            algorithm: "x z' y' 3Lw Lw' U2 Lw Rw'",
+            cubeSize: 4, // NxN
+            mask: "yau3e2c",
+            arrows: [{move: "F2"}],
+          }).style="transform:scaleX(-1)";
+          displayCube({
+            algorithm: "x z' y' 3Lw Lw' U2 Lw Rw' F2",
+            cubeSize: 4, // NxN
+            mask: "yau3e2c",
+            arrows: [{move: "R"}],
+          }).style="transform:scaleX(-1)";
+          displayCube({
+            algorithm: "x z' y' 3Lw Lw' U2 Lw Rw' F2 Rw",
+            cubeSize: 4, // NxN
+            mask: "yau3e2c",
+          }).style="transform:scaleX(-1)";
+        </script>
+      </div>
+
+      <h3>Solve the rest of the centers.</h3>
+      <h3>Some trickier cases for the last 2 centers are shown in the example solve video above.</h3>
+
+
+      <h2>Step 5. Edge Pairing</h2>
+
+      <div class="cube-step">
+        <script>
+        displayCube({
+          algorithm: "x z'",
+          cubeSize: 4, // NxN
+          mask: "yaul4c",
+          viewportRotations: [[1, 55], [0, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCubeStepArrow();
+        displayCube({
+          algorithm: "x2 F D' L2 U' B2 D' L2 U2 R2 B2 L2 U2 R U R' B D' B R2 B' F U R2 U2 B' U x2 R U' R2 U' R U'",
+          cubeSize: 4, // NxN
+          mask: "edgesonly",
+          //viewportRotations: [[1, 55], [0, -30]], // 0=x, 1=y, 2=z
+        });
+        </script>
+      </div>
+
+      <h3>Hold the cross on the bottom, with the unsolved part at the front.</h3>
+      <h3>Look for the last 2 white edge pieces. If one is in the bottom, turn the front so that it's not.</h3>
+      <h3>Put both white pieces in the front/left and front/right without breaking the partial cross.</h3>
+
+      <div class="cube-substep">
+        <script>
+        displayCube({
+          algorithm: "F' Uw R U R' Uw' U D R' D' U",
+          cubeSize: 4, // NxN
+          mask: "cross",
+          arrows: [{move: "F"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCube({
+          algorithm: "F' Uw R U R' Uw' U D R' D' U F",
+          cubeSize: 4, // NxN
+          mask: "cross",
+          arrows: [{move: "R"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        }, "Lift");
+        displayCube({
+          algorithm: "F' Uw R U R' Uw' U D R' D' U F R",
+          cubeSize: 4, // NxN
+          mask: "cross",
+          arrows: [{move: "U2"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        }, "Replace");
+        displayCube({
+          algorithm: "F' Uw R U R' Uw' U D R' D' U F R U2",
+          cubeSize: 4, // NxN
+          mask: "cross",
+          arrows: [{move: "R'"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        }, "Insert");
+        displayCube({
+          algorithm: "F' Uw R U R' Uw' U D R' D' U F R U2 R'",
+          cubeSize: 4, // NxN
+          mask: "cross",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        </script>
+      </div>
+
+      <h3>Each piece is either on the top or bottom slice layer.</h3>
+
+      <h3><b>Case 1:</b> If they are in different slices:</h3>
+
+      <div class="flex">
+        <ul>
+          <li>Join the pieces</li>
+          <li>Replace it with an unsolved edge pair</li>
+          <li>Fix the centers</li>
+        </ul>
+      </div>
+
+
+
+      <div class="cube-substep">
+        <script>
+        displayCube({
+          algorithm: "F' Uw R U R' Uw' U D R' D' U F R U2 R'",
+          cubeSize: 4, // NxN
+          mask: "cross",
+          arrows: [{move: "y'"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCube({
+          algorithm: "F' Uw R U R' Uw' U D R' D' U F R U2 R' Uw'",
+          cubeSize: 4, // NxN
+          mask: "cross",
+          arrows: [{move: "R"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCube({
+          algorithm: "F' Uw R U R' Uw' U D R' D' U F R U2 R' Uw' R",
+          cubeSize: 4, // NxN
+          mask: "cross",
+          arrows: [{move: "U'"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCube({
+          algorithm: "F' Uw R U R' Uw' U D R' D' U F R U2 R' Uw' R U'",
+          cubeSize: 4, // NxN
+          mask: "cross",
+          arrows: [{move: "R'"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCube({
+          algorithm: "F' Uw R U R' Uw' U D R' D' U F R U2 R' Uw' R U' R'",
+          cubeSize: 4, // NxN
+          mask: "cross",
+          arrows: [{move: "y"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCube({
+          algorithm: "F' Uw R U R' Uw' U D R' D' U F R U2 R' Uw' R U' R' Uw",
+          cubeSize: 4, // NxN
+          mask: "cross",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        </script>
+      </div>
+
+      <h4><b>Note:</b> the edge pair coming down must be an unsolved pair.</h4>
+
+
+      <h3><b>Case 2:</b> If they are in the same slice:</h3>
+      <div class="flex">
+        <ul>
+          <li>Slice piece 1 towards piece 2.</li>
+          <li>Flip piece 1 (with the flipping algorithm: R U R' F R' F' R)</li>
+          <li>Fix the centers</li>
+        </ul>
+      </div>
+
+      <h4>The flipping algorithm R U R' F R' F' R is written in <a href="/3x3/moves" target="_blank">move notation</a>. Make sure you hold the piece you want to flip at the front/right.</h4>
+
+
+      <div class="cube-substep">
+        <script>
+        displayCube({
+          algorithm: "F' Uw R U R' Uw' U D R' D' F",
+          cubeSize: 4, // NxN
+          mask: "cross",
+          arrows: [{move: "y'"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCube({
+          algorithm: "F' Uw R U R' Uw' U D R' D' F Uw'",
+          cubeSize: 4, // NxN
+          mask: "cross",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCubeStepArrow("R U R' F R' F' R");
+        displayCube({
+          algorithm: "F' Uw R U R' Uw' U D R' D' F Uw' R U R' F R' F' R",
+          cubeSize: 4, // NxN
+          mask: "cross",
+          arrows: [{move: "y"}],
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCube({
+          algorithm: "F' Uw R U R' Uw' U D R' D' F Uw' R U R' F R' F' R Uw",
+          cubeSize: 4, // NxN
+          mask: "cross",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        </script>
+      </div>
+
+      <h3>Insert the cross edge into the bottom layer to complete the cross.</h3>
+
+      <h3>Solve the rest of the edge pairs one at a time using the same method as for the first edge. If you are ever confused, you can watch the example solve video above as it shows the full process.</h3>
+
+      <h4><b>Note:</b> If all the top layer edges are solved already, you can only do case 2. If you get case 1 and this happens, flip either of the pieces with the flipping algorithm to turn it into case 2.</h4>
+
+
+      <h2>Step 6. Solve Like a 3x3! (mostly)</h2>
+
+      <div class="cube-step">
+        <script>
+        displayCube({
+          algorithm: "x2 F D' L2 U' B2 D' L2 U2 R2 B2 L2 U2 R U R' B D' B R2 B' F U R2 U2 B' U x2 R U' R2 U' R U'",
+          cubeSize: 4, // NxN
+          mask: "edgesonly",
+          //viewportRotations: [[1, 55], [0, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCubeStepArrow();
+        displayCube({
+          algorithm: "",
+          cubeSize: 4, // NxN
+          mask: "",
+          //viewportRotations: [[1, 55], [0, -30]], // 0=x, 1=y, 2=z
+        });
+        </script>
+      </div>
+
+      <h3>If you only turn the outer layers, the cube acts like a 3x3 with corner pieces, edge pieces, and center pieces.</h3>
+
+
+      <h3>From here you can <a href="/3x3" target="_blank">solve the cube like a 3x3</a>, but there are a few problems you might run into:</h3>
+
+      <h3><b>OLL Parity</b> is when you have a flipped edge that is impossible on a 3x3, and happens on 50% of solves. You can flip the front/top edge to fix this, by doing the OLL Parity Algorithm:</h3>
+      <h3>Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw'</h3>
+      <h4>Make sure you know how to read <a href="/3x3/moves" target="_blank">move notation</a>. This algorithm is also shown at the end of the tutorial video.</h4>
+
+
+      <div class="cube-substep">
+        <script>
+        displayCube({
+          algorithm: "Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw'",
+          cubeSize: 4, // NxN
+          mask: "oell",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCubeStepArrow("OLL Parity");
+        displayCube({
+          algorithm: "",
+          cubeSize: 4, // NxN
+          mask: "oell",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        </script>
+      </div>
+
+      <h3><b>PLL Parity</b> is when you have 2 pieces swapped in a way that is impossible on a 3x3, and happens on 50% of solves. This could be 2 corners or 2 edges. To fix this, do the PLL Parity Algorithm once:</h3>
+      <h3>2R2 U2 2R2 Uw2 2R2 Uw2</h3>
+
+      <h4>2R (big cube notation) means to turn the 2nd layer from the right side. 2R2 means to turn that layer twice. This algorithm is also shown at the end of the tutorial video.</h4>
+      <h4><b>Note:</b> this probably will not solve your case, but doing the algorithm once makes the cube solvable like a 3x3.</h4>
+      <h3>Example (<a href="/3x3">beginner method</a> step 6 impossible position):</h3>
+
+      <div class="cube-substep">
+        <script>
+        displayCube({
+          algorithm: "Rw2 R2 U2 Rw2 R2 Uw2 Rw2 R2 Uw2 U R U R' U' R' F R2 U' R' U' R U R' F' R U2 R' U' R U' R' L' U2 L U L' U L U",
+          cubeSize: 4, // NxN
+          mask: "",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        }, "Step 6");
+        displayCubeStepArrow("PLL Parity");
+        displayCube({
+          algorithm: "Rw2 R2 U2 Rw2 R2 Uw2 Rw2 R2 Uw2 U R U R' U' R' F R2 U' R' U' R U R' F' R U2 R' U' R U' R' L' U2 L U L' U L U Rw2 R2 U2 Rw2 R2 Uw2 Rw2 R2 Uw2",
+          cubeSize: 4, // NxN
+          mask: "",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        }, "Back to Step 5");
+        </script>
+      </div>
+
+      <h3>Example (<a href="/3x3/cfop">PLL</a> impossible position):</h3>
+
+      <div class="cube-substep">
+        <script>
+        displayCube({
+          algorithm: "Rw2 R2 U2 Rw2 R2 Uw2 Rw2 R2 Uw2 U2",
+          cubeSize: 4, // NxN
+          mask: "",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        displayCubeStepArrow("PLL Parity");
+        displayCube({
+          algorithm: "",
+          cubeSize: 4, // NxN
+          mask: "",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        });
+        </script>
+      </div>
+
+
+
+      <h3><b>Incorrect centers</b> can lead to a weird situation shown below. Even if you follow this tutorial correctly, it's possible that your cube has a different color scheme. You can look at any corner piece to determine how the center colors should be positioned relative to other centers.</h3>
+
+      <div class="cube-substep">
+        <script>
+        displayCube({
+          algorithm: "z Rw2 U2 D2 Rw2 z' R2 L2 L U' L' U' F U F' y' z2 y'",
+          cubeSize: 4, // NxN
+          mask: "beginnerstep2",
+          //viewportRotations: [[0, 35], [1, -30]], // 0=x, 1=y, 2=z
+        }).style="transform:rotate(180deg)";
+        </script>
+      </div>
+
+      <h3>To swap the U/F centers: Rw' F2 Rw2 U2 Rw'</h3>
+      <h3>To swap the U/D centers: Rw2 U2 D2 Rw2</h3>
+
+      <h4>Make sure you know how to read <a href="/3x3/moves" target="_blank">move notation</a>.</h4>
+
+
+      <h2>Next Steps</h2>
+
+      <div class="youtube-video-wrapper"><div class="youtube-video"><iframe src="https://www.youtube.com/embed/XfNVsSl30LQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+      <p>Congrats on solving a 4x4! The better you get at solving a new puzzle, the more fun it will get. I highly encourage putting in some practice when you learn new things, to give it a fair shot at whether or not you'll enjoy it.</p>
+      <p>4x4 doesn't have a huge amount of advanced techniques, but 3-2-3 edge pairing is one of the most important ones. Instead of pairing one edge at a time, this method solves many edges at once.</p>
+      <h3><a href="/4x4/faster">How To Get Faster at 4x4</a></h3>
+    </div>
+  </div>
+
+
+  <div id="footer">
+
+    <div class="footer-flex">
+      <div class="footer-flex-item">
+        <div class="footer-heading">
+          ABOUT
+        </div>
+        <ul class="footer-list">
+          <li><a href="/about">About Me</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ZTS3n7pV_5E&list=PLI24ciRbl8BWnUVxe6aBtjjjfLxK0bHkC" target="_blank">Animated Stories</a></li>
+          <li><a href="/credits">Credits</a></li>
+          <li><a href="mailto:dylanqwang@gmail.com" target="_blank">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-flex-item">
+        <div class="footer-heading">
+          LEARN MORE
+        </div>
+        <ul class="footer-list">
+          <li><a href="https://www.youtube.com/watch?v=_PHcUl6Jluc&list=PLI24ciRbl8BVCXWhBQ0rXCM2KK7e6O5XP" target="_blank">Cube Reviews</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ow6fc4RTJBc&list=PLI24ciRbl8BW8ybKSDsDzrSbSOx6pt1Pm" target="_blank">Solve Critiques</a></li>
+          <li><a href="https://www.youtube.com/watch?v=F4ju-U9OhdA&list=PLI24ciRbl8BUPQRy_HyfdxLeD7kzlyj6R" target="_blank">Example Solves</a></li>
+          <li><a href="https://www.youtube.com/watch?v=3B_oB2YrLvk&list=PLI24ciRbl8BUTnnzmJIIn3Ts_6-mKMBP7" target="_blank">Advanced F2L</a></li>
+          <li><a href="https://bit.ly/bestf2l" target="_blank">Best F2L Algorithms</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-flex-item">
+        <div class="footer-heading">
+          SUPPORT ME
+        </div>
+        <ul class="footer-list">
+          <li><a href="https://speedcubeshop.com/?rfsn=517424.b7e72" onclick="alert('Remember to use the discount code: JPERM')" target="_blank">Buy Cubes</a></li>
+          <li><a href="https://teespring.com/stores/jperm" target="_blank">Apparel</a></li>
+          <li><a href="https://patreon.com/jperm" target="_blank">Donate</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-flex-item">
+        <div class="footer-heading">
+          SOCIAL
+        </div>
+        <ul class="footer-social">
+          <li><a href="https://facebook.com/jpermcubing"><img src="/images/logos/facebook.png" class="social" /></a></li>
+          <li><a href="https://twitter.com/jpermofficial"><img src="/images/logos/twitter.png" class="social" /></a></li>
+          <li><a href="https://instagram.com/jpermofficial"><img src="/images/logos/instagram.png" class="social" /></a></li>
+          <li><a href="https://youtube.com/jperm"><img src="/images/logos/youtube.png" class="social" /></a></li>
+        </ul>
+      </div>
+
+    </div>
+
+
+    <div class="footer-flex">
+      <div class="footer-flex-item small-text center">
+        &copy; 2026 J Perm
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    $(function() {
+      // Default page title
+      if (document.title === "") {
+        let h2 = $("h2")[0];
+        if (h2) {
+          document.title = h2.innerHTML;
+        }
+      }
+    });
+  </script>
+
+
+</body>
+</html>

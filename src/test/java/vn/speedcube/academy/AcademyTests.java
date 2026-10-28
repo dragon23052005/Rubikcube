@@ -14,15 +14,37 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 class AcademyTests {
  @Autowired CatalogService catalog; @Autowired MockMvc mvc; @Autowired ObjectMapper mapper;
+ @Test void fiveByFiveHasCompleteSourceSetsAndIndependentProgressIds() throws Exception {
+  assertThat(catalog.counts()).containsEntry("5×5 L2E",12L).containsEntry("5×5 L2C",19L);
+  var rows=catalog.all().stream().filter(c->c.puzzle.equals("5x5")).toList();assertThat(rows).hasSize(31);
+  assertThat(rows.stream().mapToInt(c->c.getAlternatives().size()).sum()).isEqualTo(3);
+  for(var c:rows){assertThat(c.id).startsWith("5x5-");assertThat(c.sourceUrl).startsWith("https://www.cubeskills.com/");assertThat(c.algorithm).isNotBlank().doesNotContain("Solved");assertThat(c.getImages()).hasSize(1);}
+  catalog.seed();assertThat(catalog.all().stream().filter(c->c.puzzle.equals("5x5"))).hasSize(31);
+  mvc.perform(get("/api/algorithms").param("puzzle","5x5")).andExpect(status().isOk()).andExpect(jsonPath("$.total").value(31));
+  mvc.perform(get("/api/algorithms").param("method","5×5 L2C").param("size","12")).andExpect(jsonPath("$.total").value(19)).andExpect(jsonPath("$.items.length()").value(12));
+  mvc.perform(get("/api/algorithms/5x5-l2e-5")).andExpect(jsonPath("$.category").value("Parity cạnh"));
+  mvc.perform(get("/5x5")).andExpect(status().isOk()).andExpect(view().name("index"));
+ }
+ @Test void fourByFourImportsFullParitySetsAndKeepsExpandedAlgorithms() throws Exception {
+  assertThat(catalog.counts()).containsEntry("4×4 Basic",3L).containsEntry("4×4 L2E",5L).containsEntry("4×4 OLL",27L).containsEntry("4×4 PLL",22L);
+  var rows=catalog.all().stream().filter(c->c.puzzle.equals("4x4")).toList();assertThat(rows).hasSize(57);
+  for(var c:rows){assertThat(c.algorithm).isNotBlank().doesNotContain("[*]");for(var v:c.getAlternatives())assertThat(v).doesNotContain("[*]");assertThat(c.getImages()).hasSize(1);assertThat(c.sourceUrl).startsWith("https://");}
+  assertThat(catalog.get("4x4-pll-pure-minus-e").algorithm).isEqualTo("2R2 U2 2R2 Uw2 2R2 Uw2");
+  assertThat(catalog.get("4x4-l2e-1").getAlternatives()).hasSize(2);
+  catalog.seed();assertThat(catalog.all()).hasSize(606);
+  mvc.perform(get("/api/algorithms").param("puzzle","4x4")).andExpect(status().isOk()).andExpect(jsonPath("$.total").value(57));
+  mvc.perform(get("/api/algorithms/4x4-l2e-1")).andExpect(jsonPath("$.images[0]").value("/images/jperm/4x4-l2e-1.png"));
+  mvc.perform(get("/4x4")).andExpect(status().isOk()).andExpect(view().name("index"));
+ }
  @Test void twoByTwoHasIndependentMethodsAndSourceImageTransforms() throws Exception {
   assertThat(catalog.counts()).containsEntry("2×2 OLL",7L).containsEntry("2×2 PBL",5L).containsEntry("OLL",57L);
   var rows=catalog.all().stream().filter(c->c.puzzle.equals("2x2")).toList();assertThat(rows).hasSize(12);
   for(var c:rows){assertThat(c.sourceUrl).startsWith("https://www.jperm.net/algs/2x2");assertThat(c.reference).isNull();if(c.method.equals("2×2 PBL")){assertThat(c.getImages()).hasSize(2);assertThat(c.getImageTransforms()).containsExactly("","scaleX(-1)");}else assertThat(c.getImages()).hasSize(1);}
-  catalog.seed();assertThat(catalog.all()).hasSize(518);assertThat(catalog.all().stream().mapToInt(c->c.getAlternatives().size()).sum()).isEqualTo(45);
+  catalog.seed();assertThat(catalog.all()).hasSize(606);assertThat(catalog.all().stream().mapToInt(c->c.getAlternatives().size()).sum()).isEqualTo(61);
   mvc.perform(get("/api/algorithms").param("puzzle","2x2")).andExpect(jsonPath("$.total").value(12));
   mvc.perform(get("/api/algorithms/search").param("q","2x2")).andExpect(jsonPath("$.total").value(12));
   mvc.perform(get("/api/algorithms/2x2-pbl-adj-adj")).andExpect(jsonPath("$.imageTransforms[1]").value("scaleX(-1)"));
-  mvc.perform(get("/api/puzzles")).andExpect(jsonPath("$.length()").value(3));
+  mvc.perform(get("/api/puzzles")).andExpect(jsonPath("$.length()").value(5));
  }
  @Test void imageTransformDeserializationDoesNotDependOnJsonFieldOrder() throws Exception {
   var c=mapper.readValue("{\"imageTransforms\":[\"\",\"scaleX(-1)\"],\"images\":[\"/a.png\",\"/b.png\"]}",AlgorithmCase.class);
@@ -38,15 +60,15 @@ class AcademyTests {
  }
  @Test void cubeShapeSupplementLoadsAndDoesNotDuplicateOnRestart() throws Exception {
   assertThat(catalog.counts()).containsEntry("CS",5L);
-  catalog.seed();assertThat(catalog.counts()).containsEntry("CS",5L);assertThat(catalog.all()).hasSize(518);
+  catalog.seed();assertThat(catalog.counts()).containsEntry("CS",5L);assertThat(catalog.all()).hasSize(606);
   mvc.perform(get("/api/algorithms").param("method","CS")).andExpect(jsonPath("$.total").value(5));
   mvc.perform(get("/api/algorithms/cs-5")).andExpect(jsonPath("$.algorithm").value("/ (-4,0) / (5,4) / (2,-3) / (-5,-4) / (6,-3) /"));
  }
- @Test void sourceCountsAreExact(){assertThat(catalog.counts()).containsEntry("OLL",57L).containsEntry("PLL",21L).containsEntry("COLL",40L).containsEntry("ZB F2L",306L).containsEntry("CO",5L).containsEntry("EO",7L).containsEntry("CP",8L).containsEntry("EP",54L).containsEntry("Middle",3L);assertThat(catalog.all()).hasSize(518);}
+ @Test void sourceCountsAreExact(){assertThat(catalog.counts()).containsEntry("OLL",57L).containsEntry("PLL",21L).containsEntry("COLL",40L).containsEntry("ZB F2L",306L).containsEntry("CO",5L).containsEntry("EO",7L).containsEntry("CP",8L).containsEntry("EP",54L).containsEntry("Middle",3L);assertThat(catalog.all()).hasSize(606);}
  @Test void eachCaseHasSourceImageAndValidNotation() throws Exception {
   Set<String> ids=new HashSet<>();
   for(var c:catalog.all()){
-   assertThat(ids.add(c.id)).isTrue();assertThat(c.sourceUrl).startsWith(c.method.equals("CS")?"/references/":c.puzzle.equals("2x2")?"https://www.jperm.net/":"https://cubezone.be/");if(!c.id.equals("zb-f2l-6"))assertThat(c.algorithm).isNotBlank();assertThat(c.getImages()).isNotEmpty();
+   assertThat(ids.add(c.id)).isTrue();assertThat(c.sourceUrl).startsWith(c.method.equals("CS")?"/references/":c.puzzle.equals("2x2")?"https://www.jperm.net/":c.puzzle.equals("5x5")?"https://www.cubeskills.com/":c.puzzle.equals("4x4")?(c.method.equals("4×4 L2E")?"https://www.cubeskills.com/":"https://jperm.net/"):"https://cubezone.be/");if(!c.id.equals("zb-f2l-6"))assertThat(c.algorithm).isNotBlank();assertThat(c.getImages()).isNotEmpty();
    for(String img:c.getImages()){assertThat(img).startsWith("/images/");try(var in=new ClassPathResource("static"+img).getInputStream()){byte[] b=in.readNBytes(4);assertThat(b.length).isEqualTo(4);assertThat((b[0]=='G'&&b[1]=='I')||(b[0]==(byte)0x89&&b[1]=='P')||(b[0]=='<'&&b[1]=='s'&&b[2]=='v'&&b[3]=='g')).isTrue();}}
    if(c.puzzle.equals("sq1"))assertThat(c.algorithm).matches("[\\s/(),0-9\\-]+" );
    assertThat(c.verificationStatus).isEqualTo(c.method.equals("CS")?"USER_REFERENCE_SHAPE_CHECKED":c.id.equals("zb-f2l-6")?"SOURCE_EMPTY":"SOURCE_MATCHED");
@@ -58,14 +80,11 @@ class AcademyTests {
   mvc.perform(get("/api/algorithms/oll-1")).andExpect(status().isOk()).andExpect(jsonPath("$.images[0]").isNotEmpty());
   mvc.perform(get("/api/algorithms/missing")).andExpect(status().isNotFound());
   mvc.perform(get("/api/algorithms").param("size","1000")).andExpect(status().isBadRequest());
-  mvc.perform(get("/api/catalog")).andExpect(jsonPath("$.length()").value(518));
+  mvc.perform(get("/api/catalog")).andExpect(jsonPath("$.length()").value(606));
  }
- @Test void progressIsIsolatedBySession() throws Exception {
-  var session=new org.springframework.mock.web.MockHttpSession();
-  mvc.perform(put("/api/progress/oll-1").session(session).contentType("application/json").content("{\"learned\":true,\"favorite\":true,\"review\":false}")).andExpect(status().isOk());
-  mvc.perform(get("/api/progress").session(session)).andExpect(jsonPath("$[0].learned").value(true));
-  mvc.perform(get("/api/progress").session(new org.springframework.mock.web.MockHttpSession())).andExpect(jsonPath("$.length()").value(0));
-  mvc.perform(put("/api/progress/oll-1").contentType("application/json").content("{\"learned\":true,\"review\":true}")).andExpect(status().isBadRequest());
+ @Test void guestCannotReadAccountProgress() throws Exception {
+  mvc.perform(get("/api/progress")).andExpect(status().isUnauthorized());
+  mvc.perform(put("/api/progress/oll-1").contentType("application/json").content("{\"learned\":true}")).andExpect(status().isForbidden());
  }
  @Test void errorPagesHaveAccessibleVietnameseContent() throws Exception {
   mvc.perform(get("/error").accept("text/html").requestAttr(jakarta.servlet.RequestDispatcher.ERROR_STATUS_CODE,404)).andExpect(status().isNotFound()).andExpect(view().name("error/404"));
